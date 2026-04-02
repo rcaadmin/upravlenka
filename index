@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Управленческая отчетность для бизнеса — прибыль, ДДС, баланс</title>
+  <meta name="description" content="Настройка управленческой отчетности для малого и среднего бизнеса: P&L, ДДС, баланс, план-факт, аналитика для собственника и руководителя." />
+  <meta name="keywords" content="управленческая отчетность, ддс, pnl, баланс, финансовый учет, отчетность для бизнеса" />
+  <meta property="og:title" content="Управленческая отчетность для бизнеса" />
+  <meta property="og:description" content="Помогаю собственнику видеть прибыль, деньги и слабые места бизнеса через понятную систему отчетности." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: #ffffff;
+      --line: #e2e8f0;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --success: #0f766e;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+      background: rgba(248, 250, 252, 0.86);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav a:hover { color: var(--accent); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+    }
+
+    .btn-secondary:hover { border-color: #cbd5e1; transform: translateY(-1px); }
+
+    .hero {
+      padding: 72px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-card, .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 42px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 { line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.03em; }
+    h1 { font-size: clamp(34px, 6vw, 58px); }
+    h2 { font-size: clamp(28px, 4vw, 40px); }
+    h3 { font-size: 22px; }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .point {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 15px;
+    }
+
+    .hero-side {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .metric {
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #fff, #f8fafc);
+      border: 1px solid var(--line);
+    }
+
+    .metric-title {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .metric-value {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .metric-note {
+      font-size: 14px;
+      color: var(--success);
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    section {
+      padding: 36px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .grid-3, .grid-2, .grid-4 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      padding: 26px;
+    }
+
+    .card p { font-size: 16px; margin-bottom: 0; }
+
+    .list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .list li + li { margin-top: 10px; }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 16px;
+    }
+
+    .step {
+      position: relative;
+      padding: 24px 24px 24px 78px;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 24px;
+      top: 24px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-weight: 800;
+    }
+
+    .showcase {
+      display: grid;
+      gap: 16px;
+    }
+
+    .showcase-card {
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff, #f8fafc);
+    }
+
+    .showcase-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .bar {
+      height: 12px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .bar > span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #2563eb, #60a5fa);
+    }
+
+    .cta {
+      padding: 26px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .contact-box {
+      padding: 22px;
+      border-radius: 18px;
+      background: #0f172a;
+      color: #fff;
+    }
+
+    .contact-box p, .contact-box a {
+      color: rgba(255,255,255,0.82);
+      font-size: 16px;
+    }
+
+    footer {
+      padding: 34px 0 54px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid, .cta, .grid-4, .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .hero-copy { padding: 30px; }
+    }
+
+    @media (max-width: 640px) {
+      .nav { display: none; }
+      .hero { padding-top: 42px; }
+      .hero-copy, .hero-side, .card, .cta { padding: 20px; }
+      p { font-size: 16px; }
+      .hero-points { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand">Управленческая отчетность</a>
+      <nav class="nav">
+        <a href="#services">Что делаю</a>
+        <a href="#reports">Отчеты</a>
+        <a href="#process">Как проходит</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">Оставить заявку</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card hero-copy">
+          <div class="eyebrow">Для собственника и руководителя</div>
+          <h1>Управленческая отчетность, которая помогает принимать решения, а не тонуть в цифрах</h1>
+          <p>Настраиваю понятную систему управленческой отчетности для бизнеса: прибыль, ДДС, баланс, план-факт и ключевые показатели. Без хаоса в таблицах и без отчетов ради отчетов.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Обсудить задачу</a>
+            <a class="btn btn-secondary" href="#reports">Посмотреть, что входит</a>
+          </div>
+          <div class="hero-points">
+            <div class="point">P&amp;L: где прибыль, а где иллюзия</div>
+            <div class="point">ДДС: куда реально уходят деньги</div>
+            <div class="point">Баланс: из чего состоит бизнес</div>
+            <div class="point">План-факт: где отклонения и почему</div>
+          </div>
+        </div>
+
+        <aside class="hero-card hero-side">
+          <div class="metric">
+            <div class="metric-title">Главная цель</div>
+            <div class="metric-value">Прозрачность</div>
+            <div class="metric-note">для собственника и команды</div>
+          </div>
+          <div class="metric">
+            <div class="metric-title">Результат внедрения</div>
+            <div class="metric-value">Контроль</div>
+            <div class="metric-note">над прибылью, деньгами и точками риска</div>
+          </div>
+          <div class="metric">
+            <div class="metric-title">Подходит для</div>
+            <div class="metric-value">Малого и среднего бизнеса</div>
+            <div class="metric-note">торговля, услуги, производство, проекты</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Что я делаю</h2>
+          <p>Помогаю собственнику увидеть бизнес через управленческие цифры: не просто собрать данные, а настроить систему, где понятно, что происходит и что с этим делать.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Настройка отчетности</h3>
+            <p>Собираю структуру управленческого учета и отчетности под ваш бизнес: доходы, расходы, статьи, центры ответственности, аналитика и регламенты.</p>
+          </article>
+          <article class="card">
+            <h3>Финансовые отчеты</h3>
+            <p>Делаю P&amp;L, ДДС, баланс, план-факт, отчеты по направлениям, продуктам, подразделениям и другим срезам, которые реально нужны для управления.</p>
+          </article>
+          <article class="card">
+            <h3>Наведение порядка</h3>
+            <p>Убираю хаос в Excel, Google Sheets, 1С, CRM и других источниках. Выстраиваю понятную логику сбора и проверки данных.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reports">
+      <div class="container">
+        <div class="section-head">
+          <h2>Какие отчеты можно настроить</h2>
+          <p>Система строится под задачи бизнеса, но чаще всего в работу входят базовые управленческие отчеты и аналитические панели для собственника.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3>P&amp;L — отчет о прибылях и убытках</h3>
+            <ul class="list">
+              <li>Показывает реальную прибыльность бизнеса</li>
+              <li>Позволяет увидеть проблемные статьи расходов</li>
+              <li>Помогает оценивать рентабельность направлений</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>ДДС — отчет о движении денежных средств</h3>
+            <ul class="list">
+              <li>Показывает притоки и оттоки денег</li>
+              <li>Помогает управлять кассовыми разрывами</li>
+              <li>Дает понимание платежного календаря</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Управленческий баланс</h3>
+            <ul class="list">
+              <li>Показывает активы, обязательства и капитал</li>
+              <li>Дает картину финансового состояния бизнеса</li>
+              <li>Помогает понять, за счет чего растет компания</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>План-факт и аналитика</h3>
+            <ul class="list">
+              <li>Сравнение плана и факта по ключевым метрикам</li>
+              <li>Аналитика по продуктам, проектам, менеджерам</li>
+              <li>Понимание причин отклонений и зон роста</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Как это может выглядеть</h2>
+          <p>Ниже — упрощенный пример блоков, которые можно использовать как прототип будущих отчетов или дашбордов.</p>
+        </div>
+        <div class="showcase">
+          <div class="showcase-card">
+            <div class="showcase-top">
+              <strong>Прибыль по направлениям</strong>
+              <span>Месяц к месяцу</span>
+            </div>
+            <div>Основное направление</div>
+            <div class="bar"><span style="width: 78%"></span></div>
+            <div style="margin-top:12px;">Дополнительное направление</div>
+            <div class="bar"><span style="width: 56%"></span></div>
+            <div style="margin-top:12px;">Слабое направление</div>
+            <div class="bar"><span style="width: 29%"></span></div>
+          </div>
+          <div class="grid-3">
+            <div class="showcase-card">
+              <div class="showcase-top"><strong>Выручка</strong><span>+12%</span></div>
+              <h3>1 280 000 ₽</h3>
+              <p>Показатель в разрезе месяца, канала или продукта.</p>
+            </div>
+            <div class="showcase-card">
+              <div class="showcase-top"><strong>Расходы</strong><span>контроль статей</span></div>
+              <h3>860 000 ₽</h3>
+              <p>Видно, какие статьи съедают маржу и требуют внимания.</p>
+            </div>
+            <div class="showcase-card">
+              <div class="showcase-top"><strong>Денежный остаток</strong><span>на конец периода</span></div>
+              <h3>420 000 ₽</h3>
+              <p>Понимание текущей ликвидности и запаса прочности.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <h2>Как проходит работа</h2>
+          <p>Без лишней магии. Сначала разбираемся, как сейчас устроены цифры в бизнесе, потом собираем систему, которую можно использовать каждый месяц.</p>
+        </div>
+        <div class="steps">
+          <article class="card step">
+            <h3>Разбор текущей ситуации</h3>
+            <p>Смотрим, какие данные уже есть: 1С, Excel, Google Sheets, CRM, банковские выписки, таблицы менеджеров и любые другие источники.</p>
+          </article>
+          <article class="card step">
+            <h3>Проектирование модели</h3>
+            <p>Формируем структуру отчетов, статей, аналитик и правил учета так, чтобы цифры были сопоставимыми и полезными для принятия решений.</p>
+          </article>
+          <article class="card step">
+            <h3>Сборка отчетности</h3>
+            <p>Настраиваем формы отчетов, логику обновления и контроль качества данных. При необходимости делаем удобные таблицы и дашборды.</p>
+          </article>
+          <article class="card step">
+            <h3>Сопровождение и доработка</h3>
+            <p>После внедрения систему можно улучшать: добавлять план-факт, детализацию по направлениям и более глубокую аналитику.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Кому подходит</h2>
+          <p>Этот формат особенно полезен, когда бизнес уже работает, обороты есть, а ясности в цифрах нет.</p>
+        </div>
+        <div class="grid-4">
+          <article class="card"><h3>Собственникам</h3><p>Когда нужно понимать, где прибыль, где утечки и какие решения реально улучшают результат.</p></article>
+          <article class="card"><h3>Руководителям</h3><p>Когда важно видеть исполнение планов, отклонения и управлять командой не на ощущениях.</p></article>
+          <article class="card"><h3>Растущему бизнесу</h3><p>Когда таблиц становится слишком много, а единой логики учета и отчетности нет.</p></article>
+          <article class="card"><h3>Компаниям в хаосе</h3><p>Когда цифры есть везде, но собрать одну правдивую картину невозможно или слишком долго.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="hero-card cta">
+          <div>
+            <h2>Нужна управленческая отчетность без лишней бюрократии?</h2>
+            <p>Оставьте контакт, и я помогу собрать понятную систему отчетности под ваш бизнес: от базовых форм до аналитики для собственника.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+              <a class="btn btn-secondary" href="https://max.ru/yourusername" target="_blank" rel="noopener noreferrer">Написать в Max</a>
+            </div>
+          </div>
+          <div class="contact-box">
+            <h3>Контакты</h3>
+            <p>Имя: Ваше имя</p>
+            <p>Telegram: <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">@yourusername</a></p>
+            <p>Max: <a href="https://max.ru/yourusername" target="_blank" rel="noopener noreferrer">@yourusername</a></p>
+            <p>Город: Санкт-Петербург / онлайн по России</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-box">
+      <div>© 2026 Управленческая отчетность</div>
+      <div>Сайт для привлечения клиентов из поиска и заявок</div>
+    </div>
+  </footer>
+</body>
+</html>
