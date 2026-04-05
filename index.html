@@ -1,70 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){
-          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-          m[i].l=1*new Date();
-          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108398430', 'ym');
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108398430', 'ym');
 
-      ym(108398430, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    ym(108398430, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/108398430" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Связка тройки отчетов для бизнеса — ДДС, ОПиУ, Баланс</title>
-  <meta name="description" content="Когда бизнес растет, а прибыли не видно, нужна не красивая табличка, а связка ДДС, ОПиУ и Баланса. Собираю управленческую отчетность для собственника: поэтапно, жестко, без иллюзий." />
-  <meta name="keywords" content="управленческая отчетность, ддс, опиу, баланс, финансы бизнеса, прибыль, кассовый разрыв, управленка, финансовый директор" />
-  <meta property="og:title" content="Связка тройки отчетов для бизнеса — ДДС, ОПиУ, Баланс" />
-  <meta property="og:description" content="Если у вас 100 таблиц, растет оборот, а прибыли все нет — добро пожаловать в реальность. Собираю ДДС, ОПиУ и Баланс в одну понятную систему." />
+  <title>Рост есть, а денег не видно? ДДС + ОПиУ + Баланс для собственника</title>
+  <meta name="description" content="Связка тройки файлов для собственника: ДДС, ОПиУ и Баланс. Бесплатная консультация, экспресс-диагностика, этапная работа и прозрачная цена. Без отчётов ради отчётов." />
+  <meta name="keywords" content="управленческая отчетность, ДДС, ОПиУ, баланс, тройка отчетов, управленческий учет, кассовый разрыв, прибыль, 1С, Excel" />
+  <meta property="og:title" content="Рост есть, а денег не видно? Управленка без иллюзий" />
+  <meta property="og:description" content="Соберу связку ДДС + ОПиУ + Баланс, чтобы наконец стало видно: где прибыль, где кассовый разрыв и куда уходит контроль." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#121212" />
 
   <style>
     :root {
-      --bg: #f8fafc;
-      --bg-soft: #eef2ff;
-      --text: #0f172a;
-      --muted: #475569;
-      --card: #ffffff;
-      --line: #e2e8f0;
-      --accent: #111827;
-      --accent-2: #1d4ed8;
-      --accent-3: #f59e0b;
-      --danger: #991b1b;
-      --success: #0f766e;
-      --shadow: 0 18px 45px rgba(15, 23, 42, 0.09);
-      --radius: 24px;
-      --radius-sm: 18px;
-      --max: 1200px;
+      --bg: #f6f3ee;
+      --bg-soft: #faf7f2;
+      --text: #141414;
+      --muted: #575f6b;
+      --card: #fffdf9;
+      --line: #e8dece;
+      --accent: #d29a18;
+      --accent-dark: #9a6900;
+      --deep: #121212;
+      --danger: #b6543c;
+      --success: #117a61;
+      --shadow: 0 18px 42px rgba(20, 20, 20, 0.08);
+      --shadow-soft: 0 10px 24px rgba(20, 20, 20, 0.05);
+      --radius: 26px;
+      --max: 1180px;
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
       color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(210, 154, 24, 0.08), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(17, 122, 97, 0.06), transparent 24%),
+        var(--bg);
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
 
     .container {
       width: min(var(--max), calc(100% - 32px));
@@ -74,10 +69,10 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(248, 250, 252, 0.88);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+      background: rgba(246, 243, 238, 0.88);
+      border-bottom: 1px solid rgba(232, 222, 206, 0.9);
     }
 
     .topbar-inner {
@@ -89,10 +84,30 @@
     }
 
     .brand {
-      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       font-weight: 900;
       letter-spacing: -0.03em;
-      color: var(--accent);
+      font-size: 18px;
+    }
+
+    .brand-dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #f2bb34, #c78200);
+      box-shadow: 0 0 0 6px rgba(210,154,24,0.12);
+      flex: 0 0 auto;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
 
     .nav {
@@ -108,118 +123,84 @@
       font-weight: 600;
     }
 
-    .nav a:hover { color: var(--accent-2); }
+    .nav a:hover { color: var(--accent-dark); }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 15px 22px;
+      padding: 14px 20px;
       border-radius: 16px;
       font-weight: 800;
-      transition: 0.22s ease;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
       cursor: pointer;
-      border: none;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
     }
 
     .btn-primary {
-      background: var(--accent);
+      background: linear-gradient(180deg, var(--accent), #b97b00);
       color: #fff;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-soft);
     }
 
-    .btn-primary:hover {
-      background: #000;
-    }
+    .btn-primary:hover { transform: translateY(-1px); }
 
     .btn-secondary {
-      background: #fff;
+      background: rgba(255,255,255,0.7);
+      border-color: var(--line);
       color: var(--text);
-      border: 1px solid var(--line);
     }
 
-    .btn-secondary:hover {
-      border-color: #cbd5e1;
-    }
+    .btn-secondary:hover { border-color: #d8c8b3; transform: translateY(-1px); }
 
-    .btn-accent {
-      background: var(--accent-3);
-      color: #111827;
-      box-shadow: var(--shadow);
-    }
+    main { overflow: hidden; }
 
-    .btn-accent:hover {
-      background: #fbbf24;
-    }
+    section { padding: 38px 0; }
 
     .hero {
-      padding: 70px 0 44px;
+      padding: 54px 0 28px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 24px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 26px;
       align-items: stretch;
     }
 
-    .hero-main,
-    .hero-side,
-    .card,
-    .cta-box,
-    .quote-box,
-    .pricing-box {
-      background: var(--card);
+    .panel, .card {
+      background: rgba(255, 253, 249, 0.92);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
 
-    .hero-main {
-      padding: 40px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-main::after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      bottom: -80px;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(245,158,11,0.18) 0%, rgba(245,158,11,0) 68%);
-      pointer-events: none;
+    .hero-copy {
+      padding: 38px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 13px;
+      gap: 10px;
+      padding: 9px 14px;
       border-radius: 999px;
-      background: #fff7ed;
-      color: #9a3412;
+      background: rgba(210,154,24,0.12);
+      color: var(--accent-dark);
       font-size: 13px;
       font-weight: 800;
-      margin-bottom: 18px;
-      border: 1px solid #fed7aa;
+      margin-bottom: 20px;
     }
 
     h1, h2, h3 {
+      line-height: 1.08;
       margin: 0 0 16px;
-      line-height: 1.12;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.04em;
     }
 
-    h1 { font-size: clamp(34px, 6vw, 60px); }
-    h2 { font-size: clamp(28px, 4vw, 42px); }
+    h1 { font-size: clamp(36px, 5.8vw, 64px); }
+    h2 { font-size: clamp(30px, 4vw, 44px); }
     h3 { font-size: 22px; }
 
     p {
@@ -228,16 +209,23 @@
       font-size: 18px;
     }
 
-    .lead {
+    .hero-lead {
       font-size: 20px;
-      color: #334155;
+      max-width: 770px;
     }
 
     .hero-actions {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-top: 26px;
+      margin-top: 28px;
+    }
+
+    .micro-note {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
     }
 
     .hero-points {
@@ -249,51 +237,53 @@
 
     .point {
       padding: 14px 16px;
-      border-radius: 16px;
+      border-radius: 18px;
+      background: var(--bg-soft);
       border: 1px solid var(--line);
-      background: #f8fafc;
-      color: #1e293b;
-      font-weight: 700;
       font-size: 15px;
+      font-weight: 700;
+      color: #222;
     }
 
     .hero-side {
-      padding: 22px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
 
+    .illus-box {
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, #fff, #f7f2ea);
+      border: 1px solid var(--line);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
     .stat {
       padding: 18px;
       border-radius: 18px;
-      background: linear-gradient(180deg, #ffffff, #f8fafc);
       border: 1px solid var(--line);
-    }
-
-    .stat-label {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 8px;
-      font-weight: 600;
+      background: linear-gradient(180deg, #fff, #faf6ef);
     }
 
     .stat-value {
-      font-size: 30px;
-      line-height: 1.05;
+      font-size: 28px;
       font-weight: 900;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.03em;
+      margin-bottom: 5px;
     }
 
-    .stat-note {
-      margin-top: 8px;
-      color: var(--success);
+    .stat-label {
+      color: var(--muted);
       font-size: 14px;
-      font-weight: 800;
-    }
-
-    section {
-      padding: 38px 0;
+      font-weight: 700;
     }
 
     .section-head {
@@ -301,18 +291,16 @@
       margin-bottom: 24px;
     }
 
-    .section-kicker {
-      color: var(--accent-2);
+    .kicker {
+      font-size: 13px;
       font-weight: 800;
-      font-size: 14px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      color: var(--accent-dark);
       margin-bottom: 10px;
     }
 
-    .grid-2,
-    .grid-3,
-    .grid-4 {
+    .grid-2, .grid-3, .grid-4 {
       display: grid;
       gap: 18px;
     }
@@ -330,66 +318,115 @@
       margin-bottom: 0;
     }
 
-    .pain-card {
-      border-left: 6px solid #f59e0b;
-    }
-
-    .pain-card h3 {
+    .pain-card h3,
+    .report-card h3,
+    .objection-card h3,
+    .price-card h3,
+    .proof-card h3,
+    .case-card h3 {
       margin-bottom: 12px;
     }
 
-    .danger {
-      color: var(--danger);
+    .icon-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      font-size: 18px;
+      background: rgba(18,18,18,0.06);
+      margin-bottom: 14px;
+    }
+
+    .trio-wrap {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .trio-note {
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(210,154,24,0.1), rgba(210,154,24,0.05));
+      border: 1px solid rgba(210,154,24,0.22);
+      font-size: 16px;
+      color: #3b2e19;
+      font-weight: 700;
+      margin-top: 16px;
+    }
+
+    .bundle-card {
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px dashed rgba(18,18,18,0.16);
+      background: linear-gradient(180deg, #fffefa, #fbf5ea);
+      margin-top: 18px;
+    }
+
+    .bundle-card strong { font-size: 20px; display: block; margin-bottom: 8px; }
+
+    .dark-band {
+      background: linear-gradient(135deg, #111, #1d1d1d 55%, #2f2616);
+      color: rgba(255,255,255,0.92);
+      border-radius: 30px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .dark-band p {
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 0;
+    }
+
+    .quote-line {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.06;
+      margin-bottom: 12px;
+    }
+
+    .objection-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .objection-card::after {
+      content: "";
+      position: absolute;
+      right: -18px;
+      bottom: -18px;
+      width: 94px;
+      height: 94px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(210,154,24,0.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .objection-label {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
       font-weight: 800;
-    }
-
-    .list {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .list li + li {
-      margin-top: 10px;
-    }
-
-    .quote-box {
-      padding: 28px;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: #fff;
-    }
-
-    .quote-box p,
-    .quote-box li {
-      color: rgba(255,255,255,0.85);
-    }
-
-    .quote-box .quote-title {
-      font-size: 14px;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 800;
-      color: #fbbf24;
-      margin-bottom: 10px;
-    }
-
-    .quote-box blockquote {
-      margin: 0;
-      font-size: 28px;
-      line-height: 1.25;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      background: rgba(18,18,18,0.06);
+      color: #222;
     }
 
     .steps {
-      counter-reset: step;
       display: grid;
       gap: 16px;
+      counter-reset: step;
     }
 
     .step {
       position: relative;
-      padding: 24px 24px 24px 78px;
+      padding: 24px 24px 24px 80px;
     }
 
     .step::before {
@@ -397,77 +434,140 @@
       content: counter(step);
       position: absolute;
       left: 24px;
-      top: 24px;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
+      top: 22px;
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
-      background: #dbeafe;
-      color: #1d4ed8;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #f2bb34, #c78200);
+      color: white;
       font-weight: 900;
+      box-shadow: 0 10px 24px rgba(210,154,24,0.25);
     }
 
-    .pricing-box {
-      padding: 28px;
-    }
-
-    .pricing-top {
+    .checklist {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 20px;
-      align-items: start;
+      gap: 10px;
+    }
+
+    .checklist li {
+      padding-left: 28px;
+      position: relative;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 900;
+      color: var(--success);
+    }
+
+    .price-card strong {
+      display: block;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin: 8px 0 10px;
     }
 
     .price-note {
-      padding: 16px 18px;
-      border-radius: 16px;
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
-      color: #9a3412;
-      font-weight: 700;
-      font-size: 15px;
-    }
-
-    .calc-box {
-      margin-top: 20px;
       padding: 20px;
-      border-radius: 18px;
-      background: #f8fafc;
-      border: 1px solid var(--line);
-    }
-
-    .calc-box strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .formula {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 15px;
-      color: #1e293b;
-      background: #ffffff;
-      border: 1px dashed #cbd5e1;
-      padding: 14px;
-      border-radius: 14px;
-      margin: 12px 0;
-      overflow-x: auto;
-    }
-
-    .example {
-      font-size: 16px;
-      color: #0f172a;
+      border-radius: 22px;
+      border: 1px solid rgba(182,84,60,0.18);
+      background: linear-gradient(180deg, rgba(182,84,60,0.08), rgba(182,84,60,0.03));
+      color: #5b2f25;
       font-weight: 700;
     }
 
-    .narrow {
-      max-width: 900px;
+    .case-card {
+      background: linear-gradient(180deg, #fffdfa, #faf5ed);
     }
 
-    .proof-grid .card {
-      padding: 22px;
+    .proof-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: stretch;
     }
+
+    .proof-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .proof-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--line);
+      font-size: 15px;
+      font-weight: 700;
+      color: #262626;
+    }
+
+    .strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #262626;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.7);
+    }
+
+    .cta {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .contact-box {
+      background: linear-gradient(160deg, #141414, #252525 65%, #392d18);
+      color: #fff;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box p,
+    .contact-box a {
+      color: rgba(255,255,255,0.8);
+      font-size: 16px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-weight: 700;
+    }
+
+
 
     .social-grid {
       display: grid;
@@ -477,17 +577,17 @@
 
     .social-link {
       display: block;
-      padding: 18px;
-      border-radius: 18px;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255,253,249,0.92);
       border: 1px solid var(--line);
-      background: #fff;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-soft);
       transition: 0.2s ease;
     }
 
     .social-link:hover {
       transform: translateY(-2px);
-      border-color: #cbd5e1;
+      border-color: #d8c8b3;
     }
 
     .social-label {
@@ -502,7 +602,7 @@
 
     .social-name {
       display: block;
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 900;
       color: var(--text);
       margin-bottom: 6px;
@@ -511,69 +611,48 @@
     .social-hint {
       font-size: 14px;
       color: var(--muted);
-    }
-
-    .cta-box {
-      padding: 28px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .contact-box {
-      padding: 22px;
-      border-radius: 20px;
-      background: #0f172a;
-      color: #fff;
-    }
-
-    .contact-box p,
-    .contact-box a,
-    .contact-box li {
-      color: rgba(255,255,255,0.86);
-      font-size: 16px;
-    }
-
-    .contact-box ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    .illus-card {
-      overflow: hidden;
-      padding: 0;
-    }
-
-    .illus-wrap {
-      padding: 0;
-      background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 100%);
-    }
-
-    .illus-caption {
-      padding: 18px 22px 22px;
-      border-top: 1px solid var(--line);
+      font-weight: 600;
     }
 
     footer {
-      padding: 36px 0 54px;
+      padding: 28px 0 54px;
+    }
+
+    .footer-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 14px;
     }
 
-    .footer-box {
-      border-top: 1px solid var(--line);
-      padding-top: 20px;
+    .socials {
       display: flex;
-      justify-content: space-between;
-      gap: 16px;
       flex-wrap: wrap;
+      gap: 10px;
     }
 
-    @media (max-width: 1040px) {
+    .socials a {
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--line);
+      font-weight: 700;
+    }
+
+    .tagline {
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    @media (max-width: 1080px) {
       .hero-grid,
-      .pricing-top,
-      .cta-box,
+      .proof-grid,
+      .cta,
+      .trio-wrap,
       .grid-4,
       .grid-3,
       .grid-2,
@@ -582,72 +661,159 @@
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 740px) {
       .nav { display: none; }
-      .hero { padding-top: 42px; }
-      .hero-main,
+      .hero { padding-top: 34px; }
+      .hero-copy,
       .hero-side,
       .card,
-      .pricing-box,
-      .cta-box,
-      .quote-box { padding: 20px; }
-      .hero-points { grid-template-columns: 1fr; }
+      .cta,
+      .dark-band { padding: 22px; }
       p { font-size: 16px; }
-      .lead { font-size: 18px; }
-      .stat-value { font-size: 26px; }
+      .hero-lead { font-size: 18px; }
+      .hero-points,
+      .hero-stats { grid-template-columns: 1fr; }
+      .topbar-inner { gap: 10px; }
+      .brand { font-size: 16px; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="#top" class="brand">Связка тройки отчетов</a>
+      <a href="#top" class="brand">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>
+          Лайфхаки финансиста
+          <small>управленка без иллюзий</small>
+        </span>
+      </a>
+
       <nav class="nav">
         <a href="#pain">Боли</a>
-        <a href="#why">Почему тройка</a>
-        <a href="#format">Формат работы</a>
-        <a href="#pricing">Стоимость</a>
+        <a href="#bundle">Связка тройки</a>
+        <a href="#objections">Возражения</a>
+        <a href="#pricing">Цены</a>
         <a href="#contact">Контакты</a>
       </nav>
-      <a class="btn btn-primary" href="#contact">Написать мне</a>
+
+      <a class="btn btn-primary" href="#contact">Бесплатная консультация</a>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-main">
-          <div class="eyebrow">Добро пожаловать в реальность</div>
-          <h1>Бизнес растет, а прибыли нет? Значит, вам нужна не одна табличка, а связка ДДС, ОПиУ и Баланса</h1>
-          <p class="lead">Если у вас 100 файлов, хаос в 1С, ручной ДДС, “вроде много работаем”, но денег не видно — проблема не в вашем настроении. Проблема в том, что у бизнеса нет одной честной финансовой картины.</p>
-          <p>Я собираю управленческую отчетность так, чтобы собственник наконец увидел: где прибыль, где кассовая яма, где искажения, где мифология, а где уже начинается реальный бизнес.</p>
+        <div class="panel hero-copy">
+          <div class="eyebrow">Связка тройки файлов: ДДС + ОПиУ + Баланс</div>
+          <h1>Рост есть, а денег и ясности нет?</h1>
+          <p class="hero-lead">Соберу управленческую отчетность, после которой наконец видно: где прибыль, где кассовый разрыв и куда уходит контроль. Без отчетов ради отчетов. Без очередной красивой легенды в Excel.</p>
+          <p>Если сейчас у вас 1С, выписки, маркетплейсы, Google Sheets и сотрудники показывают разные цифры — проблема не в том, что вам нужен еще один дашборд. Проблема в том, что у бизнеса до сих пор нет одной внятной управленческой реальности.</p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Обсудить задачу в Telegram</a>
-            <a class="btn btn-secondary" href="#pricing">Смотреть формат и цены</a>
+            <a class="btn btn-primary" href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+            <a class="btn btn-secondary" href="#pricing">Смотреть этапы и цены</a>
           </div>
+
           <div class="hero-points">
-            <div class="point">ДДС — чтобы видеть деньги, а не гадать по выписке</div>
-            <div class="point">ОПиУ — чтобы понять, есть прибыль или только оборот</div>
-            <div class="point">Баланс — чтобы проверить, не врете ли вы сами себе</div>
-            <div class="point">Этапная работа — не зашло, останавливаемся без драмы</div>
+            <div class="point">Верхний уровень контроля: деньги, прибыль, структура бизнеса</div>
+            <div class="point">Не большая ERP-стройка, а минимально достаточная связка</div>
+            <div class="point">Этапами: сдала этап — идем дальше; не зашло — останавливаемся</div>
+            <div class="point">Подходит и для малого бизнеса, и для сложных контуров с несколькими юрлицами</div>
           </div>
+
+          <div class="micro-note">Консультация — бесплатно. Экспресс-диагностика дает смету и дорожную карту. Если идем дальше — она засчитывается в итоговую цену.</div>
         </div>
 
-        <aside class="hero-side">
-          <div class="stat">
-            <div class="stat-label">С кем работала</div>
-            <div class="stat-value">от 50 млн до 20 млрд ₽</div>
-            <div class="stat-note">и со структурами от 1 до 30 юрлиц</div>
+        <aside class="panel hero-side">
+          <div class="illus-box" aria-label="Иллюстрация перехода от хаоса к контролю">
+            <svg viewBox="0 0 680 470" role="img" aria-hidden="true">
+              <defs>
+                <linearGradient id="bgLeft" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#f2d8d0"/>
+                  <stop offset="100%" stop-color="#f7ebe7"/>
+                </linearGradient>
+                <linearGradient id="bgRight" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#edf7f2"/>
+                  <stop offset="100%" stop-color="#f7fcfa"/>
+                </linearGradient>
+                <linearGradient id="gold" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#f1bb3c"/>
+                  <stop offset="100%" stop-color="#c78200"/>
+                </linearGradient>
+              </defs>
+
+              <rect x="0" y="0" width="680" height="470" rx="28" fill="#fffaf1"/>
+              <rect x="16" y="16" width="314" height="438" rx="24" fill="url(#bgLeft)"/>
+              <rect x="350" y="16" width="314" height="438" rx="24" fill="url(#bgRight)"/>
+              <text x="58" y="56" font-size="22" font-weight="900" fill="#8a3e2c">ХАОС</text>
+              <text x="390" y="56" font-size="22" font-weight="900" fill="#0e6b57">КОНТРОЛЬ</text>
+
+              <rect x="56" y="95" width="128" height="82" rx="16" fill="#fff" stroke="#dbb9b1"/>
+              <text x="77" y="126" font-size="18" font-weight="800" fill="#7a3d32">Excel</text>
+              <line x1="76" y1="140" x2="154" y2="140" stroke="#caa29a" stroke-width="6" stroke-linecap="round"/>
+              <line x1="76" y1="154" x2="138" y2="154" stroke="#caa29a" stroke-width="6" stroke-linecap="round"/>
+
+              <rect x="165" y="210" width="136" height="92" rx="18" fill="#fff" stroke="#dbb9b1" transform="rotate(-8 165 210)"/>
+              <text x="194" y="258" font-size="18" font-weight="800" fill="#7a3d32">1С</text>
+              <circle cx="280" cy="104" r="27" fill="#fff" stroke="#dbb9b1"/>
+              <text x="257" y="111" font-size="15" font-weight="800" fill="#7a3d32">банк</text>
+
+              <path d="M86 228 C115 185, 165 186, 199 215" stroke="#b6543c" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <path d="M195 214 l11 -18 l12 20" fill="none" stroke="#b6543c" stroke-width="8" stroke-linecap="round"/>
+
+              <path d="M121 335 C148 301, 211 296, 248 326" stroke="#b6543c" stroke-width="8" fill="none" stroke-dasharray="12 10" stroke-linecap="round"/>
+              <line x1="78" y1="332" x2="128" y2="382" stroke="#b6543c" stroke-width="10" stroke-linecap="round"/>
+              <line x1="128" y1="332" x2="78" y2="382" stroke="#b6543c" stroke-width="10" stroke-linecap="round"/>
+
+              <rect x="395" y="96" width="112" height="86" rx="18" fill="#fff" stroke="#c9e1d7"/>
+              <text x="423" y="128" font-size="18" font-weight="900" fill="#0e6b57">ДДС</text>
+              <line x1="418" y1="145" x2="485" y2="145" stroke="#9bcab9" stroke-width="6" stroke-linecap="round"/>
+              <line x1="418" y1="159" x2="470" y2="159" stroke="#9bcab9" stroke-width="6" stroke-linecap="round"/>
+
+              <rect x="530" y="96" width="98" height="86" rx="18" fill="#fff" stroke="#c9e1d7"/>
+              <text x="545" y="128" font-size="18" font-weight="900" fill="#0e6b57">ОПиУ</text>
+              <line x1="549" y1="145" x2="606" y2="145" stroke="#9bcab9" stroke-width="6" stroke-linecap="round"/>
+              <line x1="549" y1="159" x2="595" y2="159" stroke="#9bcab9" stroke-width="6" stroke-linecap="round"/>
+
+              <rect x="462" y="214" width="112" height="86" rx="18" fill="#fff" stroke="#c9e1d7"/>
+              <text x="479" y="246" font-size="18" font-weight="900" fill="#0e6b57">Баланс</text>
+              <line x1="485" y1="263" x2="552" y2="263" stroke="#9bcab9" stroke-width="6" stroke-linecap="round"/>
+              <line x1="485" y1="277" x2="538" y2="277" stroke="#9bcab9" stroke-width="6" stroke-linecap="round"/>
+
+              <circle cx="518" cy="365" r="54" fill="#fff" stroke="#d8ebdf" stroke-width="3"/>
+              <text x="486" y="359" font-size="16" font-weight="900" fill="#121212">одна</text>
+              <text x="469" y="381" font-size="16" font-weight="900" fill="#121212">реальность</text>
+
+              <path d="M451 182 Q424 199 416 231" stroke="#117a61" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <path d="M555 182 Q579 199 584 228" stroke="#117a61" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <path d="M517 301 Q517 322 517 328" stroke="#117a61" stroke-width="7" fill="none" stroke-linecap="round"/>
+
+              <circle cx="603" cy="339" r="26" fill="url(#gold)"/>
+              <path d="M592 339 l8 9 l16 -20" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <text x="73" y="424" font-size="17" font-weight="800" fill="#8a3e2c">100 файлов, 0 покоя</text>
+              <text x="385" y="424" font-size="17" font-weight="800" fill="#0e6b57">связка отчетов для решения</text>
+            </svg>
           </div>
-          <div class="stat">
-            <div class="stat-label">Что обычно происходит до меня</div>
-            <div class="stat-value">100 таблиц, 5 версий правды и 0 контроля</div>
-            <div class="stat-note">рост, кредиты, нервы, кассовые разрывы</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Что получает собственник</div>
-            <div class="stat-value">одну систему вместо хаоса</div>
-            <div class="stat-note">без иллюзий, но с ясностью</div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-value">20+ лет</div>
+              <div class="stat-label">в корпоративных финансах и смежных задачах</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">1–30</div>
+              <div class="stat-label">юрлиц в структурах, с которыми приходилось работать</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">50 млн → 20 млрд</div>
+              <div class="stat-label">масштабы бизнесов, которые встречались в практике</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">Этапами</div>
+              <div class="stat-label">без долгой боли, с отдельной сдачей каждого этапа</div>
+            </div>
           </div>
         </aside>
       </div>
@@ -656,330 +822,294 @@
     <section id="pain">
       <div class="container">
         <div class="section-head">
-          <div class="section-kicker">Верхние боли</div>
-          <h2>Вот в каких точках бизнес обычно начинает тонуть</h2>
-          <p>Снаружи все выглядит прилично: оборот идет, люди заняты, 1С стоит, таблицы есть. А потом выясняется, что прибыль никто толком не видел, деньги куда-то исчезают, а каждое решение принимается на ощущениях.</p>
+          <div class="kicker">Боли, с которыми обычно приходят</div>
+          <h2>Управленка нужна не потому, что «так правильно». Она нужна, когда бизнес начинает бесить собственника цифрами.</h2>
+          <p>Если коротко: деньги ходят, оборот вроде есть, а реального понимания нет. В этот момент и нужна не теория, а отчетность, которая убирает туман.</p>
         </div>
 
         <div class="grid-3">
           <article class="card pain-card">
-            <h3>Рост есть. Прибыли нет.</h3>
-            <p>Выручка растет, реклама крутится, команда пашет, а в кармане пусто. Это классика бизнеса, который смотрит на оборот и не контролирует маржинальность.</p>
+            <div class="icon-pill">💸</div>
+            <h3>Выручка растет, а прибыль — легенда</h3>
+            <p>Оборот радует только до момента, пока не выясняется, что маржа упала, расходы раздуты, а бизнес живет не на экономике, а на героизме команды.</p>
           </article>
 
           <article class="card pain-card">
-            <h3>Денег нет, хотя “все хорошо”</h3>
-            <p>Пока нет нормального ДДС, кассовый разрыв называется “временной сложностью”. Потом внезапно выясняется, что платить уже нечем.</p>
+            <div class="icon-pill">📉</div>
+            <h3>Денег нет, хотя продажи есть</h3>
+            <p>Когда ДДС собирается вручную и всегда после пожара, кассовый разрыв обнаруживается не заранее, а по факту. Это дорогое удовольствие.</p>
           </article>
 
           <article class="card pain-card">
-            <h3>Система учета напоминает барокко</h3>
-            <p>Одна и та же операция в одном месте называется дивидендами, в другом — перемещением, в третьем — займом, а в четвертом — “мы потом объясним”.</p>
+            <div class="icon-pill">🧩</div>
+            <h3>1С, Excel и банк показывают три разные реальности</h3>
+            <p>Это не автоматизация. Это коллективный фанфик по реальности. Пока цифры не сведены в одну систему, любая уверенность — просто настроение.</p>
           </article>
 
           <article class="card pain-card">
-            <h3>100 таблиц и ни одной правды</h3>
-            <p>Есть Excel, Google Sheets, 1С, банк, CRM, маркетплейсы и еще чей-то “личный файл”. Все красивое. Ничего не сходится.</p>
+            <div class="icon-pill">🏢</div>
+            <h3>Несколько юрлиц, счетов и контуров — общей картины нет</h3>
+            <p>Внутригрупповые движения, деньги в пути, займы, дивиденды, техсчета, маркетплейсы — пока это не названо человеческим языком, контролировать нечего.</p>
           </article>
 
           <article class="card pain-card">
-            <h3>Собственник живет по выписке</h3>
-            <p>Если проблема прямо сейчас не видна в банке, значит, ее как будто нет. Это работает ровно до требования, блокировки, суда или кассовой ямы.</p>
+            <div class="icon-pill">🤯</div>
+            <h3>Купили систему, а получили новый уровень боли</h3>
+            <p>Сначала обещали автоматизацию, потом начались выгрузки, фильтры, API, скрытые ограничения, ручные корректировки и бесконечное «сейчас настроим».</p>
           </article>
 
           <article class="card pain-card">
-            <h3>Красивые отчеты без управления</h3>
-            <p>Дашборд можно нарисовать поверх любого болота. Но если фундамент кривой, автоматизация просто ускоряет хаос.</p>
+            <div class="icon-pill">🧭</div>
+            <h3>Нужна цифра для решения, а не пачка таблиц</h3>
+            <p>Собственнику не нужен музей отчетов. Нужен понятный ответ: где прибыль, где утечка, что можно исправить сейчас и что лучше не трогать.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="bundle">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Почему я продаю именно связку тройки файлов</div>
+          <h2>Один отчет закрывает симптом. Связка ДДС + ОПиУ + Баланс закрывает управление.</h2>
+          <p>Большинству компаний не нужен «финансовый космолет». Нужен минимально достаточный контур, который показывает и деньги, и прибыль, и то, за счет чего бизнес вообще живет.</p>
+        </div>
+
+        <div class="trio-wrap">
+          <div class="panel card">
+            <svg viewBox="0 0 560 420" role="img" aria-label="Связка тройки отчетов">
+              <defs>
+                <linearGradient id="gold2" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#f0b53b"/>
+                  <stop offset="100%" stop-color="#c78000"/>
+                </linearGradient>
+              </defs>
+              <rect x="0" y="0" width="560" height="420" rx="26" fill="#fffaf2"/>
+              <circle cx="280" cy="210" r="72" fill="#121212"/>
+              <text x="239" y="200" font-size="22" font-weight="900" fill="#fff">Одна</text>
+              <text x="226" y="228" font-size="22" font-weight="900" fill="#fff">картина</text>
+
+              <rect x="52" y="58" width="148" height="98" rx="20" fill="#ffffff" stroke="#dfd2bd" stroke-width="2"/>
+              <text x="92" y="95" font-size="24" font-weight="900" fill="#0e6b57">ДДС</text>
+              <text x="72" y="121" font-size="14" font-weight="700" fill="#57606c">Где деньги</text>
+              <text x="72" y="142" font-size="14" font-weight="700" fill="#57606c">и когда разрыв</text>
+
+              <rect x="360" y="58" width="148" height="98" rx="20" fill="#ffffff" stroke="#dfd2bd" stroke-width="2"/>
+              <text x="385" y="95" font-size="24" font-weight="900" fill="#0e6b57">ОПиУ</text>
+              <text x="380" y="121" font-size="14" font-weight="700" fill="#57606c">Где прибыль,</text>
+              <text x="380" y="142" font-size="14" font-weight="700" fill="#57606c">а где иллюзия</text>
+
+              <rect x="206" y="280" width="148" height="98" rx="20" fill="#ffffff" stroke="#dfd2bd" stroke-width="2"/>
+              <text x="221" y="317" font-size="24" font-weight="900" fill="#0e6b57">Баланс</text>
+              <text x="223" y="343" font-size="14" font-weight="700" fill="#57606c">За счет чего</text>
+              <text x="223" y="364" font-size="14" font-weight="700" fill="#57606c">живет бизнес</text>
+
+              <path d="M200 140 C235 158, 238 170, 238 174" stroke="url(#gold2)" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <path d="M360 140 C325 158, 322 170, 322 174" stroke="url(#gold2)" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <path d="M280 280 C280 262, 280 254, 280 248" stroke="url(#gold2)" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+              <circle cx="110" cy="221" r="24" fill="#117a61" opacity="0.12"/>
+              <circle cx="445" cy="236" r="24" fill="#b6543c" opacity="0.12"/>
+              <circle cx="116" cy="222" r="8" fill="#117a61"/>
+              <circle cx="451" cy="236" r="8" fill="#b6543c"/>
+            </svg>
+          </div>
+
+          <div>
+            <div class="grid-3">
+              <article class="card report-card">
+                <h3>Только ДДС?</h3>
+                <p>Вы будете видеть деньги, но не поймете, это прибыльный бизнес или просто красиво движется к следующей яме.</p>
+              </article>
+
+              <article class="card report-card">
+                <h3>Только ОПиУ?</h3>
+                <p>Можно получить бумажную прибыль и все равно остаться без денег на счете. Собственнику от этого не легче.</p>
+              </article>
+
+              <article class="card report-card">
+                <h3>Только Баланс?</h3>
+                <p>Он покажет состояние, но не даст динамику движения денег и не ответит, где именно сейчас болит экономика.</p>
+              </article>
+            </div>
+
+            <div class="bundle-card">
+              <strong>Связка тройки файлов — это и есть минимально достаточная управленка.</strong>
+              <p>ДДС отвечает за деньги. ОПиУ — за прибыль. Баланс — за структуру и контрольную точку. Вместе они перестают спорить друг с другом и начинают объяснять бизнес.</p>
+            </div>
+
+            <div class="trio-note">Сначала собираем реальность. Потом автоматизируем ручной труд. А уже после этого имеет смысл строить сложные модели, юниты и красивые графики.</div>
+          </div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <div class="quote-box">
-          <div class="quote-title">Суть в одной фразе</div>
-          <blockquote>Пока одна строка не сошлась в ноль, вы не управляете бизнесом. Вы просто красиво пересказываете хаос.</blockquote>
+        <div class="dark-band">
+          <div class="quote-line">Добро пожаловать в реальность.</div>
+          <p>Если у вас уже есть бизнес — система у вас уже есть. Ее надо проявить и собрать в понятную связку, а не ломать все очередным внедрением ради внедрения.</p>
         </div>
       </div>
     </section>
 
-    <section id="why">
+    <section id="objections">
       <div class="container">
         <div class="section-head">
-          <div class="section-kicker">Почему не один отчет</div>
-          <h2>Один файл не спасет. Работает именно связка тройки</h2>
-          <p>Отдельный ДДС покажет симптомы. Отдельный ОПиУ даст картинку прибыли. Отдельный Баланс проверит, не врете ли вы сами себе. Но реальное управление начинается, когда эти три отчета собраны вместе и математически связаны.</p>
+          <div class="kicker">Возражения, которые я закрываю сразу</div>
+          <h2>Нормальные вопросы собственника звучат не как «хочу управленку», а как «почему это снова должно быть сложно?»</h2>
+          <p>Поэтому на сайте не надо делать вид, что у клиента нет сомнений. Они есть. И их надо закрывать нормальным человеческим языком.</p>
         </div>
 
         <div class="grid-3">
-          <article class="card">
-            <h3>ДДС</h3>
-            <p>Показывает, куда реально уходят деньги, где кассовые разрывы и какие платежи уже нельзя объяснять словом “потом”.</p>
+          <article class="card objection-card">
+            <div class="objection-label">Возражение</div>
+            <h3>У нас уже есть бухгалтерия и 1С</h3>
+            <p>Отлично. Значит, есть из чего собирать реальность. Но бухгалтерский, налоговый и управленческий учет — разные миры. Я не строю финансовый на бухгалтерском и не подменяю решения отчетами для налоговой.</p>
           </article>
-          <article class="card">
-            <h3>ОПиУ</h3>
-            <p>Показывает прибыльность бизнеса, направлений, клиентов, продуктов. Где экономика работает, а где только шум и оборот.</p>
-          </article>
-          <article class="card">
-            <h3>Баланс</h3>
-            <p>Показывает, что у бизнеса есть, кому он должен, что реально принадлежит компании и где ломается логика учета.</p>
-          </article>
-        </div>
 
-        <div class="grid-2" style="margin-top:18px;">
-          <article class="card">
-            <h3>Что происходит без связки</h3>
-            <ul class="list">
-              <li>Прибыль не совпадает с деньгами</li>
-              <li>Собственник путает оборот с результатом</li>
-              <li>Ошибки в учете прячутся под красивыми формами</li>
-              <li>Решения принимаются по интуитивной карте выживания</li>
-            </ul>
+          <article class="card objection-card">
+            <div class="objection-label">Возражение</div>
+            <h3>Нам не нужна большая система</h3>
+            <p>И не надо. Я продаю не тяжелый проект на полгода, а минимально достаточную связку тройки файлов, с которой можно начать видеть бизнес уже сейчас.</p>
           </article>
-          <article class="card">
-            <h3>Что происходит со связкой</h3>
-            <ul class="list">
-              <li>Появляется одна логика вместо пяти версий реальности</li>
-              <li>Можно проверить себя контрольными суммами</li>
-              <li>Виден реальный результат, а не настроение собственника</li>
-              <li>Становится понятно, где рост, где дыра, где самообман</li>
-            </ul>
+
+          <article class="card objection-card">
+            <div class="objection-label">Возражение</div>
+            <h3>Это, наверное, будет дорого</h3>
+            <p>Дорого — это когда вы берете кредит на плохую экономику, не видите кассовый разрыв, держите лишние юрлица по привычке и месяцами гадаете на выписке.</p>
+          </article>
+
+          <article class="card objection-card">
+            <div class="objection-label">Возражение</div>
+            <h3>Это, наверное, будет долго</h3>
+            <p>Работа идет этапами. Каждый этап сдаю отдельно. Не понравился результат — работа прекращается, никто никому ничего не должен. Без зависания в бесконечной стройке.</p>
+          </article>
+
+          <article class="card objection-card">
+            <div class="objection-label">Возражение</div>
+            <h3>У нас NDA, кейсы нельзя показать</h3>
+            <p>Нормально. Я и не строю доверие на чужой кухне. Показываю архитектуру проблем, логику сборки и результаты без названий. NDA — не препятствие, а обычная рабочая среда.</p>
+          </article>
+
+          <article class="card objection-card">
+            <div class="objection-label">Возражение</div>
+            <h3>У нас слишком сложный контур</h3>
+            <p>Сложность — это рабочий материал. Несколько юрлиц, счета, маркетплейсы, ручные реестры, свои учетные системы, внутригрупповые движения — с этим как раз и приходят.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="container grid-2">
-        <article class="card illus-card">
-          <div class="illus-wrap">
-            <svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема хаоса в отчетности">
-              <defs>
-                <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#fff7ed"/>
-                  <stop offset="100%" stop-color="#fee2e2"/>
-                </linearGradient>
-              </defs>
-              <rect width="900" height="520" fill="url(#bg1)"/>
-              <rect x="60" y="50" rx="24" ry="24" width="220" height="110" fill="#ffffff" stroke="#e2e8f0" stroke-width="3"/>
-              <rect x="340" y="70" rx="24" ry="24" width="220" height="110" fill="#ffffff" stroke="#e2e8f0" stroke-width="3"/>
-              <rect x="620" y="55" rx="24" ry="24" width="220" height="110" fill="#ffffff" stroke="#e2e8f0" stroke-width="3"/>
-              <rect x="145" y="235" rx="24" ry="24" width="220" height="110" fill="#ffffff" stroke="#e2e8f0" stroke-width="3"/>
-              <rect x="520" y="245" rx="24" ry="24" width="220" height="110" fill="#ffffff" stroke="#e2e8f0" stroke-width="3"/>
-
-              <text x="90" y="100" font-size="32" font-family="Inter, sans-serif" font-weight="800" fill="#0f172a">Банк</text>
-              <text x="90" y="138" font-size="22" font-family="Inter, sans-serif" fill="#475569">выписка</text>
-
-              <text x="380" y="120" font-size="32" font-family="Inter, sans-serif" font-weight="800" fill="#0f172a">1С</text>
-              <text x="380" y="158" font-size="22" font-family="Inter, sans-serif" fill="#475569">живет своей жизнью</text>
-
-              <text x="650" y="105" font-size="28" font-family="Inter, sans-serif" font-weight="800" fill="#0f172a">Табличка</text>
-              <text x="650" y="142" font-size="22" font-family="Inter, sans-serif" fill="#475569">от менеджера</text>
-
-              <text x="175" y="280" font-size="28" font-family="Inter, sans-serif" font-weight="800" fill="#0f172a">CRM</text>
-              <text x="175" y="316" font-size="22" font-family="Inter, sans-serif" fill="#475569">что-то знает</text>
-
-              <text x="550" y="290" font-size="28" font-family="Inter, sans-serif" font-weight="800" fill="#0f172a">Маркетплейсы</text>
-              <text x="550" y="326" font-size="22" font-family="Inter, sans-serif" fill="#475569">еще одна реальность</text>
-
-              <path d="M280 120 C320 120, 310 125, 340 125" stroke="#dc2626" stroke-width="5" fill="none" stroke-dasharray="10 10"/>
-              <path d="M560 120 C595 120, 590 112, 620 112" stroke="#dc2626" stroke-width="5" fill="none" stroke-dasharray="10 10"/>
-              <path d="M250 160 C240 210, 250 215, 250 235" stroke="#dc2626" stroke-width="5" fill="none" stroke-dasharray="10 10"/>
-              <path d="M560 180 C600 210, 620 220, 630 245" stroke="#dc2626" stroke-width="5" fill="none" stroke-dasharray="10 10"/>
-              <text x="290" y="445" font-size="42" font-family="Inter, sans-serif" font-weight="900" fill="#991b1b">5 версий правды</text>
-            </svg>
-          </div>
-          <div class="illus-caption">
-            <h3>До внедрения</h3>
-            <p>Каждый источник что-то знает. Вместе они создают не систему, а коллективный психоз с печатями.</p>
-          </div>
-        </article>
-
-        <article class="card illus-card">
-          <div class="illus-wrap">
-            <svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема связки тройки отчетов">
-              <defs>
-                <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#eff6ff"/>
-                  <stop offset="100%" stop-color="#ecfeff"/>
-                </linearGradient>
-              </defs>
-              <rect width="900" height="520" fill="url(#bg2)"/>
-              <circle cx="240" cy="180" r="95" fill="#ffffff" stroke="#93c5fd" stroke-width="5"/>
-              <circle cx="450" cy="320" r="95" fill="#ffffff" stroke="#86efac" stroke-width="5"/>
-              <circle cx="660" cy="180" r="95" fill="#ffffff" stroke="#fcd34d" stroke-width="5"/>
-
-              <text x="196" y="175" font-size="40" font-family="Inter, sans-serif" font-weight="900" fill="#0f172a">ДДС</text>
-              <text x="169" y="212" font-size="22" font-family="Inter, sans-serif" fill="#475569">деньги и касса</text>
-
-              <text x="392" y="315" font-size="38" font-family="Inter, sans-serif" font-weight="900" fill="#0f172a">ОПиУ</text>
-              <text x="360" y="352" font-size="22" font-family="Inter, sans-serif" fill="#475569">прибыль и маржа</text>
-
-              <text x="583" y="175" font-size="34" font-family="Inter, sans-serif" font-weight="900" fill="#0f172a">Баланс</text>
-              <text x="582" y="212" font-size="22" font-family="Inter, sans-serif" fill="#475569">активы и долги</text>
-
-              <path d="M320 230 C360 255, 360 255, 395 275" stroke="#2563eb" stroke-width="6" fill="none"/>
-              <path d="M505 275 C545 250, 565 240, 600 230" stroke="#16a34a" stroke-width="6" fill="none"/>
-              <path d="M330 145 C390 105, 525 105, 585 145" stroke="#f59e0b" stroke-width="6" fill="none"/>
-
-              <rect x="250" y="405" rx="22" ry="22" width="400" height="62" fill="#0f172a"/>
-              <text x="302" y="445" font-size="30" font-family="Inter, sans-serif" font-weight="900" fill="#ffffff">одна система вместо хаоса</text>
-            </svg>
-          </div>
-          <div class="illus-caption">
-            <h3>После внедрения</h3>
-            <p>Не магия. Просто три отчета, одна логика, контрольные суммы и прекращение самообмана.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section>
       <div class="container">
         <div class="section-head">
-          <div class="section-kicker">Возражения</div>
-          <h2>Что обычно думают до начала работы — и почему это не так</h2>
-          <p>Я не продаю сказку про “сейчас все быстро автоматизируем”. Я продаю неприятную, но полезную вещь: ясность.</p>
+          <div class="kicker">Что вы получаете на выходе</div>
+          <h2>Не просто файлы. А спокойствие в тех местах, где раньше был туман.</h2>
         </div>
 
-        <div class="grid-2">
+        <div class="grid-4">
           <article class="card">
-            <h3>“У нас слишком много NDA”</h3>
-            <p>Именно поэтому я не выкладываю половину реальных кейсов с названиями. Но масштабы опыта есть: компании на 50 млн, 300 млн, 2 млрд и 20 млрд ₽, структуры от одного до 30 юрлиц.</p>
+            <h3>Реальную прибыль</h3>
+            <p>Не «ну примерно», не «по ощущениям», а цифру, по которой можно принимать решение.</p>
           </article>
-
           <article class="card">
-            <h3>“У нас слишком сложный бизнес”</h3>
-            <p>Обычно за этой фразой скрывается не уникальность, а хаос. Сложность — это когда много контуров. Проблема — когда никто не может показать, где тут прибыль человеческим языком.</p>
+            <h3>Видимость денег вперед</h3>
+            <p>Понимание, где кассовый разрыв, что давит на ликвидность и какие платежи нельзя игнорировать.</p>
           </article>
-
           <article class="card">
-            <h3>“У нас уже есть 1С / ERP / куча сервисов”</h3>
-            <p>Прекрасно. Сами по себе сервисы не создают управленку. Они просто быстрее производят несогласованные данные, если логика не собрана.</p>
+            <h3>Одну управленческую реальность</h3>
+            <p>Когда ДДС, ОПиУ и баланс перестают спорить, а начинают объяснять, что происходит.</p>
           </article>
-
           <article class="card">
-            <h3>“Нам нужен только один отчет”</h3>
-            <p>Нет. Один отчет закрывает один симптом. Реальный контроль появляется, когда ДДС, ОПиУ и Баланс начинают подтверждать друг друга.</p>
-          </article>
-
-          <article class="card">
-            <h3>“Наверное, это будет очень долго и больно”</h3>
-            <p>Работа идет этапами. Сдали этап — смотрим, идем дальше или нет. Не понравилось — останавливаемся. Никто никому ничего не должен.</p>
-          </article>
-
-          <article class="card">
-            <h3>“Мы сами потом разберемся”</h3>
-            <p><span class="danger">Потом</span> обычно приезжает в сопровождении требований, блокировок, кредиторов или внезапного понимания, что два года вы смотрели не на те цифры.</p>
+            <h3>Базу для роста и автоматизации</h3>
+            <p>Сначала контрольные точки. Потом уже автоматизация, план-факт, детализация, регламенты и прочее красивое.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="format">
+    <section id="process">
       <div class="container">
         <div class="section-head">
-          <div class="section-kicker">Как проходит работа</div>
-          <h2>Поэтапно. Без магии. Без обязательства терпеть друг друга вечно.</h2>
-          <p>Я не продаю “вечное сопровождение любой ценой”. Работа идет шагами. Каждый этап можно остановить, если вы понимаете, что дальше идти не хотите.</p>
+          <div class="kicker">Как проходит работа</div>
+          <h2>Без магии. Без месячного исчезновения в недрах проекта. С понятной логикой и этапами.</h2>
+          <p>Ниже — формат, который хорошо работает и для малого бизнеса, и для более сложных контуров.</p>
         </div>
 
         <div class="steps">
           <article class="card step">
             <h3>Бесплатная консультация</h3>
-            <p>Смотрим на вашу ситуацию. Понимаем, где именно боль: прибыль не видна, касса хромает, метод начисления отсутствует, внутри пять версий реальности или бизнес уже живет на выживании.</p>
+            <p>Смотрим, что болит: деньги, прибыль, 1С, Excel, маркетплейсы, несколько юрлиц, ручная сборка, кассовые разрывы, странные цифры в отчетах.</p>
           </article>
 
           <article class="card step">
             <h3>Экспресс-диагностика</h3>
-            <p>На выходе вы получаете смету и понимание, что делать дальше. Если идем в работу, стоимость диагностики входит в итоговую цену.</p>
+            <p>Разбираю исходники, смотрю, где и что врет, какие данные реально есть, а какие только притворяются учетом. На выходе — смета и дорожная карта дальнейшей работы.</p>
           </article>
 
           <article class="card step">
-            <h3>Сборка отчетности</h3>
-            <p>Собираем связку: ДДС, ОПиУ, Баланс. Настраиваем структуру, формулы, сверки, контрольные суммы, логику источников, проверяем, где у вас искажается реальность.</p>
+            <h3>Базовая сборка тройки</h3>
+            <p>Собираем ДДС, ОПиУ и баланс, равняем остатки, ставим контрольные суммы, получаем верхний уровень финансовой аналитики, на который уже можно опираться.</p>
           </article>
 
           <article class="card step">
-            <h3>Сдача этапа</h3>
-            <p>Каждый этап сдается отдельно. Если на этом этапе вам не нравится результат или формат — работа прекращается. Без драматургии, взаимных мучений и токсичной привязки.</p>
-          </article>
-
-          <article class="card step">
-            <h3>Доработка и углубление</h3>
-            <p>После базовой тройки можно идти глубже: метод начисления, план-факт, аналитика по направлениям, SKU, клиентам, юнитам, маркетплейсам, холдингу и контурам.</p>
+            <h3>Углубление и передача</h3>
+            <p>Если нужно — идем в метод начисления, регистры продаж и покупок, план-факт, детализацию по направлениям, автоматизацию и поддержку внутреннего сотрудника.</p>
           </article>
         </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-kicker">Кому это подходит</div>
-          <h2>Когда уже пора, а не “еще немного поживем в отрицании”</h2>
-          <p>Мой формат подходит не всем. Он подходит тем, кто хочет видеть правду о своем бизнесе и использовать ее для управления.</p>
-        </div>
-
-        <div class="grid-4 proof-grid">
-          <article class="card">
-            <h3>Собственникам</h3>
-            <p>Которые хотят знать, где прибыль, а не угадывать ее по выражению лица после налогового периода.</p>
-          </article>
-          <article class="card">
-            <h3>Растущим компаниям</h3>
-            <p>Где оборот уже не маленький, а управление до сих пор идет через куски таблиц и героизм сотрудников.</p>
-          </article>
-          <article class="card">
-            <h3>Бизнесу с несколькими контурами</h3>
-            <p>Когда есть несколько юрлиц, ИП, направлений, площадок, маркетплейсов или внутренних потоков, которые никто нормально не сводил.</p>
-          </article>
-          <article class="card">
-            <h3>Тем, кто устал от схемок</h3>
-            <p>Когда уже хочется не “перекинуть”, а построить взрослую систему, в которой прибыль возникает из экономики, а не из легенд.</p>
-          </article>
+        <div class="strip">
+          <div class="chip">Сдал этап — идем дальше</div>
+          <div class="chip">Не понравилось — останавливаемся</div>
+          <div class="chip">Без обязательства тащить проект любой ценой</div>
+          <div class="chip">Можно стартовать с малого контура</div>
         </div>
       </div>
     </section>
 
     <section id="pricing">
       <div class="container">
-        <div class="pricing-box">
-          <div class="section-head narrow" style="margin-bottom:18px;">
-            <div class="section-kicker">Стоимость</div>
-            <h2>Прозрачная логика цены. Без тумана.</h2>
-            <p>Сначала разбираемся. Потом считаем. Потом делаем. Цена зависит от периода, количества счетов и того, нужен ли учет продаж/покупок по методу начисления.</p>
-          </div>
+        <div class="section-head">
+          <div class="kicker">Цены без тумана</div>
+          <h2>Смета точнее считается после экспресс-диагностики, но ориентир по входу можно понять сразу.</h2>
+          <p>Я не люблю историю «цена после созвона» без хотя бы базовой логики. Поэтому вот нормальный ориентир.</p>
+        </div>
 
-          <div class="pricing-top">
-            <div>
-              <h3>Что по этапам</h3>
-              <ul class="list">
-                <li><strong>Консультация</strong> — бесплатно</li>
-                <li><strong>Экспресс-диагностика</strong> — дает смету дальнейшей работы и входит в итоговую цену, если идем дальше</li>
-                <li><strong>Формирование отчета</strong> — от 25 000 ₽ за месяц или квартал</li>
-                <li><strong>Каждый расчетный счет</strong> — + 5 000 ₽</li>
-                <li><strong>Регистр продаж и покупок / метод начисления</strong> — от 5 000 до 50 000 ₽</li>
-              </ul>
-            </div>
+        <div class="grid-3">
+          <article class="card price-card">
+            <h3>Консультация</h3>
+            <strong>0 ₽</strong>
+            <p>Первичный разбор ситуации: поймем, есть ли вообще задача на управленку и какой контур нужен.</p>
+          </article>
 
-            <div class="price-note">
-              Цена зависит от масштаба и реальной сложности. Не “от ощущения клиента”, а от количества контуров, периода и логики учета.
-            </div>
-          </div>
+          <article class="card price-card">
+            <h3>Экспресс-диагностика</h3>
+            <strong>По ситуации</strong>
+            <p>Результат — смета и дорожная карта. Если идем в проект дальше, стоимость диагностики входит в итоговую цену.</p>
+          </article>
 
-          <div class="calc-box">
-            <strong>Пример расчета</strong>
-            <div class="formula">
-Год + 3 расчетных счета + продажи методом начисления = 115 000 ₽
-            </div>
-            <div class="example">То есть цена собирается из понятных частей, а не берется из воздуха.</div>
-          </div>
+          <article class="card price-card">
+            <h3>Формирование тройки отчетов</h3>
+            <strong>от 25 000 ₽</strong>
+            <p>Базовый ориентир за месяц или квартал. Финальная сумма зависит от числа счетов, метода учета и сложности контура.</p>
+          </article>
+        </div>
 
-          <div class="calc-box">
-            <strong>Почему это честно</strong>
-            <p>Вы не покупаете “надежду на красивый файл”. Вы покупаете последовательную сборку системы, где каждый этап можно проверить и остановить, если не устраивает результат.</p>
+        <div class="grid-2" style="margin-top:18px; align-items:start;">
+          <article class="card">
+            <h3>Что влияет на цену</h3>
+            <ul class="checklist">
+              <li>Каждый расчетный счет: <strong>+ 5 000 ₽</strong></li>
+              <li>Регистр продаж и покупок при методе начисления: <strong>от 5 000 ₽ до 50 000 ₽</strong></li>
+              <li>Для бизнеса с выручкой от 800 млн в год регистр по начислению может стоить <strong>50 000 ₽</strong></li>
+              <li>Годовая сборка, сложные контуры и несколько юрлиц считаются после диагностики</li>
+            </ul>
+          </article>
+
+          <div class="price-note">
+            Пример для ориентира: <strong>год, 3 расчетных счета и продажи методом начисления — 115 000 ₽.</strong><br><br>
+            Для малого бизнеса делаю приемлемый вход, особенно если у вас внутри есть человек, который потом сможет поддерживать систему.
           </div>
         </div>
       </div>
@@ -987,97 +1117,139 @@
 
     <section>
       <div class="container">
-        <div class="section-head">
-          <div class="section-kicker">Фактология без лишних имен</div>
-          <h2>NDA уважаю. Масштаб опыта не прячу.</h2>
-          <p>Да, значительная часть работы под NDA. Но это не отменяет главного: я видела компании очень разного масштаба и очень разной степени управленческого безумия.</p>
-        </div>
+        <div class="proof-grid">
+          <div>
+            <div class="section-head" style="margin-bottom:18px;">
+              <div class="kicker">NDA — это нормально</div>
+              <h2>Поэтому я говорю не именами, а масштабом и типом проблем.</h2>
+              <p>В практике были компании и контуры с разным размером, структурой и уровнем бардака. Это и есть причина, почему я не пугаюсь сложных конфигураций и не обещаю волшебную кнопку.</p>
+            </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>По размеру бизнеса</h3>
-            <p>Работала с компаниями на 50 млн, 300 млн, 2 млрд и 20 млрд ₽. Малый, средний и большой бизнес — это разная степень сложности, но одинаковая потребность в правде.</p>
-          </article>
-          <article class="card">
-            <h3>По структуре</h3>
-            <p>Контуры от 1 до 30 юридических лиц. Когда кто-то говорит “у нас слишком много сущностей”, я обычно уже видела и хуже.</p>
-          </article>
-          <article class="card">
-            <h3>По типу хаоса</h3>
-            <p>Маркетплейсы, производство, услуги, логистика, проектка, холдинги, ручные перемещения, серые зоны, кривой учет, сильный собственник, слабая система — ничего нового.</p>
-          </article>
+            <div class="proof-list">
+              <div class="proof-item">Контуры от 50 млн, 300 млн, 2 млрд и 20 млрд+</div>
+              <div class="proof-item">От одного юрлица до структур на 30 юрлиц</div>
+              <div class="proof-item">Кассовые разрывы, дробление, 1С «не считает», маркетплейсы, свои учетные системы, внутригрупповые хвосты</div>
+              <div class="proof-item">Экономическое и юридическое образование, опыт финансового директора, главбуха, международки, ВНП и банкротств</div>
+            </div>
+
+            <div class="strip">
+              <div class="chip">Маркетплейсы</div>
+              <div class="chip">Производство</div>
+              <div class="chip">Логистика</div>
+              <div class="chip">Розница</div>
+              <div class="chip">Услуги</div>
+              <div class="chip">Группы компаний</div>
+            </div>
+          </div>
+
+          <div class="panel card">
+            <h3>Типовые результаты из практики — без названий, потому что NDA</h3>
+            <div class="grid-1" style="display:grid; gap:14px; margin-top:16px;">
+              <article class="case-card card" style="padding:20px;">
+                <h3 style="font-size:20px;">Кризисный e-commerce проект</h3>
+                <p>После того как экономика наконец стала видна в управленке, сократили неэффективные расходы на рекламу и ключевой канал вырос более чем в 2 раза.</p>
+              </article>
+
+              <article class="case-card card" style="padding:20px;">
+                <h3 style="font-size:20px;">Рост без контроля по марже</h3>
+                <p>После пересмотра затрат и настройки контроля над маржинальностью прибыль выросла на 25% за квартал. До этого компания росла оборотом, а не результатом.</p>
+              </article>
+
+              <article class="case-card card" style="padding:20px;">
+                <h3 style="font-size:20px;">Финансовая неразбериха на этапе роста</h3>
+                <p>Когда в бизнесе наконец появилась одна понятная картина цифр, один клиент закрыл линию овердрафта уже через неделю после разбора.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="container">
-        <div class="cta-box">
+        <div class="panel cta">
           <div>
-            <div class="section-kicker">Финальный экран</div>
-            <h2>Если хотите наконец увидеть, что у вас происходит с деньгами — пишите</h2>
-            <p>Не обещаю “волшебный дашборд за вечер”. Обещаю честно собрать картину бизнеса, чтобы вам было на что опираться, кроме надежды, харизмы и чужих слов “ну вроде все нормально”.</p>
+            <div class="kicker">Финальный шаг</div>
+            <h2>Хотите перестать гадать на выписке?</h2>
+            <p>Напишите мне. Бесплатно разберем вашу ситуацию, поймем, нужен ли вам только стартовый контур или полноценная связка тройки файлов, и посчитаем смету без тумана.</p>
+            <p>Подходит, если у вас сейчас: рост без прибыли, кассовые разрывы, несколько счетов, 1С+Excel+банк в вечном споре, маркетплейсы, странные цифры, ручной ДДС или просто усталость от хаоса.</p>
+
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
               <a class="btn btn-secondary" href="https://max.ru/id7810978256_biz" target="_blank" rel="noopener noreferrer">Написать в Max</a>
-              <a class="btn btn-accent" href="https://promo.okcept.ru/" target="_blank" rel="noopener noreferrer">Смотреть платформу Окцепт</a>
+              <a class="btn btn-secondary" href="https://promo.okcept.ru/" target="_blank" rel="noopener noreferrer">Смотреть платформу Окцепт</a>
             </div>
           </div>
 
           <div class="contact-box">
-            <h3>Контакты</h3>
-            <p><strong>Александра Константиновна К.</strong></p>
-            <p>Санкт-Петербург / онлайн по России</p>
-            <ul>
-              <li>Telegram: <a href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">@international_deal_sp</a></li>
-              <li>Max: <a href="https://max.ru/id7810978256_biz" target="_blank" rel="noopener noreferrer">@international_deal_sp</a></li>
-            </ul>
+            <h3>Контакты и площадки</h3>
+            <p>Александра Константиновна К<br/>Санкт-Петербург / онлайн по России</p>
+
+            <div class="contact-list">
+              <div class="contact-item">Телефон: <a href="tel:+79312681293">+7 931 268-12-93</a></div>
+              <div class="contact-item">Telegram: <a href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">@international_deal_sp</a></div>
+              <div class="contact-item">Telegram-канал: <a href="https://t.me/hack_fin" target="_blank" rel="noopener noreferrer">Лайфхаки финансиста</a></div>
+              <div class="contact-item">Max-канал: <a href="https://max.ru/id7810978256_biz" target="_blank" rel="noopener noreferrer">max.ru/id7810978256_biz</a></div>
+              <div class="contact-item">Zen: <a href="https://dzen.ru/id/5e92b2779ef45f550d34042f" target="_blank" rel="noopener noreferrer">Дзен-канал</a></div>
+              <div class="contact-item">Платформа Okcept: <a href="https://promo.okcept.ru/" target="_blank" rel="noopener noreferrer">promo.okcept.ru</a></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+  
 
     <section>
       <div class="container">
         <div class="section-head">
-          <div class="section-kicker">Где еще меня читать</div>
+          <div class="kicker">Где еще меня читать</div>
           <h2>Все площадки в одном месте</h2>
-          <p>Если хотите сначала посмотреть стиль, тексты и подход — вот основные каналы.</p>
+          <p>Если хотите сначала посмотреть стиль, тексты и подход — вот основные каналы и ссылки.</p>
         </div>
 
         <div class="social-grid">
           <a class="social-link" href="https://t.me/hack_fin" target="_blank" rel="noopener noreferrer">
             <span class="social-label">Telegram</span>
-            <span class="social-name">Канал</span>
-            <span class="social-hint">Лайфхаки финансиста</span>
+            <span class="social-name">Лайфхаки финансиста</span>
+            <span class="social-hint">Основной канал со статьями, кейсами и разбором хаоса</span>
           </a>
 
           <a class="social-link" href="https://max.ru/id7810978256_biz" target="_blank" rel="noopener noreferrer">
             <span class="social-label">Max</span>
-            <span class="social-name">Канал / связь</span>
-            <span class="social-hint">Основной контакт в Max</span>
+            <span class="social-name">Основной контакт</span>
+            <span class="social-hint">Канал и связь в Max</span>
           </a>
 
           <a class="social-link" href="https://dzen.ru/id/5e92b2779ef45f550d34042f" target="_blank" rel="noopener noreferrer">
             <span class="social-label">Zen</span>
             <span class="social-name">Дзен</span>
-            <span class="social-hint">Статьи и разборы</span>
+            <span class="social-hint">Публикации, истории и длинные разборы</span>
           </a>
 
           <a class="social-link" href="https://promo.okcept.ru/" target="_blank" rel="noopener noreferrer">
             <span class="social-label">Сайт</span>
             <span class="social-name">promo.okcept.ru</span>
-            <span class="social-hint">Платформа Окцепт</span>
+            <span class="social-hint">Платформа Okcept</span>
           </a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
     <div class="container footer-box">
-      <div>© 2026 Александра Константиновна К. — управленческая отчетность и финансовая реальность</div>
-      <div>Стиль Питерского финансиста — не для слабаков</div>
+      <div>
+        <div class="tagline">Будьте в игре: стиль Питерского финансиста — не для слабаков.</div>
+        <div>Связка тройки файлов для собственника: ДДС, ОПиУ, Баланс. Телефон: +7 931 268-12-93</div>
+      </div>
+
+      <div class="socials">
+        <a href="https://t.me/hack_fin" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://max.ru/id7810978256_biz" target="_blank" rel="noopener noreferrer">Max</a>
+        <a href="https://dzen.ru/id/5e92b2779ef45f550d34042f" target="_blank" rel="noopener noreferrer">Zen</a>
+        <a href="https://promo.okcept.ru/" target="_blank" rel="noopener noreferrer">Okcept</a>
+      </div>
     </div>
   </footer>
 </body>
