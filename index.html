@@ -215,34 +215,8 @@
       .axiom{grid-template-columns:1fr}
     }
 
-
-    /* Research teaser */
-    .research-feature{display:grid;grid-template-columns:.82fr 1.18fr;overflow:hidden}
-    .research-intro{padding:35px;background:var(--dark);color:#fff}
-    .research-intro .section-kicker{color:#9fc0dc}
-    .research-intro h2{color:#fff;font-size:clamp(29px,3.6vw,42px)}
-    .research-intro p{color:rgba(255,255,255,.74);font-size:16px}
-    .research-meta{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 23px}
-    .research-meta span{padding:7px 10px;border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-md);font-size:12px;font-weight:750;color:rgba(255,255,255,.83)}
-    .research-intro .btn{background:#fff;color:var(--dark)}
-    .research-body{padding:35px;background:#fff}
-    .research-body h3{font-size:25px;margin-bottom:18px}
-    .research-points{display:grid;gap:11px}
-    .research-point{display:grid;grid-template-columns:34px 1fr;gap:13px;align-items:start;padding:14px 15px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--soft)}
-    .research-point b{width:34px;height:34px;display:grid;place-items:center;border-radius:var(--radius-md);background:var(--accent);color:#fff;font-size:12px}
-    .research-point strong{display:block;font-size:15.5px;margin-bottom:3px}
-    .research-point span{display:block;font-size:14px;line-height:1.45;color:var(--muted)}
-    .research-note{margin-top:16px;padding:14px 16px;border-left:3px solid var(--accent);background:var(--accent-soft);font-size:14.5px;color:var(--accent-dark);font-weight:650}
-
-    @media (max-width:1080px){
-      .research-feature{grid-template-columns:1fr}
-    }
-    @media (max-width:760px){
-      .research-intro,.research-body{padding:22px}
-      .research-point{grid-template-columns:1fr}
-    }
-
   </style>
+  <link rel="stylesheet" href="research-components.css" />
 </head>
 <body>
   <header class="topbar">
@@ -258,7 +232,7 @@
         <a href="#timeline">Сроки</a>
         <a href="#proof">Проверки и споры</a>
         <a href="#experience">Опыт</a>
-        <a href="#research">Исследования</a>
+        <a href="research.html">Исследования</a>
       </nav>
       <a class="btn btn-primary" href="#contact">Написать</a>
     </div>
@@ -646,32 +620,24 @@
 
     <section id="research">
       <div class="container">
-        <div class="panel research-feature">
-          <div class="research-intro">
-            <div class="section-kicker">Исследования • право, собственность и экономика</div>
-            <h2>Передел собственности после 2022 года.</h2>
-            <p>Какие российские активы перешли государству, что попало под временное управление, кто действительно ушёл с рынка, была ли волна банкротств — и что можно доказуемо сказать о смертях топ-менеджеров.</p>
-            <div class="research-meta">
-              <span>Срез на 30 августа 2026</span>
-              <span>Открытые источники</span>
-              <span>18–22 минуты</span>
-            </div>
-            <a class="btn" href="peredel-sobstvennosti-rossiya-2022-2026.html">Читать исследование →</a>
+        <div class="research-section-head">
+          <div class="section-head">
+            <div class="section-kicker">Исследования • экономика, право и системы</div>
+            <h2>Разбираю не только цифры бизнеса, но и среду, в которой он принимает решения.</h2>
+            <p>Большие материалы по открытым источникам: с хронологией, границами доказанного и понятным переводом последствий на язык собственника и финансового руководителя.</p>
           </div>
-
-          <div class="research-body">
-            <span class="label">Что внутри</span>
-            <h3>Не один список «национализированных компаний», а пять разных процессов.</h3>
-            <div class="research-points">
-              <div class="research-point"><b>01</b><div><strong>Судебное обращение активов в доход государства</strong><span>Приватизационные, антикоррупционные, стратегические и антиэкстремистские основания.</span></div></div>
-              <div class="research-point"><b>02</b><div><strong>Временное управление иностранными активами</strong><span>Государство получает операционный контроль, но юридический механизм отличается от перехода собственности.</span></div></div>
-              <div class="research-point"><b>03</b><div><strong>Уход иностранных групп и смена владельца</strong><span>Бренд мог исчезнуть, хотя завод, ресторан, команда и денежный поток продолжили существовать.</span></div></div>
-              <div class="research-point"><b>04</b><div><strong>Банкротства и фактический уход с рынка</strong><span>Почему громкие отдельные кейсы не подтверждают тезис о сплошной волне корпоративных банкротств.</span></div></div>
-              <div class="research-point"><b>05</b><div><strong>Смерти и исчезновения руководителей</strong><span>Подтверждённые эпизоды, опубликованные версии и граница, за которой начинаются недоказанные гипотезы.</span></div></div>
-            </div>
-            <div class="research-note">Материал построен так, чтобы судебное основание, сообщение ведомства и версия журналистов не выдавались за один и тот же уровень установленного факта.</div>
-          </div>
+          <a class="btn btn-secondary" href="research.html">Все исследования →</a>
         </div>
+
+        <div class="research-grid" data-research-list data-limit="2"></div>
+        <noscript>
+          <div class="research-noscript">
+            <a href="peredel-sobstvennosti-rossiya-2022-2026.html">Передел собственности после 2022 года</a><br />
+            <a href="marketplaces-ozon-wildberries-usa-russia.html">Ozon и Wildberries сходят с ума?</a>
+          </div>
+        </noscript>
+
+        <div class="research-library-note">Новые материалы добавляются в общую библиотеку: главная показывает последние публикации, а отдельная страница хранит весь архив. Поэтому раздел не придётся заново верстать при каждой статье.</div>
       </div>
     </section>
 
@@ -704,7 +670,7 @@
       </div>
 
       <div class="footer-links">
-        <a href="#research">Исследования</a>
+        <a href="research.html">Исследования</a>
         <a href="https://t.me/international_deal_sp" rel="noopener noreferrer" target="_blank">Telegram</a>
         <a href="https://t.me/hack_fin" rel="noopener noreferrer" target="_blank">ТГ-канал</a>
         <a href="https://max.ru/id7810978256_biz" rel="noopener noreferrer" target="_blank">Max</a>
@@ -725,6 +691,9 @@
       <p>Удалить переписку или переданные данные можно по запросу в том же канале связи.</p>
     </div>
   </dialog>
+
+  <script src="research-data.js"></script>
+  <script src="research-list.js"></script>
 
   <script>
     (() => {

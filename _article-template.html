@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TITLE}} | Hack Finance</title>
+  <meta name="description" content="{{DESCRIPTION}}" />
+  <link rel="canonical" href="https://hack-fin.ru/{{SLUG}}.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <!-- Скопируйте стили и шапку из любой готовой статьи, затем замените поля {{...}}. -->
+  <link rel="stylesheet" href="research-components.css" />
+</head>
+<body>
+  <main>
+    <article>
+      <header>
+        <a href="research.html">Исследования</a>
+        <div>{{CATEGORY}}</div>
+        <h1>{{TITLE}}</h1>
+        <p>{{DESCRIPTION}}</p>
+        <time datetime="{{PUBLISHED_ISO}}">{{PUBLISHED_RU}}</time>
+      </header>
+
+      <section>
+        <h2>{{FIRST_SECTION_TITLE}}</h2>
+        <p>{{ARTICLE_TEXT}}</p>
+      </section>
+
+      <section aria-labelledby="relatedTitle">
+        <h2 id="relatedTitle">Читайте также</h2>
+        <div class="research-grid research-grid--related" data-related-research data-current="{{SLUG}}" data-limit="1"></div>
+      </section>
+    </article>
+  </main>
+  <script src="research-data.js"></script>
+  <script src="research-list.js"></script>
+</body>
+</html>
