@@ -1,889 +1,485 @@
-
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta name="google-site-verification" content="3eFHYFysFR-2SCQRUlmbo7nLdDJEeGX12d21DHr_TT8" />
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
+<meta content="3eFHYFysFR-2SCQRUlmbo7nLdDJEeGX12d21DHr_TT8" name="google-site-verification"/>
+<script type="text/javascript">
     (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
     })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108398430', 'ym');
-
     ym(108398430, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
   </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/108398430" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Точные цифры для решений</title>
-  <meta name="description" content="Собираю точную картину бизнеса за короткое время: когда деньги есть, а прибыли не видно, команда меняется и решения нужно принимать сейчас." />
-  <meta name="keywords" content="финансы для собственника, финансовая ясность, точные цифры, планирование бизнеса, финансовое сопровождение" />
-  <meta property="og:title" content="Точные цифры для решений" />
-  <meta property="og:description" content="Ясность в финансах без лишних слов: точная картина бизнеса, опора для решений и планирования." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#151515" />
-
-  <style>
+<noscript><div><img alt="" src="https://mc.yandex.ru/watch/108398430" style="position:absolute; left:-9999px"/></div></noscript>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Точные цифры для решений — Александра Кашаева</title>
+<meta content="Собираю сложные финансовые контуры в одну проверяемую картину: группы компаний, fintech, международные структуры, ВНП, судебные и банкротные задачи." name="description"/>
+<meta content="Точные цифры для решений" property="og:title"/>
+<meta content="Математика бизнеса не изменилась. Сложнее стали данные. Собираю их в одну проверяемую финансовую картину." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="#0f1720" name="theme-color"/>
+<style>
     :root {
-      --bg: #f6f2ea;
-      --bg-soft: #fbf8f3;
-      --card: rgba(255, 253, 249, 0.96);
-      --text: #161616;
-      --muted: #5d6470;
-      --line: #e3d8c7;
-      --accent: #c68a13;
-      --accent-dark: #8b5b00;
-      --deep: #121212;
-      --success: #0f7a61;
-      --danger: #b6543c;
-      --shadow: 0 18px 42px rgba(21, 21, 21, 0.08);
-      --shadow-soft: 0 10px 24px rgba(21, 21, 21, 0.05);
-      --radius-xl: 30px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --max: 1180px;
+      --bg:#f3f5f7;
+      --card:#ffffff;
+      --soft:#eef2f5;
+      --text:#111827;
+      --muted:#5b6472;
+      --line:#d7dde4;
+      --accent:#1f4b73;
+      --accent-dark:#16344f;
+      --accent-soft:#edf4fa;
+      --dark:#131920;
+      --shadow:0 18px 40px rgba(17,24,39,.06);
+      --radius-xl:10px;
+      --radius-lg:8px;
+      --radius-md:6px;
+      --max:1200px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      line-height: 1.55;
-      background:
-        radial-gradient(circle at top left, rgba(198, 138, 19, 0.10), transparent 26%),
-        radial-gradient(circle at bottom right, rgba(15, 122, 97, 0.08), transparent 24%),
-        var(--bg);
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      line-height:1.6;
+      background:var(--bg);
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(255,255,255,.94);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px);
+    }
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0}
+    .brand{display:inline-flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.02em;font-size:18px}
+    .brand-mark{width:10px;height:10px;border-radius:2px;background:var(--accent);flex:0 0 auto}
+    .brand small{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-top:2px}
+    .nav{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+    .nav a{font-size:14px;font-weight:600;color:var(--muted)}
+    .nav a:hover{color:var(--accent-dark)}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:var(--radius-md);font-weight:700;transition:.18s ease;border:1px solid transparent;cursor:pointer}
+    .btn-primary{background:var(--dark);color:#fff}
+    .btn-secondary{background:#fff;border-color:var(--line);color:var(--text)}
+    .btn:hover{transform:translateY(-1px)}
+
+    main{overflow:hidden}
+    section{padding:42px 0}
+    .hero{padding:44px 0 30px}
+
+    .panel,.card,.tax-panel,.contact-panel{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
     }
 
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
+    .hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+    .hero-person{padding:24px;background:linear-gradient(180deg,#fff,#fafbfd)}
+    .portrait{width:100%;max-width:320px;height:380px;margin:0 auto 18px;overflow:hidden;border-radius:var(--radius-lg);border:1px solid var(--line);background:#e8ebee}
+    .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .person-note{padding-top:16px;border-top:1px solid var(--line)}
+    .person-note strong{display:block;font-size:24px;letter-spacing:-.02em;margin-bottom:8px}
+    .person-note span{display:block;font-size:15px;color:var(--muted);font-weight:600;margin-bottom:14px}
+    .person-meta{display:grid;gap:8px}
+    .person-meta div{font-size:14px;color:var(--muted);padding:10px 12px;background:var(--soft);border:1px solid var(--line);border-radius:var(--radius-md)}
 
-    .container {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
+    .hero-copy{padding:42px}
+    .eyebrow,.section-kicker,.signature,.tag{display:inline-flex;align-items:center;gap:10px;font-weight:700}
+    .eyebrow{padding:8px 12px;border-radius:var(--radius-md);background:var(--accent-soft);color:var(--accent-dark);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+    .section-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-dark);margin-bottom:12px}
+    h1,h2,h3,h4{line-height:1.08;margin:0 0 14px;letter-spacing:-.04em}
+    h1{font-size:clamp(40px,5vw,66px);max-width:12ch}
+    h2{font-size:clamp(30px,4vw,44px)}
+    h3{font-size:24px}
+    h4{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent-dark)}
+    p{margin:0 0 16px;color:var(--muted);font-size:18px}
+    .hero-lead{font-size:21px;max-width:770px}
+    .hero-lead strong{color:var(--text)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .microline{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:15px;color:var(--muted);font-weight:600}
+
+    .stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:20px}
+    .stat{padding:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg)}
+    .stat-value{font-size:28px;font-weight:800;letter-spacing:-.03em;margin-bottom:6px}
+    .stat-label{font-size:14px;color:var(--muted);font-weight:600}
+
+    .dark-band{padding:34px;border:1px solid #202833;border-radius:var(--radius-xl);background:var(--dark);color:#fff;box-shadow:var(--shadow)}
+    .dark-band p{color:rgba(255,255,255,.74);margin-bottom:0;max-width:920px}
+    .quote-line{font-size:clamp(28px,4vw,40px);font-weight:800;line-height:1.1;letter-spacing:-.04em;margin-bottom:12px}
+
+    .section-head{max-width:920px;margin-bottom:24px}
+    .section-head p{max-width:850px}
+
+    .cases{display:grid;gap:18px}
+    .case{padding:0;overflow:hidden}
+    .case-grid{display:grid;grid-template-columns:1.1fr .9fr}
+    .case-main{padding:30px}
+    .case-side{padding:30px;border-left:1px solid var(--line);background:#fbfcfd}
+    .case-number{display:inline-flex;align-items:center;justify-content:center;min-width:94px;height:34px;padding:0 10px;border-radius:var(--radius-md);background:var(--soft);border:1px solid var(--line);color:var(--accent-dark);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+    .case-main h3{font-size:29px;max-width:820px}
+    .case-main p,.case-side p{font-size:17px}
+    .case-side ul{margin:0;padding-left:18px;color:var(--muted)}
+    .case-side li{margin:0 0 10px}
+    .accent-note{padding:14px 16px;border-left:3px solid var(--accent);background:var(--accent-soft);color:var(--accent-dark);font-weight:700;font-size:15px;margin-top:16px}
+
+    .grid-2,.grid-4{display:grid;gap:16px}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .card{padding:24px}
+    .card p{font-size:16px}
+    .label{display:inline-block;margin-bottom:12px;padding:6px 10px;border:1px solid var(--line);background:var(--soft);border-radius:var(--radius-md);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-dark)}
+    .method-card{position:relative}
+    .method-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent)}
+
+    .tax-panel{padding:34px;background:#fff}
+    .tax-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:start}
+    .tax-copy p{font-size:17px}
+    .tax-list{display:grid;gap:10px}
+    .tax-item{padding:14px 16px;border:1px solid var(--line);background:var(--soft);border-radius:var(--radius-md);font-size:15px;color:var(--text);font-weight:600}
+
+    .contact-panel{padding:34px;background:linear-gradient(180deg,#fff,#f9fbfc)}
+    .contact-panel p{max-width:760px}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+    footer{padding:24px 0 48px}
+    .footer-box{display:grid;grid-template-columns:1fr 1fr auto;gap:20px;align-items:start;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+    .footer-meta{display:flex;flex-direction:column;gap:8px}
+    .footer-project{padding:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg)}
+    .footer-project strong{display:block;color:var(--text);margin-bottom:6px}
+    .footer-project a{color:var(--accent-dark);font-weight:800}
+    .footer-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+    .footer-links a,.footer-links button{padding:10px 12px;border-radius:var(--radius-md);background:#fff;border:1px solid var(--line);font:inherit;font-weight:700;color:inherit;cursor:pointer}
+    .footer-links a:hover,.footer-links button:hover{color:var(--accent-dark)}
+
+    .privacy-dialog{width:min(560px,calc(100% - 28px));border:1px solid var(--line);border-radius:var(--radius-lg);padding:0;background:#fff;color:var(--text);box-shadow:0 28px 80px rgba(21,21,21,.18)}
+    .privacy-dialog::backdrop{background:rgba(15,23,32,.45);backdrop-filter:blur(4px)}
+    .privacy-inner{padding:24px}
+    .privacy-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:12px}
+    .privacy-head h3{margin:0;font-size:22px}
+    .privacy-close{width:36px;height:36px;border-radius:var(--radius-md);border:1px solid var(--line);background:#fff;cursor:pointer;font-size:20px;line-height:1}
+    .privacy-dialog p{font-size:15px;margin:0 0 12px;color:var(--muted)}
+    .privacy-dialog p:last-child{margin-bottom:0}
+
+    @media (max-width:1080px){
+      .hero-grid,.case-grid,.tax-grid,.grid-4,.stats-grid{grid-template-columns:1fr 1fr}
+      .hero-grid{grid-template-columns:1fr}
+      .case-grid,.tax-grid{grid-template-columns:1fr}
+      .case-side{border-left:0;border-top:1px solid var(--line)}
     }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(14px);
-      background: rgba(246, 242, 234, 0.9);
-      border-bottom: 1px solid rgba(227, 216, 199, 0.9);
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 0;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      font-size: 18px;
-    }
-
-    .brand-mark {
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      background: linear-gradient(180deg, #f2bb34, #c78200);
-      box-shadow: 0 0 0 6px rgba(198, 138, 19, 0.12);
-      flex: 0 0 auto;
-    }
-
-    .brand small {
-      display: block;
-      font-size: 11px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 800;
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .nav a {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--muted);
-    }
-
-    .nav a:hover { color: var(--accent-dark); }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 20px;
-      border-radius: 16px;
-      font-weight: 800;
-      transition: 0.2s ease;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: linear-gradient(180deg, var(--accent), #af7300);
-      color: #fff;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .btn-primary:hover,
-    .btn-secondary:hover { transform: translateY(-1px); }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.76);
-      border-color: var(--line);
-      color: var(--text);
-    }
-
-    main { overflow: hidden; }
-    section { padding: 34px 0; }
-    .hero { padding: 48px 0 24px; }
-
-    .hero-grid,
-    .grid-2,
-    .grid-3,
-    .grid-4,
-    .price-grid,
-    .cta-grid,
-    .expert-grid,
-    .stats-grid,
-    .contact-list,
-    .hero-points {
-      display: grid;
-      gap: 16px;
-    }
-
-    .hero-grid { grid-template-columns: 1.06fr 0.94fr; gap: 24px; }
-    .grid-2,
-    .cta-grid,
-    .expert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid-3,
-    .price-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .hero-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .panel,
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-copy { padding: 38px; }
-    .hero-side { padding: 18px; display: flex; flex-direction: column; gap: 16px; }
-    .card,
-    .cta-box,
-    .contact-box,
-    .expert-copy { padding: 26px; }
-
-    .eyebrow,
-    .signature,
-    .section-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-    }
-
-    .eyebrow,
-    .signature {
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(198, 138, 19, 0.12);
-      color: var(--accent-dark);
-      font-size: 13px;
-      margin-bottom: 18px;
-    }
-
-    .section-kicker {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent-dark);
-      margin-bottom: 10px;
-    }
-
-    h1, h2, h3 {
-      line-height: 1.04;
-      margin: 0 0 14px;
-      letter-spacing: -0.045em;
-    }
-
-    h1 { font-size: clamp(38px, 5vw, 62px); max-width: 8.8ch; }
-    h2 { font-size: clamp(30px, 4vw, 44px); }
-    h3 { font-size: 22px; }
-
-    p {
-      margin: 0 0 16px;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .hero-lead {
-      font-size: 21px;
-      max-width: 760px;
-      margin-bottom: 0;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .point,
-    .stat,
-    .mini-note {
-      padding: 16px 18px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, #fff, #faf5ee);
-    }
-
-    .point {
-      font-size: 15px;
-      font-weight: 700;
-      color: #272727;
-    }
-
-    .stat-value {
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      margin-bottom: 6px;
-    }
-
-    .stat-label {
-      font-size: 14px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .section-head {
-      max-width: 820px;
-      margin-bottom: 24px;
-    }
-
-    .icon {
-      width: 44px;
-      height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 14px;
-      background: rgba(21,21,21,0.06);
-      margin-bottom: 14px;
-      font-size: 18px;
-    }
-
-    .card p,
-    .contact-box p,
-    .expert-copy p,
-    .price-card p { font-size: 16px; }
-
-    .illustration-box {
-      padding: 18px;
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, #fff, #f8f2e8);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
-    }
-
-    .dark-band {
-      padding: 30px;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(140deg, #121212, #1c1c1c 56%, #312614);
-      color: rgba(255,255,255,0.94);
-      box-shadow: var(--shadow);
-    }
-
-    .dark-band p {
-      color: rgba(255,255,255,0.78);
-      margin-bottom: 0;
-    }
-
-    .quote-line {
-      font-size: clamp(28px, 4vw, 40px);
-      font-weight: 900;
-      line-height: 1.06;
-      letter-spacing: -0.04em;
-      margin-bottom: 12px;
-    }
-
-    .steps {
-      display: grid;
-      gap: 16px;
-      counter-reset: step;
-    }
-
-    .step {
-      position: relative;
-      padding: 24px 24px 24px 82px;
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 24px;
-      top: 22px;
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: linear-gradient(180deg, #f2bb34, #c78200);
-      color: #fff;
-      font-weight: 900;
-      box-shadow: 0 10px 24px rgba(198,138,19,0.28);
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .chip {
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.72);
-      font-size: 13px;
-      font-weight: 800;
-      color: #282828;
-    }
-
-    .price-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-
-    .price-card strong {
-      display: block;
-      font-size: 30px;
-      line-height: 1;
-      letter-spacing: -0.03em;
-      margin: 10px 0 12px;
-    }
-
-    .price-footnote {
-      margin-top: 14px;
-      font-size: 14px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .note-box {
-      padding: 20px 22px;
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(182,84,60,0.18);
-      background: linear-gradient(180deg, rgba(182,84,60,0.08), rgba(182,84,60,0.03));
-      color: #5b2f25;
-      font-weight: 700;
-      margin-top: 18px;
-    }
-
-    .note-box p {
-      color: #5b2f25;
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .contact-box {
-      background: linear-gradient(160deg, #141414, #252525 66%, #392d18);
-      color: #fff;
-      box-shadow: var(--shadow);
-      border-radius: var(--radius-lg);
-    }
-
-    .contact-box p,
-    .contact-box a { color: rgba(255,255,255,0.82); }
-
-    .contact-item {
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
-      font-weight: 700;
-    }
-
-    .expert-photo {
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      background: #ece7df;
-      min-height: 100%;
-    }
-
-    .expert-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    footer { padding: 24px 0 48px; }
-
-    .footer-box {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      padding-top: 22px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .footer-links a {
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid var(--line);
-      font-weight: 700;
-    }
-
-    @media (max-width: 1100px) {
-      .hero-grid,
-      .grid-4,
-      .grid-3,
-      .grid-2,
-      .price-grid,
-      .cta-grid,
-      .expert-grid,
-      .stats-grid,
-      .hero-points {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .nav { display: none; }
-      .hero { padding-top: 34px; }
-      .hero-copy,
-      .hero-side,
-      .card,
-      .cta-box,
-      .contact-box,
-      .expert-copy,
-      .dark-band { padding: 22px; }
-      h1 { max-width: none; font-size: clamp(34px, 10vw, 48px); }
-      p { font-size: 16px; }
-      .hero-lead { font-size: 18px; }
-      .topbar-inner { gap: 10px; }
-      .brand { font-size: 16px; }
-      .step { padding: 74px 22px 22px; }
-      .step::before { left: 22px; top: 20px; }
+    @media (max-width:760px){
+      .nav{display:none}
+      .hero{padding-top:34px}
+      .hero-copy,.hero-person,.card,.case-main,.case-side,.tax-panel,.contact-panel{padding:22px}
+      .container{width:min(var(--max),calc(100% - 24px))}
+      h1{max-width:none;font-size:clamp(36px,11vw,50px)}
+      p,.hero-lead{font-size:17px}
+      .stats-grid,.grid-2,.grid-4,.footer-box{grid-template-columns:1fr}
+      .footer-links{justify-content:flex-start}
+      .portrait{max-width:280px;height:330px}
+      .case-main h3{font-size:26px}
+      .topbar-inner{gap:10px}
+      .brand{font-size:16px}
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="#top" class="brand">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>
-          Александра К
-          <small>финансовая ясность для собственника</small>
-        </span>
-      </a>
-
-      <nav class="nav">
-        <a href="#situations">Когда нужна</a>
-        <a href="#result">Что получите</a>
-        <a href="#pricing">Стоимость</a>
-        <a href="#experience">Опыт</a>
-        <a href="#contact">Контакты</a>
-      </nav>
-
-      <a class="btn btn-primary" href="#contact">Бесплатная консультация</a>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="panel hero-copy">
-          <div class="eyebrow">Для собственников, руководителей и учредителей</div>
-          <h1>Точные цифры для решений</h1>
-          <p class="hero-lead">Собираю точную картину бизнеса за короткое время: когда деньги есть, а прибыли не видно, команда меняется, а в управлении нужно быстро договориться о цифрах.</p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
-            <a class="btn btn-secondary" href="#pricing">Посмотреть стоимость</a>
-          </div>
-
-          <div class="hero-points">
-            <div class="point">Быстрый разбор ситуации</div>
-            <div class="point">Цифры, на которые можно опереться</div>
-            <div class="point">Основа для планирования</div>
-            <div class="point">Спокойные решения внутри команды</div>
-          </div>
-        </div>
-
-        <aside class="panel hero-side">
-          <div class="illustration-box" aria-label="Переход от неясности к понятной финансовой картине">
-            <svg viewBox="0 0 680 470" role="img" aria-hidden="true">
-              <defs>
-                <linearGradient id="leftSoft" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#f4d9d2"/>
-                  <stop offset="100%" stop-color="#f8ece8"/>
-                </linearGradient>
-                <linearGradient id="rightSoft" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#edf8f3"/>
-                  <stop offset="100%" stop-color="#f8fcfa"/>
-                </linearGradient>
-                <linearGradient id="gold" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#efb63a"/>
-                  <stop offset="100%" stop-color="#c78200"/>
-                </linearGradient>
-              </defs>
-
-              <rect x="0" y="0" width="680" height="470" rx="30" fill="#fffaf1"/>
-              <rect x="16" y="16" width="314" height="438" rx="24" fill="url(#leftSoft)"/>
-              <rect x="350" y="16" width="314" height="438" rx="24" fill="url(#rightSoft)"/>
-
-              <text x="54" y="58" font-size="24" font-weight="900" fill="#8a3e2c">НЕЯСНО</text>
-              <text x="388" y="58" font-size="24" font-weight="900" fill="#0e6b57">ПОНЯТНО</text>
-
-              <rect x="54" y="94" width="210" height="72" rx="18" fill="#fff" stroke="#e4beb6"/>
-              <text x="78" y="122" font-size="18" font-weight="800" fill="#7a3d32">деньги есть</text>
-              <text x="78" y="146" font-size="15" font-weight="700" fill="#8f6a62">а прибыли не видно</text>
-
-              <rect x="78" y="196" width="184" height="72" rx="18" fill="#fff" stroke="#e4beb6"/>
-              <text x="102" y="224" font-size="18" font-weight="800" fill="#7a3d32">смена команды</text>
-              <text x="102" y="248" font-size="15" font-weight="700" fill="#8f6a62">и потеря опоры</text>
-
-              <rect x="54" y="298" width="232" height="84" rx="18" fill="#fff" stroke="#e4beb6"/>
-              <text x="78" y="328" font-size="18" font-weight="800" fill="#7a3d32">разные мнения</text>
-              <text x="78" y="352" font-size="15" font-weight="700" fill="#8f6a62">много разговоров,</text>
-              <text x="78" y="372" font-size="15" font-weight="700" fill="#8f6a62">мало точной опоры</text>
-
-              <path d="M300 167 C332 167, 350 167, 368 167" stroke="url(#gold)" stroke-width="10" fill="none" stroke-linecap="round"/>
-              <path d="M356 149 l24 18 l-24 18" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-
-              <circle cx="507" cy="120" r="54" fill="#fff" stroke="#cfe5db" stroke-width="3"/>
-              <text x="475" y="113" font-size="16" font-weight="900" fill="#121212">видно</text>
-              <text x="451" y="135" font-size="16" font-weight="900" fill="#121212">что делать</text>
-
-              <path d="M507 176 Q507 200 507 220" stroke="#117a61" stroke-width="7" fill="none" stroke-linecap="round"/>
-
-              <rect x="402" y="220" width="210" height="56" rx="18" fill="#fff" stroke="#cfe5db"/>
-              <text x="424" y="254" font-size="16" font-weight="800" fill="#0e6b57">понятно, где деньги</text>
-
-              <path d="M507 276 Q507 298 507 314" stroke="#117a61" stroke-width="7" fill="none" stroke-linecap="round"/>
-
-              <rect x="400" y="314" width="214" height="56" rx="18" fill="#fff" stroke="#cfe5db"/>
-              <text x="422" y="348" font-size="16" font-weight="800" fill="#0e6b57">понятно, где прибыль</text>
-
-              <text x="397" y="420" font-size="17" font-weight="900" fill="#0e6b57">ясность для решений и плана</text>
-            </svg>
-          </div>
-
-          <div class="stats-grid">
-            <div class="stat">
-              <div class="stat-value">20+ лет</div>
-              <div class="stat-label">в финансах и работе со сложными контурами</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">до 10</div>
-              <div class="stat-label">юридических лиц в одном контуре</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">до 3 млрд ₽</div>
-              <div class="stat-label">оборот контуров, с которыми приходилось работать</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">Быстро</div>
-              <div class="stat-label">вхожу в ситуацию и собираю рабочую картину</div>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="situations">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-kicker">Когда нужна ясность</div>
-          <h2>Когда бизнесу срочно нужна ясность</h2>
-          <p>Без лишних слов и без лишней теории. Обычно ситуация выглядит так.</p>
-        </div>
-
-        <div class="grid-4">
-          <article class="card">
-            <div class="icon">💸</div>
-            <h3>Деньги есть, а прибыли не видно</h3>
-            <p>Оборот идёт, но непонятно, что бизнес реально зарабатывает и где теряет маржу.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🔄</div>
-            <h3>Резко меняется команда</h3>
-            <p>Уходит главный бухгалтер, финансовый специалист или руководитель блока, и опора в цифрах пропадает.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🤝</div>
-            <h3>Нужно договориться в управлении</h3>
-            <p>Собственники и руководители смотрят на один бизнес, но видят разные версии реальности.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">📍</div>
-            <h3>Нужен план на цифрах</h3>
-            <p>Надо быстро посчитать бизнес или проект и понять, на что реально можно опираться дальше.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="dark-band">
-          <div class="quote-line">Ясность в цифрах вместо субъективного мнения.</div>
-          <p>Когда все говорят разное, опираться нужно не на ощущение, а на точную картину бизнеса.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="result">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-kicker">Что вы получаете</div>
-          <h2>Понятная картина и следующий шаг</h2>
-          <p>Не ещё один слой слов, а рабочая основа для решения и планирования.</p>
-        </div>
-
-        <div class="grid-4">
-          <article class="card">
-            <h3>Где деньги</h3>
-            <p>Видно, что происходит с денежным потоком и где бизнес теряет устойчивость.</p>
-          </article>
-
-          <article class="card">
-            <h3>Где прибыль</h3>
-            <p>Понятно, что действительно зарабатывает компания, а что только выглядит хорошо.</p>
-          </article>
-
-          <article class="card">
-            <h3>О чём договариваться</h3>
-            <p>Руководителям и учредителям проще обсуждать факты, а не спорить о версиях.</p>
-          </article>
-
-          <article class="card">
-            <h3>Что делать дальше</h3>
-            <p>Появляется понятный следующий шаг: восстановление, пересчёт, сопровождение или план.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-kicker">Как работаю</div>
-          <h2>Коротко и по делу</h2>
-          <p>Беру в работу ту базу и те данные, которые уже есть в компании. Задача — быстро собрать рабочую картину.</p>
-        </div>
-
-        <div class="steps">
-          <article class="card step">
-            <h3>Разбор ситуации</h3>
-            <p>Смотрю, что происходит сейчас, где расходятся цифры и что уже можно взять в работу.</p>
-          </article>
-
-          <article class="card step">
-            <h3>Сбор точной основы</h3>
-            <p>Привожу данные к одной логике, чтобы на них можно было опираться в управлении и планировании.</p>
-          </article>
-
-          <article class="card step">
-            <h3>Вывод и следующий шаг</h3>
-            <p>Говорю, где риск, где опора и какой формат нужен дальше: пересчёт, сопровождение или план.</p>
-          </article>
-        </div>
-
-        <div class="chips">
-          <div class="chip">для собственника</div>
-          <div class="chip">для руководителя</div>
-          <div class="chip">для новой команды</div>
-          <div class="chip">для проекта внутри бизнеса</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-kicker">Сколько это стоит</div>
-          <h2>Понятный ориентир по стоимости</h2>
-          <p>Без тумана и без истории «цена только после долгого созвона».</p>
-        </div>
-
-        <div class="price-grid">
-          <article class="card price-card">
-            <h3>Консультация</h3>
-            <strong>0 ₽</strong>
-            <p>Коротко разбираем ситуацию и понимаем, какой формат нужен именно сейчас.</p>
-          </article>
-
-          <article class="card price-card">
-            <h3>Восстановление картины и планирование</h3>
-            <strong>от 25 000 ₽</strong>
-            <p>Когда нужно быстро собрать цифры в одну логику и получить основу для решения.</p>
-          </article>
-
-          <article class="card price-card">
-            <h3>Сбор отчетности за три года</h3>
-            <strong>от 150 000 ₽</strong>
-            <p>Финансовая отчётность для бизнеса с оборотом до 1 млрд ₽ в год.</p>
-          </article>
-
-          <article class="card price-card">
-            <h3>Финансовый план</h3>
-            <strong>от 150 000 ₽</strong>
-            <p>Долгий контур, три варианта, как влияет кредитная/лизинговая нагрузка.</p>
-          </article>
-        </div>
-
-        <div class="note-box">
-          <p>Бухгалтерский учёт — нулевая компания от 8 000 ₽ в месяц.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-kicker">Опыт по бизнесам</div>
-          <h2>С какими контурами уже работала</h2>
-          <p>Ниже — не абстрактные формулировки, а типы бизнеса и масштабы, с которыми уже был практический опыт.</p>
-          <p>В моей практике присутствует обширный опыт сопровождения ВНП, банкротств и перевода активов с одного юрлица на другое.</p>
-        </div>
-
-        <div class="grid-2">
-          <article class="card">
-            <div class="icon">🛒</div>
-            <h3>Маркетплейсы</h3>
-            <p>Контуры до 10 юридических лиц. Разные потоки денег, общая картина по группе и рабочая логика для управления.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🏬</div>
-            <h3>Ритейл в разных регионах</h3>
-            <p>До 3 юридических лиц. Сводная картина по направлениям и территориям без потери управленческого смысла.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🎓</div>
-            <h3>Онлайн-образование</h3>
-            <p>1 юридическое лицо, обороты до 1 млрд ₽ в год. Контроль цифр и планирование на быстрорастущем контуре.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🚚</div>
-            <h3>Логистика</h3>
-            <p>Собственный и лизинговый транспорт, обороты до 3 млрд ₽ в год. Сложная операционная модель и большая нагрузка на финконтроль.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="panel cta-box">
-          <div class="cta-grid">
-            <div>
-              <div class="section-kicker">Контакт</div>
-              <h2>Можно начать с короткого разговора</h2>
-              <p>Разберём вашу ситуацию, поймём, какая точка нужна сейчас, и станет ясно, с чего лучше начинать.</p>
-
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
-                <a class="btn btn-secondary" href="https://max.ru/id7810978256_biz" target="_blank" rel="noopener noreferrer">Написать в Max</a>
-              </div>
-            </div>
-
-            <div class="contact-box">
-              <h3>Контакты</h3>
-              <p>Александра Константиновна К<br/>Санкт-Петербург / онлайн по России</p>
-
-              <div class="contact-list">
-                <div class="contact-item">Телефон: <a href="tel:+79312681293">+7 931 268-12-93</a></div>
-                <div class="contact-item">Telegram: <a href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">@international_deal_sp</a></div>
-                <div class="contact-item">Telegram-канал: <a href="https://t.me/hack_fin" target="_blank" rel="noopener noreferrer">Лайфхаки финансиста</a></div>
-                <div class="contact-item">Max: <a href="https://max.ru/id7810978256_biz" target="_blank" rel="noopener noreferrer">max.ru/id7810978256_biz</a></div>
-                <div class="contact-item">Дзен: <a href="https://dzen.ru/id/5e92b2779ef45f550d34042f" target="_blank" rel="noopener noreferrer">dzen.ru</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="expert-grid">
-          <div class="expert-photo">
-            <img src="alexandra-photo.JPG" alt="Александра Константиновна К" />
-          </div>
-
-          <div class="panel expert-copy">
-            <div class="section-kicker">Кто будет разбирать вашу ситуацию</div>
-            <h2>Александра Константиновна К</h2>
-            <p>Работаю с финансами больше 20 лет. Быстро вхожу в ситуацию, раскладываю цифры в понятную систему и даю основу для решений, когда бизнесу нужна ясность, а не лишние слова.</p>
-            <p>Моя задача — собрать точную картину, на которую можно опереться в управлении, в разговоре между собственниками и в планировании следующего шага.</p>
-            <div class="signature">Санкт-Петербург / онлайн по России</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-box">
-      <div>
-        <strong>Точная картина бизнеса для решений и планирования.</strong><br/>
-        Телефон: +7 931 268-12-93
-      </div>
-
-      <div class="footer-links">
-        <a href="https://t.me/hack_fin" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a href="https://max.ru/id7810978256_biz" target="_blank" rel="noopener noreferrer">Max</a>
-        <a href="https://dzen.ru/id/5e92b2779ef45f550d34042f" target="_blank" rel="noopener noreferrer">Дзен</a>
-      </div>
-    </div>
-  </footer>
+<header class="topbar">
+<div class="container topbar-inner">
+<a class="brand" href="#top">
+<span aria-hidden="true" class="brand-mark"></span>
+<span>Александра Кашаева<small>точные цифры для решений</small></span>
+</a>
+<nav class="nav">
+<a href="#situations">Ситуации</a>
+<a href="#method">Что в итоге</a>
+<a href="#tax">ВНП</a>
+<a href="#experience">Опыт</a>
+<a href="#contact">Контакты</a>
+</nav>
+<a class="btn btn-primary" href="#contact">Написать</a>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="container">
+<div class="hero-grid">
+<aside class="panel hero-person">
+<div class="portrait">
+<img alt="Александра Кашаева" onerror="this.style.display='none'; this.parentElement.innerHTML='&lt;div style=&quot;height:100%;display:grid;place-items:center;padding:28px;text-align:center;font-weight:800;color:#1f4b73&quot;&gt;Александра Кашаева&lt;/div&gt;'" src="alexandra-photo.JPG"/>
+</div>
+<div class="person-note">
+<strong>Александра Кашаева</strong>
+<span>Финансовая реконструкция • международные структуры • ВНП • судебный и банкротный контур</span>
+<div class="person-meta">
+<div>17+ лет в финансах</div>
+<div>Группы до 50 юридических лиц • контуры до 6 млрд ₽</div>
+<div>Россия, Европа, Азия • fintech, производство, логистика, digital</div>
+</div>
+</div>
+</aside>
+<div class="panel hero-copy">
+<div class="eyebrow">Финансовая картина бизнеса из разрозненных данных</div>
+<h1>Вы же понимаете: всё это можно собрать в одну картину.</h1>
+<p class="hero-lead"><strong>Математика бизнеса не изменилась. Сложнее стали данные.</strong> Несколько компаний, банки, старая 1С, Excel, API, биллинг, платформы, сервисы, крипта и десятки выгрузок.</p>
+<p class="hero-lead">Я собираю их в одну проверяемую финансовую картину — чтобы было понятно, <strong>где деньги, где прибыль, как связаны компании и что происходило на самом деле.</strong></p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="https://t.me/international_deal_sp" rel="noopener noreferrer" target="_blank">Написать в Telegram</a>
+<a class="btn btn-secondary" href="https://max.ru/id7810978256_biz" rel="noopener noreferrer" target="_blank">Написать в Max</a>
+</div>
+<div class="microline">Не добавляю ещё один слой отчётности поверх существующих таблиц. Сначала разбираюсь, какие данные уже есть, как они связаны между собой и где теряется экономический смысл.</div>
+</div>
+</div>
+<div class="stats-grid">
+<div class="stat"><div class="stat-value">17+ лет</div><div class="stat-label">в финансах и работе со сложными контурами</div></div>
+<div class="stat"><div class="stat-value">до 50</div><div class="stat-label">юридических лиц в одном экономическом контуре</div></div>
+<div class="stat"><div class="stat-value">до 6 млрд ₽</div><div class="stat-label">оборот бизнесов, с которыми работала</div></div>
+<div class="stat"><div class="stat-value">Big Data + AI</div><div class="stat-label">как инструмент обработки массивов данных и ускорения разбора</div></div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="dark-band">
+<div class="quote-line">Хаос обычно не потому, что данных нет. Их слишком много — и они не связаны между собой.</div>
+<p>Бухгалтерия видит одно, банк — другое, биллинг — третье, платформа — четвёртое. Пока эти источники не соединены, отчёт может выглядеть аккуратно и всё равно не отвечать на главный вопрос собственника: что происходит с бизнесом экономически.</p>
+</div>
+</div>
+</section>
+<section id="situations">
+<div class="container">
+<div class="section-head">
+<div class="section-kicker">Когда меня подключают</div>
+<h2>Всё вроде работает. Пока однажды не приходится собирать картину целиком.</h2>
+<p>У вас уже есть бухгалтерия, финансисты, аналитики, 1С, BI и десятки выгрузок. Проблема начинается в тот момент, когда нужно доказуемо соединить их между собой.</p>
+</div>
+<div class="cases">
+<article class="card case">
+<div class="case-grid">
+<div class="case-main">
+<div class="case-number">Случай 01</div>
+<h3>Когда бизнесу нужно доказать государству, что происходило на самом деле.</h3>
+<p>Субъективная бухгалтерская логика — «так исторически сложилось», «так проводили», «так бывает» — может жить годами. Но во время ВНП или серьёзного спора её уже недостаточно.</p>
+<p>У каждой операции есть источник денег, маршрут, обязательство и экономический смысл. Это можно восстановить и показать цифрами.</p>
+<div class="accent-note">Много ли можно доказать субъективной бухгалтерией? Экономика достаточно точна: движение денег и реальный смысл операций можно восстановить.</div>
+</div>
+<div class="case-side">
+<h4>Что я делаю</h4>
+<ul>
+<li>восстанавливаю финансово-экономическую картину за нужный период;</li>
+<li>разбираю структуру платежей, взаиморасчёты, займы и движение активов;</li>
+<li>работаю в составе команд, сопровождающих выездные налоговые проверки;</li>
+<li>готовлю расчёты и экономическую логику для коммуникаций с налоговыми органами и Следственным комитетом.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="card case">
+<div class="case-grid">
+<div class="case-main">
+<div class="case-number">Случай 02</div>
+<h3>У вас 25 компаний, 15 лет истории и старая доработанная система, которая технически работает.</h3>
+<p>При двух–пяти компаниях правило «работает — не трогай» действительно помогает. Потом добавляются юрлица, ручные исключения, старые доработки, внутренние правила и люди, без которых никто уже не понимает всю систему.</p>
+<p>В какой-то момент это становится просто невыгодно: дороже управление, дороже административный аппарат, больше ошибок и медленнее решения.</p>
+<div class="accent-note">Не обязательно ломать всё завтра. Но если бизнес вам нужен дальше, старую архитектуру хотя бы нужно увидеть целиком и оценить. Иногда через несколько дней после перехода команда уже удивляется, почему столько лет боялась менять систему.</div>
+</div>
+<div class="case-side">
+<h4>Что я делаю</h4>
+<ul>
+<li>собираю группу как один экономический контур;</li>
+<li>убираю внутригрупповые обороты и зависимость от «знаний в голове» отдельных сотрудников;</li>
+<li>показываю, где старый учёт уже создаёт стоимость вместо экономии;</li>
+<li>при необходимости помогаю перейти на новую финансовую логику без остановки бизнеса.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="card case">
+<div class="case-grid">
+<div class="case-main">
+<div class="case-number">Случай 03</div>
+<h3>Финтех, банки, платформы: каждый отчёт правильный. А бизнес?</h3>
+<p>API работает, биллинг считает, процессинг считает, банк показывает settlement, аналитики строят P&amp;L. Вы точно ведёте финансовый учёт.</p>
+<p>Вопрос в другом: что осталось за его границами? Те самые условные 20% часто живут между системами — комиссии, транзит, settlement, FX, крипта, фиат и межкомпанейские потоки.</p>
+<div class="accent-note">Профессиональный финансист нужен не для того, чтобы ещё раз сделать P&amp;L. Он нужен, чтобы найти то, что не попало в P&amp;L. Локально правильные цифры ещё не означают правильную финансовую картину бизнеса.</div>
+</div>
+<div class="case-side">
+<h4>Что я делаю</h4>
+<ul>
+<li>связываю продуктовые события, billing, processing, settlement, банки и кошельки;</li>
+<li>разделяю выручку, комиссии, клиентские и транзитные деньги;</li>
+<li>проверяю маршрут цифры от сервиса до финансового результата;</li>
+<li>использую автоматизацию, Big Data и AI там, где они действительно ускоряют разбор.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="card case">
+<div class="case-grid">
+<div class="case-main">
+<div class="case-number">Случай 04</div>
+<h3>Внутренний финансовый форензик — как нормальная гигиена бизнеса.</h3>
+<p>Дубли, ручные операции, оплаты за соседнее юрлицо, потерянные комиссии, курсовые разницы и расхождения между системами редко выглядят страшно по одной операции. По тысячам операций за несколько лет — уже вполне.</p>
+<p>Поэтому форензик нужен не только после конфликта или подозрения. Иногда полезно самим посмотреть внутрь раньше, чем это сделает кто-то снаружи.</p>
+<div class="accent-note">Гарантий, что такая проверка спасёт от всех проблем, я не даю. Но обнаружить их самим обычно значительно дешевле, чем восстанавливать историю, когда вопросы уже задают вам.</div>
+</div>
+<div class="case-side">
+<h4>Что я делаю</h4>
+<ul>
+<li>сопоставляю банк, учёт, invoices, billing и операционные данные;</li>
+<li>нахожу дубли, разрывы и неидентифицированные движения;</li>
+<li>восстанавливаю цепочки операций до подтверждающих документов;</li>
+<li>отделяю ошибку данных от управленческой, налоговой или юридической проблемы.</li>
+</ul>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section id="method">
+<div class="container">
+<div class="section-head">
+<div class="section-kicker">Что появляется в итоге</div>
+<h2>Не новый слой отчётов. Одна связная модель бизнеса.</h2>
+<p>Цифра должна не просто красиво стоять в файле. Она должна быть проверяема: чтобы можно было пройти назад до источника и понять, почему она именно такая.</p>
+</div>
+<div class="grid-4">
+<article class="card method-card"><span class="label">Результат 01</span><h3>Единая карта данных</h3><p>Понятно, какие системы являются источниками, где возникают дубли и что должно сходиться между собой.</p></article>
+<article class="card method-card"><span class="label">Результат 02</span><h3>Деньги и прибыль</h3><p>Появляется единая версия денежных потоков, результата и обязательств — без смешивания транзита и реального дохода.</p></article>
+<article class="card method-card"><span class="label">Результат 03</span><h3>Связи между компаниями</h3><p>Видно, кто кого финансирует, кто за кого платит и как внутригрупповые операции влияют на общую картину.</p></article>
+<article class="card method-card"><span class="label">Результат 04</span><h3>Следующий шаг</h3><p>Становится понятно, что исправлять в учёте, где помогает автоматизация, а где вопрос уже налоговый, юридический или управленческий.</p></article>
+</div>
+</div>
+</section>
+<section id="tax">
+<div class="container">
+<div class="tax-panel">
+<div class="tax-grid">
+<div>
+<div class="section-kicker">ВНП и сложные проверки</div>
+<h2>Работаю в составе команд, сопровождающих выездные налоговые проверки.</h2>
+</div>
+<div class="tax-copy">
+<p>Моя зона — <strong>финансово-экономический анализ</strong>: восстановление фактической картины операций, структуры расчётов, движения денежных средств и взаимосвязей между юридическими лицами.</p>
+<p>Вместе с налоговыми консультантами и юристами готовлю расчёты и экономическую позицию для коммуникаций с <strong>налоговыми органами и Следственным комитетом</strong>, когда это требуется в рамках проекта.</p>
+<div class="tax-list">
+<div class="tax-item">Восстановить, что экономически происходило за несколько лет.</div>
+<div class="tax-item">Посчитать и объяснить структуру платежей и взаиморасчётов.</div>
+<div class="tax-item">Подготовить цифры и логику, на которые может опираться юридическая команда.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="experience">
+<div class="container">
+<div class="section-head">
+<div class="section-kicker">Опыт</div>
+<h2>Сложные контуры — российские и международные</h2>
+<p>По части проектов действует NDA, поэтому без названий и деталей. Но диапазон задач — от операционной управленки до биржевого выхода, сворачивания международных структур, ВНП и банкротства.</p>
+</div>
+<div class="grid-2">
+<article class="card">
+<span class="label">Международный опыт</span>
+<h3>Финтех, офшорные структуры, Азия и Европа</h3>
+<p>Работа в проекте выхода на Шанхайскую биржу, крупный fintech в полностью международной структуре, масштабная маркетинговая кампания в Сингапуре, европейский и азиатский НДС, кросс-бордерные расчёты и отчётность.</p>
+</article>
+<article class="card">
+<span class="label">Структуры и активы</span>
+<h3>Рост — и обратная сторона роста</h3>
+<p>Работала не только с расширением групп, но и со сворачиванием и упрощением структур: NAV, перенос и распределение активов, взаиморасчёты между компаниями, восстановление экономической логики после многих лет изменений.</p>
+</article>
+<article class="card">
+<span class="label">Судебный опыт</span>
+<h3>Банкротство и арбитраж — не только из учебников</h3>
+<p>Опыт арбитражного управления и судебной работы даёт понимание того, что происходит с цифрами, активами и сделками, когда бизнес уже находится в конфликтной или банкротной стадии.</p>
+</article>
+<article class="card">
+<span class="label">Налоговые проверки</span>
+<h3>От обычной отчётности до ситуации, где цифры становятся доказательствами</h3>
+<p>Проходила налоговые проверки и работаю в экспертных командах по ВНП: финансовая реконструкция, движение денег, структура платежей, экономический смысл операций, работа на стыке финансов, налогов и юридической позиции.</p>
+</article>
+<article class="card">
+<span class="label">Российский бизнес</span>
+<h3>Производство, торговля, ритейл и логистика</h3>
+<p>Группы из нескольких и десятков юридических лиц, собственный и лизинговый транспорт, старые учётные системы, распределённые регионы и высокая нагрузка на финансовый контроль.</p>
+</article>
+<article class="card">
+<span class="label">Digital</span>
+<h3>Маркетплейсы, IT, платёжные и цифровые сервисы</h3>
+<p>Комиссии, удержания, возвраты, billing, API, банки, кошельки и большие транзакционные массивы — когда нужно связать операционный мир продукта с реальными деньгами и результатом.</p>
+</article>
+</div>
+</div>
+</section>
+<section id="contact">
+<div class="container">
+<div class="contact-panel">
+<div class="section-kicker">Контакт</div>
+<h2>Если узнали свою ситуацию — напишите.</h2>
+<p>Можно без длинного технического задания. Достаточно коротко описать, что у вас не собирается: группа компаний, старая система, платформа, ВНП, расхождение в деньгах или просто слишком много разрозненных данных.</p>
+<div class="contact-actions">
+<a class="btn btn-primary" href="https://t.me/international_deal_sp" rel="noopener noreferrer" target="_blank">Telegram</a>
+<a class="btn btn-secondary" href="https://max.ru/id7810978256_biz" rel="noopener noreferrer" target="_blank">Max</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-box">
+<div class="footer-meta">
+<div><strong>Точные цифры для решений.</strong><br/>Санкт-Петербург / онлайн по России</div>
+<div>© 2026 Александра Кашаева</div>
+</div>
+<div class="footer-project">
+<strong>С 2021 года развиваю OkCept</strong>
+Платформа для малого бизнеса: меньше ручной рутины, больше понятных процессов.
+<div style="margin-top:8px"><a href="https://promo.okcept.ru/" rel="noopener noreferrer" target="_blank">promo.okcept.ru</a></div>
+</div>
+<div class="footer-links">
+<a href="https://t.me/international_deal_sp" rel="noopener noreferrer" target="_blank">Telegram</a>
+<a href="https://t.me/hack_fin" rel="noopener noreferrer" target="_blank">ТГ-канал</a>
+<a href="https://max.ru/id7810978256_biz" rel="noopener noreferrer" target="_blank">Max</a>
+<a href="https://dzen.ru/hack_fin" rel="noopener noreferrer" target="_blank">Дзен</a>
+<button id="openPrivacy" type="button">Персональные данные</button>
+</div>
+</div>
+</footer>
+<dialog aria-labelledby="privacyTitle" class="privacy-dialog" id="privacyDialog">
+<div class="privacy-inner">
+<div class="privacy-head">
+<h3 id="privacyTitle">Персональные данные</h3>
+<button aria-label="Закрыть" class="privacy-close" id="closePrivacy" type="button">×</button>
+</div>
+<p>Сайт использует Яндекс Метрику. При переходе в Telegram, Max, Дзен и OkCept данные также обрабатываются соответствующими сервисами.</p>
+<p>Данные, которые вы добровольно направляете Александре Кашаевой через мессенджеры, используются только для ответа и обсуждения сотрудничества.</p>
+<p>Удалить переписку или переданные данные можно по запросу в том же канале связи.</p>
+</div>
+</dialog>
+<script>
+    (() => {
+      const dialog = document.getElementById('privacyDialog');
+      const open = document.getElementById('openPrivacy');
+      const close = document.getElementById('closePrivacy');
+      if (!dialog || !open || !close) return;
+      open.addEventListener('click', () => dialog.showModal());
+      close.addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) dialog.close();
+      });
+    })();
+  </script>
 </body>
 </html>
