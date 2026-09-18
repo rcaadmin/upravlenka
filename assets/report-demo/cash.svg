@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="960" viewBox="0 0 1400 960" role="img" aria-labelledby="title desc">
+<title id="title">Движение денежных средств</title><desc id="desc">Группа «Демо» · январь — июнь 2024 · выплаты показаны положительными величинами. Все суммы и названия вымышлены.</desc>
+<rect width="1400" height="960" rx="18" fill="#fff"/>
+<text x="45" y="48" fill="#173c32" font-size="22" font-weight="700" text-anchor="start" font-family="Arial, sans-serif">hack / fin</text>
+<text x="1355" y="48" fill="#65736c" font-size="15" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">УЧЕБНЫЕ ДАННЫЕ · 2024</text>
+<text x="45" y="103" fill="#182b25" font-size="34" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Движение денежных средств</text>
+<text x="45" y="139" fill="#65736c" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Группа «Демо» · январь — июнь 2024 · выплаты показаны положительными величинами</text>
+<rect x="45" y="176" width="1310" height="44" fill="#173c32" rx="5"/>
+<text x="65" y="205" fill="#fff" font-size="18" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Показатель · млн ₽</text>
+<text x="635" y="205" fill="#fff" font-size="18" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">Январь</text>
+<text x="775" y="205" fill="#fff" font-size="18" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">Февраль</text>
+<text x="915" y="205" fill="#fff" font-size="18" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">Март</text>
+<text x="1055" y="205" fill="#fff" font-size="18" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">Апрель</text>
+<text x="1195" y="205" fill="#fff" font-size="18" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">Май</text>
+<text x="1335" y="205" fill="#fff" font-size="18" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">Июнь</text>
+<rect x="45" y="220" width="1310" height="42" fill="#eef3ed"/>
+<text x="89" y="248" fill="#182b25" font-size="19" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Деньги на начало месяца</text>
+<text x="635" y="248" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">5,60</text>
+<text x="775" y="248" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">5,69</text>
+<text x="915" y="248" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">7,47</text>
+<text x="1055" y="248" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">7,54</text>
+<text x="1195" y="248" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">9,01</text>
+<text x="1335" y="248" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">9,56</text>
+<line x1="45" y1="304" x2="1355" y2="304" stroke="#dce3dd"/>
+<text x="89" y="290" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Поступления от покупателей</text>
+<text x="635" y="290" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">17,80</text>
+<text x="775" y="290" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">19,90</text>
+<text x="915" y="290" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">21,20</text>
+<text x="1055" y="290" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">21,00</text>
+<text x="1195" y="290" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">22,90</text>
+<text x="1335" y="290" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">24,80</text>
+<line x1="45" y1="346" x2="1355" y2="346" stroke="#dce3dd"/>
+<text x="89" y="332" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Оплата поставщикам</text>
+<text x="635" y="332" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">10,90</text>
+<text x="775" y="332" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">11,70</text>
+<text x="915" y="332" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">12,80</text>
+<text x="1055" y="332" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">12,60</text>
+<text x="1195" y="332" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">13,80</text>
+<text x="1335" y="332" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">14,50</text>
+<line x1="45" y1="388" x2="1355" y2="388" stroke="#dce3dd"/>
+<text x="89" y="374" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Выплаты персоналу</text>
+<text x="635" y="374" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">3,20</text>
+<text x="775" y="374" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">3,25</text>
+<text x="915" y="374" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">3,35</text>
+<text x="1055" y="374" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">3,40</text>
+<text x="1195" y="374" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">3,55</text>
+<text x="1335" y="374" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">3,65</text>
+<line x1="45" y1="430" x2="1355" y2="430" stroke="#dce3dd"/>
+<text x="89" y="416" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Аренда, логистика и прочие</text>
+<text x="635" y="416" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">2,01</text>
+<text x="775" y="416" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">2,16</text>
+<text x="915" y="416" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">2,25</text>
+<text x="1055" y="416" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">2,32</text>
+<text x="1195" y="416" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">2,48</text>
+<text x="1335" y="416" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">2,58</text>
+<line x1="45" y1="472" x2="1355" y2="472" stroke="#dce3dd"/>
+<text x="89" y="458" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Проценты и налог</text>
+<text x="635" y="458" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,60</text>
+<text x="775" y="458" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,71</text>
+<text x="915" y="458" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,83</text>
+<text x="1055" y="458" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,61</text>
+<text x="1195" y="458" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,87</text>
+<text x="1335" y="458" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,98</text>
+<rect x="45" y="472" width="1310" height="42" fill="#d7f07d"/>
+<text x="89" y="500" fill="#182b25" font-size="19" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Операционный денежный поток</text>
+<text x="635" y="500" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">1,09</text>
+<text x="775" y="500" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">2,08</text>
+<text x="915" y="500" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">1,97</text>
+<text x="1055" y="500" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">2,07</text>
+<text x="1195" y="500" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">2,20</text>
+<text x="1335" y="500" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">3,09</text>
+<line x1="45" y1="556" x2="1355" y2="556" stroke="#dce3dd"/>
+<text x="89" y="542" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Приобретение основных средств</text>
+<text x="635" y="542" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,60</text>
+<text x="775" y="542" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,50</text>
+<text x="915" y="542" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">1,00</text>
+<text x="1055" y="542" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,20</text>
+<text x="1195" y="542" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,70</text>
+<text x="1335" y="542" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,40</text>
+<line x1="45" y1="598" x2="1355" y2="598" stroke="#dce3dd"/>
+<text x="89" y="584" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Получено / погашено кредитов</text>
+<text x="635" y="584" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">−0,40</text>
+<text x="775" y="584" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,20</text>
+<text x="915" y="584" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">−0,30</text>
+<text x="1055" y="584" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">−0,40</text>
+<text x="1195" y="584" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">−0,25</text>
+<text x="1335" y="584" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">−0,50</text>
+<line x1="45" y1="640" x2="1355" y2="640" stroke="#dce3dd"/>
+<text x="89" y="626" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Дивиденды</text>
+<text x="635" y="626" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,00</text>
+<text x="775" y="626" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,00</text>
+<text x="915" y="626" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,60</text>
+<text x="1055" y="626" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,00</text>
+<text x="1195" y="626" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">0,70</text>
+<text x="1335" y="626" fill="#182b25" font-size="20" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">1,00</text>
+<rect x="45" y="640" width="1310" height="42" fill="#eef3ed"/>
+<text x="89" y="668" fill="#182b25" font-size="19" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Деньги на конец месяца</text>
+<text x="635" y="668" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">5,69</text>
+<text x="775" y="668" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">7,47</text>
+<text x="915" y="668" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">7,54</text>
+<text x="1055" y="668" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">9,01</text>
+<text x="1195" y="668" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">9,56</text>
+<text x="1335" y="668" fill="#182b25" font-size="20" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">10,75</text>
+<text x="45" y="718" fill="#173c32" font-size="19" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Остаток на конец месяца переносится в строку «Деньги» управленческого баланса.</text>
+<text x="45" y="752" fill="#65736c" font-size="17" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Начальный остаток + операционный поток − приобретение ОС + кредиты − дивиденды.</text>
+<text x="45" y="781" fill="#65736c" font-size="17" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Поступления и выручка различаются: задолженность покупателей учитывается отдельно.</text>
+<text x="45" y="927" fill="#65736c" font-size="16" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Демонстрационный пример. Суммы, даты и названия заменены; это не финансовые результаты клиента.</text>
+</svg>

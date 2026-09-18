@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+<title id="title">От показателя — к исходному документу</title><desc id="desc">Логистика за май 2024 · 1 190 000 ₽ · все названия и документы вымышлены. Все суммы и названия вымышлены.</desc>
+<rect width="1400" height="1000" rx="18" fill="#fff"/>
+<text x="45" y="48" fill="#173c32" font-size="22" font-weight="700" text-anchor="start" font-family="Arial, sans-serif">hack / fin</text>
+<text x="1355" y="48" fill="#65736c" font-size="15" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">УЧЕБНЫЕ ДАННЫЕ · 2024</text>
+<text x="45" y="103" fill="#182b25" font-size="34" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">От показателя — к исходному документу</text>
+<text x="45" y="139" fill="#65736c" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Логистика за май 2024 · 1 190 000 ₽ · все названия и документы вымышлены</text>
+<rect x="45" y="175" width="1310" height="150" rx="12" fill="#173c32"/>
+<text x="70" y="210" fill="#e4eee6" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">1. ОПиУ · ячейка G10 · логистика</text>
+<text x="70" y="269" fill="#d7f07d" font-size="42" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">1 190 000 ₽</text>
+<text x="565" y="220" fill="#fff" font-size="22" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Сумма операций по статье и месяцу</text>
+<text x="565" y="259" fill="#e4eee6" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">= СУММЕСЛИМН(Сумма; Статья; &quot;Логистика&quot;;</text>
+<text x="565" y="291" fill="#e4eee6" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Месяц; ДАТА(2024;5;1))</text>
+<text x="45" y="375" fill="#182b25" font-size="26" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">2. Расшифровка из журнала операций</text>
+<rect x="45" y="401" width="1310" height="44" rx="4" fill="#eef3ed"/>
+<text x="65" y="430" fill="#182b25" font-size="18" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Документ</text>
+<text x="245" y="430" fill="#182b25" font-size="18" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">ЦФО</text>
+<text x="490" y="430" fill="#182b25" font-size="18" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Проект</text>
+<text x="780" y="430" fill="#182b25" font-size="18" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">SKU</text>
+<text x="1050" y="430" fill="#182b25" font-size="18" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Отдел</text>
+<text x="1330" y="430" fill="#182b25" font-size="18" font-weight="600" text-anchor="end" font-family="Arial, sans-serif">Сумма, ₽</text>
+<text x="65" y="480" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">DEMO-041</text>
+<text x="245" y="480" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Склад</text>
+<text x="490" y="480" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Проект А</text>
+<text x="780" y="480" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">DEMO-101</text>
+<text x="1050" y="480" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Логистика</text>
+<text x="1330" y="480" fill="#182b25" font-size="19" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">420 000</text>
+<line x1="45" y1="500" x2="1355" y2="500" stroke="#dce3dd"/>
+<text x="65" y="537" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">DEMO-042</text>
+<text x="245" y="537" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Доставка</text>
+<text x="490" y="537" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Проект Б</text>
+<text x="780" y="537" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">DEMO-202</text>
+<text x="1050" y="537" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Логистика</text>
+<text x="1330" y="537" fill="#182b25" font-size="19" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">385 000</text>
+<line x1="45" y1="557" x2="1355" y2="557" stroke="#dce3dd"/>
+<text x="65" y="594" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">DEMO-043</text>
+<text x="245" y="594" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Доставка</text>
+<text x="490" y="594" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Проект В</text>
+<text x="780" y="594" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">DEMO-303</text>
+<text x="1050" y="594" fill="#182b25" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Логистика</text>
+<text x="1330" y="594" fill="#182b25" font-size="19" font-weight="400" text-anchor="end" font-family="Arial, sans-serif">385 000</text>
+<line x1="45" y1="614" x2="1355" y2="614" stroke="#dce3dd"/>
+<text x="45" y="675" fill="#182b25" font-size="26" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">3. Первичка и правило расчёта</text>
+<text x="45" y="720" fill="#173c32" font-size="23" font-weight="600" text-anchor="start" font-family="Arial, sans-serif">Акт DEMO-041 от 08.05.2024: 70 рейсов × 6 000 ₽ = 420 000 ₽</text>
+<text x="45" y="761" fill="#182b25" font-size="20" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">DEMO-042: 55 × 7 000 ₽ = 385 000 ₽ · DEMO-043: 35 × 11 000 ₽ = 385 000 ₽</text>
+<text x="45" y="810" fill="#65736c" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Период признания расхода — май. Дата оплаты отражается отдельно в ДДС.</text>
+<text x="45" y="864" fill="#65736c" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">В рабочей модели формулы ведут от отчёта к строкам базы и реквизитам первички.</text>
+<text x="45" y="902" fill="#65736c" font-size="19" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">На сайте показана схема расшифровки; клиентские документы здесь не размещены.</text>
+<text x="45" y="967" fill="#65736c" font-size="16" font-weight="400" text-anchor="start" font-family="Arial, sans-serif">Учебный пример по структуре управленческой отчётности. Все данные вымышлены.</text>
+</svg>
