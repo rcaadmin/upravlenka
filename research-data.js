@@ -6,6 +6,22 @@
 */
 window.HACK_FIN_RESEARCH = [
   {
+      "slug": "struktura-biznesa-usn-osno-zpif-2026",
+      "href": "struktura-biznesa-usn-osno-zpif-2026.html",
+      "title": "Бизнес вырос, а структура осталась: УСН, ОСНО и ЗПИФ",
+      "category": "Финансы и структура бизнеса",
+      "categoryKey": "structure",
+      "date": "1 октября 2026",
+      "published": "2026-10-01",
+      "readTime": "22–27 мин",
+      "badge": "Новое исследование",
+      "proof": "47 источников",
+      "description": "Как бизнес обрастает ООО и ИП: три расчёта налоговой экономики, ЗПИФ, практика дробления и семейные права. Что пересчитать перед перестройкой.",
+      "visualLabel": "Структура бизнеса",
+      "visual": "УСН · ОСНО · ЗПИФ",
+      "theme": "finance"
+  },
+  {
     slug: "peredel-sobstvennosti-rossiya-2022-2026",
     href: "peredel-sobstvennosti-rossiya-2022-2026.html",
     title: "Передел собственности после 2022 года",
