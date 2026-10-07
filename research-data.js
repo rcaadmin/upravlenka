@@ -6,6 +6,22 @@
 */
 window.HACK_FIN_RESEARCH = [
   {
+    slug: "nds-russia-2026",
+    href: "nds-russia-2026.html",
+    title: "НДС простыми словами: кто платит и зачем нужен вычет",
+    category: "Налоги и экономика",
+    categoryKey: "taxes",
+    date: "7 октября 2026",
+    published: "2026-10-07",
+    readTime: "12–15 мин",
+    badge: "Новое исследование",
+    proof: "15 источников",
+    description: "Почему НДС проходит через бизнес к покупателю, зачем нужен вычет и экспортное возмещение, и как УСН влияет на закупки и налог на прибыль. Правила России на 7 октября 2026 года.",
+    visualLabel: "Потребление · вычет · экспорт",
+    visual: "НДС / 2026",
+    theme: "finance"
+  },
+  {
       "slug": "struktura-biznesa-usn-osno-zpif-2026",
       "href": "struktura-biznesa-usn-osno-zpif-2026.html",
       "title": "Бизнес вырос, а структура осталась: УСН, ОСНО и ЗПИФ",

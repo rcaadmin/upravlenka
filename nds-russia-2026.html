@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="НДС простыми словами: как налог проходит через цепочку бизнеса, почему его вычитает покупатель, кто в итоге несет налог, почему экспорт облагается по ставке 0% и как УСН влияет на НДС компании на ОСНО. Правила на 7 октября 2026 года.">
+  <title>НДС простыми словами: кто платит и зачем нужен вычет | Hack Finance</title>
+  <link rel="canonical" href="https://hack-fin.ru/nds-russia-2026.html">
+  <link rel="stylesheet" href="research-components.css">
+  <style>
+    :root {
+      --ink: #15212b;
+      --muted: #66727d;
+      --paper: #f3f5f7;
+      --white: #ffffff;
+      --navy: #111a23;
+      --navy-2: #202b36;
+      --line: #dce2e7;
+      --blue: #285778;
+      --blue-soft: #e9f1f6;
+      --mint: #d8eee8;
+      --mint-dark: #226854;
+      --coral: #f1ad8c;
+      --warm: #fff4e8;
+      --shadow: 0 16px 44px rgba(21, 33, 43, .07);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 16px/1.68 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+    a { color: var(--blue); text-underline-offset: 3px; }
+    a:hover { color: #143b55; }
+    .page { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .sitebar {
+      background: var(--white); border-bottom: 1px solid #e7eaee;
+      color: #3d4852; font-size: 13px; font-weight: 700;
+    }
+    .sitebar-inner { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { color: var(--ink); text-decoration: none; letter-spacing: .01em; }
+    .brand small { display: block; color: var(--muted); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+    .sitebar nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    .sitebar nav a { color: #5b6570; text-decoration: none; }
+    .crumbs { padding: 20px 0 12px; color: #6d7882; font-size: 13px; }
+    .crumbs a { color: var(--ink); text-decoration: none; font-weight: 700; }
+    .hero {
+      isolation: isolate; overflow: hidden; position: relative;
+      padding: clamp(34px, 6vw, 68px) clamp(28px, 5vw, 54px);
+      border-radius: 16px; color: #f7f9fb; background: var(--navy);
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: ""; position: absolute; z-index: -1; right: -70px; top: -260px;
+      width: 500px; height: 500px; border: 1px solid rgba(255,255,255,.07);
+      border-radius: 50%; box-shadow: 0 0 0 60px rgba(255,255,255,.025), 0 0 0 120px rgba(255,255,255,.018);
+    }
+    .eyebrow, .badge { text-transform: uppercase; letter-spacing: .12em; font-size: 11px; font-weight: 800; }
+    .eyebrow { display: inline-block; padding: 8px 11px; border: 1px solid rgba(255,255,255,.2); border-radius: 7px; color: #c6d2db; }
+    h1 { max-width: 850px; margin: 24px 0 18px; font-size: clamp(38px, 6.4vw, 68px); line-height: 1.02; letter-spacing: -.045em; }
+    .dek { max-width: 890px; margin: 0; color: #c5cdd4; font-size: clamp(18px, 2.3vw, 22px); line-height: 1.55; }
+    .dek strong { color: #fff; }
+    .metadata { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .metadata span { border: 1px solid rgba(255,255,255,.16); border-radius: 7px; padding: 7px 10px; color: #e2e8ed; font-size: 12px; font-weight: 700; }
+    .notice { max-width: 920px; margin-top: 24px; padding: 15px 17px; border-left: 3px solid #9dc4d7; background: rgba(255,255,255,.08); color: #d8e0e6; font-size: 14px; }
+    .toc-wrap { margin: 24px 0 34px; padding: 13px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); box-shadow: 0 4px 20px rgba(21,33,43,.03); }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; }
+    .toc a { padding: 8px 10px; border-radius: 6px; background: #f3f6f8; color: #35434f; font-size: 12px; font-weight: 750; text-decoration: none; }
+    .toc a:hover { background: var(--blue-soft); }
+    main { padding-bottom: 70px; }
+    section { margin: 0 0 52px; scroll-margin-top: 24px; }
+    .section-label { margin-bottom: 8px; color: var(--blue); font-size: 11px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    h2 { margin: 0 0 16px; font-size: clamp(28px, 4vw, 40px); line-height: 1.12; letter-spacing: -.035em; }
+    h3 { margin: 24px 0 9px; font-size: 21px; line-height: 1.28; letter-spacing: -.02em; }
+    p { margin: 0 0 15px; }
+    .lead { max-width: 930px; color: #3d4a55; font-size: 19px; line-height: 1.65; }
+    .conclusion { padding: 25px; border: 1px solid #d6e3e9; border-radius: 13px; background: #eaf1f5; }
+    .conclusion-head { color: #38596d; font-size: 11px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    .conclusion > p { margin-top: 9px; font-size: 19px; font-weight: 700; line-height: 1.5; }
+    .grid-4, .grid-3, .grid-2 { display: grid; gap: 14px; margin-top: 18px; }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .card, .panel { padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
+    .card .big { display: block; margin: 1px 0 7px; color: var(--navy); font-size: 29px; font-weight: 850; line-height: 1.1; letter-spacing: -.035em; }
+    .card small { display: block; margin-bottom: 8px; color: var(--blue); font-size: 10px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    .card p { margin: 0; color: #53616c; font-size: 14px; line-height: 1.55; }
+    .panel { margin-top: 18px; box-shadow: 0 6px 22px rgba(21,33,43,.025); }
+    .callout { margin: 18px 0; padding: 17px 19px; border-left: 3px solid var(--mint-dark); border-radius: 0 9px 9px 0; background: #eaf4f0; }
+    .callout.warm { border-left-color: #bd6e4b; background: var(--warm); }
+    .callout p:last-child { margin-bottom: 0; }
+    .formula { margin: 19px 0; padding: 20px; border-radius: 11px; background: var(--navy); color: #fff; text-align: center; font-size: clamp(20px, 3vw, 27px); font-weight: 800; line-height: 1.35; }
+    .formula small { display: block; margin-top: 8px; color: #bdc9d2; font-size: 12px; font-weight: 500; }
+    .figure { margin: 23px 0; padding: 20px; border: 1px solid var(--line); border-radius: 13px; background: var(--white); }
+    .figure-title { margin-bottom: 15px; color: var(--navy); font-size: 15px; font-weight: 850; }
+    .svg-scroll { overflow-x: auto; }
+    .figure svg { display: block; width: 100%; height: auto; }
+    .figure figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .chain-svg { min-width: 820px; }
+    .export-svg { min-width: 700px; }
+    .table-wrap { overflow-x: auto; margin: 18px 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 13px 15px; border-bottom: 1px solid #e7ebee; text-align: left; vertical-align: top; }
+    th { background: #eff3f5; color: #394853; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+    td strong { color: var(--navy); }
+    .timeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 20px 0; }
+    .time-card { min-height: 125px; padding: 16px; border-top: 3px solid var(--blue); border-radius: 8px; background: #fff; box-shadow: 0 5px 18px rgba(21,33,43,.035); }
+    .time-card b { display: block; margin-bottom: 7px; font-size: 21px; }
+    .time-card span { display: block; color: #53616c; font-size: 13px; line-height: 1.5; }
+    .steps { display: grid; gap: 10px; margin: 20px 0; }
+    .step { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: start; padding: 15px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+    .step-no { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: var(--navy); color: #fff; font-size: 13px; font-weight: 850; }
+    .step h3 { margin: 0 0 4px; font-size: 17px; }
+    .step p { margin: 0; color: #586671; font-size: 14px; }
+    .source-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0; list-style: none; }
+    .source-list li { padding: 14px; border: 1px solid var(--line); border-radius: 9px; background: #fff; font-size: 13px; line-height: 1.5; }
+    .source-list a { display: block; margin-bottom: 4px; font-weight: 800; text-decoration: none; }
+    .source-list span { color: var(--muted); }
+    .small-note { color: var(--muted); font-size: 12px; }
+    .footer { margin-top: 45px; padding: 22px 0 36px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    @media (max-width: 850px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .timeline { grid-template-columns: repeat(2, 1fr); }
+      .sitebar nav { display: none; }
+    }
+    @media (max-width: 560px) {
+      .page { width: min(100% - 24px, 1180px); }
+      .sitebar-inner { min-height: 62px; }
+      .hero { border-radius: 12px; padding: 29px 22px; }
+      .hero::after { right: -260px; }
+      .grid-4, .grid-3, .grid-2, .source-list, .timeline { grid-template-columns: 1fr; }
+      .figure { padding: 14px; }
+      .toc-wrap { margin-bottom: 27px; }
+      .toc { max-height: 120px; overflow: auto; }
+      .table-wrap table { min-width: 680px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="sitebar">
+    <div class="page sitebar-inner">
+      <a class="brand" href="https://hack-fin.ru/">Александра Кашаева<small>Точные цифры для решений</small></a>
+      <nav aria-label="Навигация"><a href="https://hack-fin.ru/research.html">Все исследования</a><a href="#how">Как работает</a><a href="#export">Экспорт</a><a href="#usn">ОСНО и УСН</a><a href="#control">Контроль</a><a href="#sources">Источники</a></nav>
+    </div>
+  </header>
+  <div class="page">
+    <div class="crumbs"><a href="https://hack-fin.ru/">Главная</a>　→　<a href="https://hack-fin.ru/research.html">Исследования</a>　→　НДС</div>
+    <header class="hero">
+      <div class="eyebrow">Исследования • налоги, финансы и бизнес</div>
+      <h1>НДС простыми словами: кто платит и зачем нужен вычет</h1>
+      <p class="dek">Почему налог проходит через компанию, но в обычной цепочке доезжает до покупателя; зачем экспортеру возвращают входной НДС; и почему поставщик на УСН иногда обходится компании на ОСНО дороже.</p>
+      <div class="metadata"><span>Александра Кашаева</span><span>7 октября 2026</span><span>Правила России на эту дату</span><span>12–15 минут чтения</span></div>
+      <div class="notice">Это объяснение экономической логики и общих правил главы 21 НК РФ. Конкретная ставка, вычет, момент начисления и право на возмещение зависят от операции, документов и налогового режима. Материал не заменяет проверку конкретной сделки.</div>
+    </header>
+
+    <div class="toc-wrap"><nav class="toc" aria-label="Содержание">
+      <a href="#answer">Главный вывод</a><a href="#rates">Ставки 2026 года</a><a href="#how">Как идет налог по цепочке</a><a href="#consumer">Почему платит покупатель</a><a href="#profit">НДС и прибыль</a><a href="#export">Экспорт и возврат</a><a href="#usn">ОСНО и УСН</a><a href="#control">История и контроль</a><a href="#myths">Коротко о мифах</a><a href="#sources">Источники</a>
+    </nav></div>
+
+    <main>
+      <section id="answer">
+        <div class="section-label">Главный вывод</div>
+        <div class="conclusion">
+          <div class="conclusion-head">Если объяснить без бухгалтерского жаргона</div>
+          <p>НДС — налог на потребление. Бизнес собирает его по дороге от поставщика к покупателю и перечисляет в бюджет разницу между налогом со своих продаж и налогом в подтвержденных покупках. В конце цепочки стоит тот, кто не может заявить вычет: обычно конечный потребитель, но им может стать и организация на освобождении от НДС или на специальной ставке без права на вычет.</p>
+          <p>Вычет нужен, чтобы налог не начислялся заново на уже обложенную стоимость. Экспорт облагается по ставке 0%, потому что потребление происходит в другой стране; возврат входного налога убирает российский НДС из экспортной цены.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card"><small>В России в 2026</small><span class="big">22%</span><p>Общая ставка с 1 января 2026 года. Ставка 10% сохраняется для предусмотренных законом категорий товаров и операций.</p></div>
+          <div class="card"><small>Экспорт</small><span class="big">0%</span><p>Это облагаемая операция по нулевой ставке с правом на вычет при выполнении требований закона и подтверждении операции.</p></div>
+          <div class="card"><small>УСН</small><span class="big">20 млн ₽</span><p>Если доход за 2025 год не выше этой суммы, в 2026 году действует обязательное освобождение от обязанностей по НДС.</p></div>
+          <div class="card"><small>Налог на прибыль</small><span class="big">25%</span><p>Общая ставка налога на прибыль организаций применяется к базе начиная с 2025 года; это другой расчет и другая налоговая база.</p></div>
+        </div>
+        <p class="small-note">Ставки и пороги для УСН меняются: конкретный режим зависит от дохода, даты его превышения, выбранной ставки и вида операции. Ниже разобран срез на 7 октября 2026 года.</p>
+      </section>
+
+      <section id="rates">
+        <div class="section-label">Сначала — действующие правила</div>
+        <h2>Какие ставки действуют в России сейчас</h2>
+        <p>С 1 января 2026 года общая ставка выросла с 20% до 22%. Ставка 10% применяется к перечисленным в НК РФ социально значимым категориям, например к отдельным продуктам питания, товарам для детей, медицинским товарам и книжной продукции. Нулевая ставка действует только для перечисленных законом операций и при соблюдении порядка подтверждения. Это не три произвольных варианта «на выбор» для любой продажи.</p>
+        <div class="panel">
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Ставка</th><th>Когда в общем случае встречается</th><th>Что важно помнить</th></tr></thead>
+              <tbody>
+                <tr><td><strong>22%</strong></td><td>Общая ставка по облагаемым операциям, для которых не установлена другая ставка.</td><td>Для цены 100 без налога НДС равен 22; если цена уже включает НДС, расчетная ставка — 22/122.</td></tr>
+                <tr><td><strong>10%</strong></td><td>Отдельные продукты питания, товары для детей, лекарства и медицинские товары, некоторые печатные издания и другие позиции по перечням.</td><td>Нельзя применять только потому, что товар «социально важный» в бытовом смысле: нужна позиция в установленном перечне и подходящий код.</td></tr>
+                <tr><td><strong>0%</strong></td><td>В частности, экспорт товаров и некоторые международные перевозки и иные операции, прямо указанные в статье 164 НК РФ.</td><td>Нулевая ставка — не автоматическое освобождение. Обычно нужно подтвердить основание и сохранить право на вычет входного НДС.</td></tr>
+                <tr><td><strong>5% / 7%</strong></td><td>Специальные ставки для части плательщиков на УСН, которые обязаны исчислять НДС.</td><td>При этих специальных ставках плательщик на УСН в общем случае не принимает входной НДС к вычету, кроме прямо установленных НК РФ случаев. Покупатель, которому такой НДС предъявлен в счете-фактуре, в общем случае может заявить свой вычет.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="callout warm"><p><strong>Про порог УСН.</strong> В 2026 году освобождение обязательно, если доход за предыдущий календарный год не превысил 20 млн ₽. Если лимит пересечен уже в течение года, обязанности по НДС возникают с первого числа следующего месяца. Для 2026 года ФНС указывает индексированные верхние границы 272,5 млн ₽ для ставки 5% и 490,5 млн ₽ для ставки 7%; выше применяются иные правила, в том числе может утрачиваться право на УСН. По действующей шкале порог освобождения далее снижается: 15 млн ₽ в 2027 году и 10 млн ₽ с 2028 года.</p></div>
+      </section>
+
+      <section id="how">
+        <div class="section-label">Механика</div>
+        <h2>Как НДС проходит через цепочку бизнеса</h2>
+        <p>У каждого участника обычной облагаемой цепочки есть два числа. <strong>Исходящий НДС</strong> — налог, начисленный при продаже. <strong>Входящий НДС</strong> — налог, предъявленный поставщиками при покупке. Если покупка нужна для облагаемой деятельности, принята к учету и подтверждена документами, входящий налог обычно можно вычесть.</p>
+        <p class="small-note">Тонкость языка: в НК РФ нет отдельного определения «добавленной стоимости». Это название экономической логики налога; конкретные облагаемые операции, база, ставки и вычеты определяют статьи главы 21 НК РФ.</p>
+        <div class="formula">НДС к уплате = исходящий НДС − входной НДС к вычету + восстановленный НДС<small>Базовая логика для обычного плательщика с правом на вычеты. В НК есть специальные правила и исключения.</small></div>
+        <div class="callout"><p><strong>Проверить арифметику:</strong> откройте <a href="https://promo.okcept.world/blog/kalkulyator-nds/" target="_blank" rel="noopener noreferrer">калькулятор НДС Okcept</a>. Калькулятор помогает проверить сумму; какая ставка и порядок применяются к конкретной операции, определяются НК РФ и условиями сделки.</p></div>
+
+        <figure class="figure">
+          <div class="figure-title">Одна вещь проходит три продажи — налог не наслаивается три раза</div>
+          <div class="svg-scroll">
+            <svg class="chain-svg" viewBox="0 0 1080 260" role="img" aria-labelledby="chain-title chain-desc">
+              <title id="chain-title">Как НДС движется от поставщика к потребителю</title>
+              <desc id="chain-desc">Поставщик добавил стоимость 100 и перечислил 22 налога. Производитель добавил 50, начислил 33, вычел входные 22 и перечислил 11. Магазин добавил 50, начислил 44, вычел 33 и перечислил 11. Потребитель заплатил 244, включая 44 НДС.</desc>
+              <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7c929f"/></marker></defs>
+              <g font-family="Arial, sans-serif">
+                <rect x="10" y="33" width="225" height="188" rx="13" fill="#eef4f7" stroke="#cbd9e1"/>
+                <text x="28" y="67" font-size="13" font-weight="700" fill="#426274">ПОСТАВЩИК</text>
+                <text x="28" y="105" font-size="18" font-weight="700" fill="#15212b">Продает за 100 + 22</text>
+                <text x="28" y="136" font-size="15" fill="#4c5a64">Начислил: 22</text>
+                <text x="28" y="162" font-size="15" fill="#4c5a64">Вычет: 0</text>
+                <rect x="28" y="178" width="185" height="27" rx="6" fill="#d8eee8"/>
+                <text x="41" y="197" font-size="14" font-weight="700" fill="#226854">В бюджет: 22</text>
+
+                <line x1="239" y1="125" x2="276" y2="125" stroke="#7c929f" stroke-width="3" marker-end="url(#arrow)"/>
+                <rect x="287" y="33" width="225" height="188" rx="13" fill="#ffffff" stroke="#cbd9e1"/>
+                <text x="305" y="67" font-size="13" font-weight="700" fill="#426274">ПРОИЗВОДИТЕЛЬ</text>
+                <text x="305" y="105" font-size="18" font-weight="700" fill="#15212b">Продает за 150 + 33</text>
+                <text x="305" y="136" font-size="15" fill="#4c5a64">Начислил: 33</text>
+                <text x="305" y="162" font-size="15" fill="#4c5a64">Вычел: 22</text>
+                <rect x="305" y="178" width="185" height="27" rx="6" fill="#d8eee8"/>
+                <text x="318" y="197" font-size="14" font-weight="700" fill="#226854">В бюджет: 11</text>
+
+                <line x1="516" y1="125" x2="553" y2="125" stroke="#7c929f" stroke-width="3" marker-end="url(#arrow)"/>
+                <rect x="564" y="33" width="225" height="188" rx="13" fill="#ffffff" stroke="#cbd9e1"/>
+                <text x="582" y="67" font-size="13" font-weight="700" fill="#426274">МАГАЗИН</text>
+                <text x="582" y="105" font-size="18" font-weight="700" fill="#15212b">Продает за 200 + 44</text>
+                <text x="582" y="136" font-size="15" fill="#4c5a64">Начислил: 44</text>
+                <text x="582" y="162" font-size="15" fill="#4c5a64">Вычел: 33</text>
+                <rect x="582" y="178" width="185" height="27" rx="6" fill="#d8eee8"/>
+                <text x="595" y="197" font-size="14" font-weight="700" fill="#226854">В бюджет: 11</text>
+
+                <line x1="793" y1="125" x2="830" y2="125" stroke="#7c929f" stroke-width="3" marker-end="url(#arrow)"/>
+                <rect x="841" y="33" width="225" height="188" rx="13" fill="#15212b"/>
+                <text x="859" y="67" font-size="13" font-weight="700" fill="#a9c7d7">ПОКУПАТЕЛЬ</text>
+                <text x="859" y="105" font-size="18" font-weight="700" fill="#ffffff">Платит всего 244</text>
+                <text x="859" y="136" font-size="15" fill="#d0d9df">Цена без налога: 200</text>
+                <rect x="859" y="160" width="185" height="45" rx="7" fill="#2b3e4b"/>
+                <text x="872" y="180" font-size="14" font-weight="700" fill="#f1ad8c">НДС внутри: 44</text>
+                <text x="872" y="197" font-size="11" fill="#d0d9df">Потребитель вычет не заявляет</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption>Упрощенный пример по ставке 22%: каждая компания перечисляет налог только с добавленной ею стоимости. В бюджет поступает 22 + 11 + 11 = 44 ₽ — столько же, сколько составляет НДС с конечной цены без налога 200 ₽.</figcaption>
+        </figure>
+
+        <div class="table-wrap"><table>
+          <thead><tr><th>Участник</th><th>Продажа без НДС</th><th>Исходящий НДС</th><th>Вычет</th><th>Перечисляет</th></tr></thead>
+          <tbody>
+            <tr><td>Поставщик</td><td>100 ₽</td><td>22 ₽</td><td>0 ₽</td><td><strong>22 ₽</strong></td></tr>
+            <tr><td>Производитель</td><td>150 ₽</td><td>33 ₽</td><td>22 ₽</td><td><strong>11 ₽</strong></td></tr>
+            <tr><td>Магазин</td><td>200 ₽</td><td>44 ₽</td><td>33 ₽</td><td><strong>11 ₽</strong></td></tr>
+            <tr><td>Потребитель</td><td>Не продает дальше</td><td>Не подает декларацию</td><td>0 ₽</td><td>Платит цену 244 ₽; в ней 44 ₽ НДС</td></tr>
+          </tbody>
+        </table></div>
+        <p>Вычет — не скидка из бюджета и не премия компании. Это способ убрать налог, уже предъявленный на предыдущем звене, чтобы в итоге не облагать одни и те же 100 ₽ повторно на каждом переходе товара.</p>
+      </section>
+
+      <section id="consumer">
+        <div class="section-label">Кто перечисляет и кто несет</div>
+        <h2>Почему говорят, что НДС платит конечный потребитель</h2>
+        <p class="lead">Здесь часто смешивают два разных вопроса: кто по закону рассчитывает и перечисляет НДС и на ком в экономическом смысле остается расход.</p>
+        <div class="grid-2">
+          <div class="card"><small>Юридическая сторона</small><span class="big">Бизнес</span><p>Налог исчисляют и декларируют налогоплательщики по облагаемым операциям. Продавец предъявляет налог покупателю в цене или отдельной строкой и перечисляет рассчитанную сумму в бюджет.</p></div>
+          <div class="card"><small>Экономическая сторона</small><span class="big">Покупатель</span><p>Покупатель для личного потребления не использует покупку в облагаемой деятельности и не заявляет вычет. НДС остается внутри уплаченной им цены.</p></div>
+        </div>
+        <h3>Почему 22% от цены 244 ₽ — это не 53,68 ₽</h3>
+        <p>Ставка 22% начисляется на цену <em>без</em> НДС. Если цена без налога равна 200 ₽, налог — 44 ₽, а итоговая цена — 244 ₽. Доля налога внутри уже готовой цены считается по расчетной ставке 22/122: 244 × 22/122 = 44 ₽. Поэтому в цене с налогом НДС составляет около 18,03%, хотя ставка — 22%.</p>
+        <div class="callout"><p><strong>И все же перенос в цену не механический.</strong> Типовая модель устроена так, чтобы налог на потребление нес конечный покупатель. Но в конкретном рынке продавец может не суметь целиком поднять цену: тогда часть налогового эффекта временно уменьшает его маржу, влияет на закупочную цену или распределяется между участниками. Это зависит от конкуренции, договора и чувствительности спроса. Юридическая обязанность продавца от этого не исчезает.</p></div>
+      </section>
+
+      <section id="profit">
+        <div class="section-label">Два налога — две разные линейки</div>
+        <h2>Почему НДС считается отдельно от налога на прибыль</h2>
+        <p>НДС отвечает на вопрос: сколько налога начислено с облагаемых продаж и сколько входного НДС можно зачесть? Налог на прибыль отвечает на другой вопрос: какой финансовый результат остается после признанных доходов и расходов? Один и тот же бизнес может иметь НДС к уплате и одновременно убыток по налогу на прибыль.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Что сравниваем</th><th>НДС</th><th>Налог на прибыль организаций</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Что облагается</strong></td><td>Облагаемые операции по реализации, ввоз и другие объекты, определенные главой 21 НК РФ.</td><td>Прибыль: учитываемые доходы минус учитываемые расходы.</td></tr>
+            <tr><td><strong>Базовая логика</strong></td><td>Исходящий налог минус допустимые вычеты плюс восстановленный налог.</td><td>Налоговая база умножается на установленную ставку; общая ставка в 2026 году — 25%.</td></tr>
+            <tr><td><strong>Что делает покупной НДС</strong></td><td>При выполнении условий уменьшает налог с продаж.</td><td>Если входной НДС принимается к вычету, он обычно не становится расходом по налогу на прибыль; если вычет не положен, учет зависит от основания и правил главы 21.</td></tr>
+            <tr><td><strong>Есть ли связь с убытком</strong></td><td>Убыток сам по себе не отменяет начисление НДС с продаж.</td><td>При отрицательной налоговой базе текущий налог на прибыль обычно не начисляется, хотя действуют правила переноса убытков и специальные ограничения.</td></tr>
+          </tbody>
+        </table></div>
+        <div class="figure">
+          <div class="figure-title">Пример: компания в убытке, но у нее есть НДС к уплате</div>
+          <div class="grid-3">
+            <div class="card"><small>Продала</small><span class="big">100 ₽</span><p>Цена без НДС. Начислила 22 ₽ исходящего НДС.</p></div>
+            <div class="card"><small>Потратила</small><span class="big">140 ₽</span><p>Например, на зарплату и расходы, по которым нет вычитаемого входного НДС.</p></div>
+            <div class="card"><small>Получилось</small><span class="big">−40 ₽</span><p>Убыток для примера: прибыльного налога к уплате нет, но НДС 22 ₽ остается.</p></div>
+          </div>
+          <p class="small-note">Это намеренно упрощенный пример: ставка 22%, нет входного НДС к вычету, расходы полностью признаются по налогу на прибыль. Фактический расчет определяется составом расходов и операциями компании.</p>
+        </div>
+        <div class="callout"><p><strong>Зачем понадобилось отделять?</strong> Если облагать всю цену на каждом этапе без вычета, налог «накручивался» бы на прежний налог. Если же облагать только прибыль компании, налог бы менялся вместе с расходами, убытками и структурой финансирования. НДС сконструирован как налог на потребление: бизнес в нормальной облагаемой цепочке переносит налог дальше, а вычет сохраняет нейтральность числа производственных и торговых этапов.</p></div>
+      </section>
+
+      <section id="export">
+        <div class="section-label">Экспорт</div>
+        <h2>Почему при экспорте применяется 0% и откуда берется возврат</h2>
+        <p>В основе — <strong>принцип страны назначения</strong>: налог на потребление должен остаться там, где товар или услуга потребляются. Если российская компания продает товар иностранному покупателю для потребления за рубежом, Россия не должна оставлять у себя НДС с этой продажи. Налог на конечное потребление начислит страна назначения по своим правилам.</p>
+        <figure class="figure">
+          <div class="figure-title">Экспорт: убрать российский налог и оставить налог стране потребления</div>
+          <div class="svg-scroll">
+            <svg class="export-svg" viewBox="0 0 900 275" role="img" aria-labelledby="export-title export-desc">
+              <title id="export-title">Почему экспортеру возвращают входной НДС</title>
+              <desc id="export-desc">Российские поставщики предъявляют экспортеру входной НДС 22. Экспортер продает товар за рубеж по нулевой ставке и при подтверждении заявляет входной НДС к вычету или возмещению. Налог на конечное потребление начисляется в стране назначения.</desc>
+              <defs><marker id="exp-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7c929f"/></marker><marker id="exp-arrow-rev" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M9,0 L9,6 L0,3 z" fill="#226854"/></marker></defs>
+              <g font-family="Arial, sans-serif">
+                <rect x="15" y="35" width="235" height="150" rx="13" fill="#eef4f7" stroke="#cbd9e1"/>
+                <text x="35" y="68" font-size="13" font-weight="700" fill="#426274">РОССИЯ</text>
+                <text x="35" y="101" font-size="19" font-weight="700" fill="#15212b">Поставщики</text>
+                <text x="35" y="132" font-size="15" fill="#4c5a64">Предъявили входной НДС</text>
+                <text x="35" y="159" font-size="18" font-weight="700" fill="#285778">22 ₽</text>
+
+                <line x1="255" y1="110" x2="316" y2="110" stroke="#7c929f" stroke-width="3" marker-end="url(#exp-arrow)"/>
+                <text x="267" y="92" font-size="11" fill="#66727d">поставка</text>
+                <rect x="327" y="35" width="235" height="150" rx="13" fill="#15212b"/>
+                <text x="347" y="68" font-size="13" font-weight="700" fill="#a9c7d7">РОССИЙСКИЙ ЭКСПОРТЕР</text>
+                <text x="347" y="101" font-size="19" font-weight="700" fill="#ffffff">Продает за рубеж</text>
+                <text x="347" y="132" font-size="15" fill="#d0d9df">Ставка на экспортной продаже</text>
+                <text x="347" y="160" font-size="22" font-weight="800" fill="#f1ad8c">0%</text>
+
+                <line x1="567" y1="110" x2="628" y2="110" stroke="#7c929f" stroke-width="3" marker-end="url(#exp-arrow)"/>
+                <text x="583" y="92" font-size="11" fill="#66727d">экспорт</text>
+                <rect x="639" y="35" width="245" height="150" rx="13" fill="#eef4f7" stroke="#cbd9e1"/>
+                <text x="659" y="68" font-size="13" font-weight="700" fill="#426274">СТРАНА НАЗНАЧЕНИЯ</text>
+                <text x="659" y="101" font-size="19" font-weight="700" fill="#15212b">Импортер / покупатель</text>
+                <text x="659" y="132" font-size="15" fill="#4c5a64">Там начисляется налог</text>
+                <text x="659" y="159" font-size="16" font-weight="700" fill="#285778">по местным правилам</text>
+
+                <path d="M440 194 C440 246 110 246 110 194" fill="none" stroke="#226854" stroke-width="3" marker-end="url(#exp-arrow-rev)"/>
+                <rect x="250" y="218" width="330" height="34" rx="7" fill="#d8eee8"/>
+                <text x="270" y="240" font-size="14" font-weight="700" fill="#226854">Вычет / возмещение подтвержденного входного НДС</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption>Возмещение не означает, что государство «платит экспортеру за экспорт». Оно убирает из российской цепочки НДС, который компания заплатила поставщикам, хотя ее продажа облагается по нулевой ставке.</figcaption>
+        </figure>
+        <p><strong>Зачем нужен возврат, если выходной налог равен нулю?</strong> Российский производитель уже мог заплатить НДС за сырье, упаковку, перевозку и услуги. Если оставить этот налог внутри экспортной цены, товар уйдет за рубеж с российским НДС в себестоимости, а при импорте страна назначения добавит собственный налог. Это ухудшает нейтральность торговли и может означать налоговую нагрузку в двух странах.</p>
+        <p>При ставке 0% выходной НДС по экспорту равен нулю, но право на вычет входного налога в общем режиме сохраняется. Если входные вычеты больше исчисленного налога, возникает сумма к возмещению. Экспортер подтверждает право на ставку по правилам НК РФ и ЕАЭС; налоговая проверяет документы и расчет. Возврат — это часть механизма, а не безусловная выплата по факту отправки товара.</p>
+        <div class="callout warm"><p><strong>Нулевая ставка — не то же самое, что освобождение от НДС.</strong> При освобождении входной налог часто нельзя вычесть и он остается в расходах или стоимости приобретений. При нулевой ставке в обычном режиме входной НДС, связанный с подтвержденной облагаемой операцией, может заявляться к вычету. Для плательщика на УСН, выбравшего специальные ставки 5% или 7%, входной НДС в общем случае не вычитается, в том числе по приобретениям для экспортных операций; сохраняются отдельные исключения, прямо предусмотренные НК РФ.</p></div>
+      </section>
+
+      <section id="usn">
+        <div class="section-label">Практика для закупок</div>
+        <h2>Почему компании на ОСНО бывает невыгодно покупать у поставщика на УСН</h2>
+        <p class="lead">Чаще всего разница возникает не в налоге на прибыль, а во входном НДС. Но с 2025 года фраза «поставщик на УСН — значит без НДС» уже неверна: у поставщика может быть освобождение, ставка 5% или 7%, либо общая ставка.</p>
+        <h3>Упрощенный пример с одной продажей</h3>
+        <p>Компания на ОСНО продает товар конечному покупателю за 200 ₽ без НДС и начисляет 44 ₽ НДС. Входные затраты на покупку товара — 100 ₽ без учета предъявленного поставщиком налога. Налоговая прибыль в примере — 100 ₽, налог на прибыль по общей ставке 25% — 25 ₽. Сравним, что меняется из-за статуса поставщика.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Кто поставщик</th><th>Счет за покупку</th><th>Входной НДС к вычету у ОСНО</th><th>НДС покупателя к уплате</th><th>База и налог на прибыль покупателя</th></tr></thead>
+          <tbody>
+            <tr><td><strong>ОСНО, ставка 22%</strong></td><td>100 ₽ + 22 ₽ НДС</td><td>22 ₽</td><td>44 − 22 = <strong>22 ₽</strong></td><td>База 100 ₽; налог 25 ₽</td></tr>
+            <tr><td><strong>УСН, освобождение от НДС</strong></td><td>100 ₽, без НДС</td><td>0 ₽</td><td>44 − 0 = <strong>44 ₽</strong></td><td>База 100 ₽; налог 25 ₽</td></tr>
+            <tr><td><strong>УСН, специальная ставка 5%</strong></td><td>100 ₽ + 5 ₽ НДС</td><td>5 ₽, если есть счет-фактура и выполнены условия вычета</td><td>44 − 5 = <strong>39 ₽</strong></td><td>База 100 ₽; налог 25 ₽</td></tr>
+          </tbody>
+        </table></div>
+        <p>Эта таблица сравнивает одинаковую цену товара до НДС. При поставщике на ОСНО покупатель платит 100 ₽ за товар и 22 ₽ предъявленного НДС, который принимает к вычету. При освобожденном от НДС поставщике на УСН он платит 100 ₽ без входного налога. В обоих случаях расход для налога на прибыль — 100 ₽, база — 100 ₽, налог — 25 ₽. Разница в НДС к уплате появляется потому, что во втором случае вычитать нечего; сам статус поставщика на УСН не запрещает учесть реальную и подтвержденную закупку в расходах.</p>
+        <div class="figure">
+          <div class="figure-title">Где именно появляется разница</div>
+          <div class="grid-2">
+            <div class="card"><small>НДС покупателя на ОСНО</small><span class="big">+22 ₽</span><p>При поставщике без НДС у покупателя нет счета-фактуры с входным налогом для вычета. Поэтому из его 44 ₽ исходящего НДС нечего вычитать.</p></div>
+            <div class="card"><small>Налог на прибыль покупателя</small><span class="big">0 ₽ разницы</span><p>В нормализованном примере расход на закупку — 100 ₽ в обоих случаях. Расход должен быть реальным, связанным с деятельностью и документально подтвержденным.</p></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Если договорная цена одинакова: 122 ₽ у обоих поставщиков</h3>
+          <p>Теперь сравним одинаковую сумму счета. При поставщике на ОСНО 100 ₽ — стоимость товара и 22 ₽ — вычитаемый НДС. У поставщика на УСН с освобождением все 122 ₽ — цена без предъявленного НДС. Предположим, что товар продан в том же периоде за 200 ₽ без НДС, а расходы подтверждены и признаются для налога на прибыль.</p>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Что считаем</th><th>Поставщик на ОСНО</th><th>Поставщик на УСН без НДС</th></tr></thead>
+            <tbody>
+              <tr><td>Счет поставщика</td><td>100 ₽ + 22 ₽ НДС = 122 ₽</td><td>122 ₽ без НДС</td></tr>
+              <tr><td>Входной НДС к вычету</td><td>22 ₽</td><td>0 ₽</td></tr>
+              <tr><td>НДС покупателя к уплате с продажи за 200 ₽</td><td>44 − 22 = <strong>22 ₽</strong></td><td>44 − 0 = <strong>44 ₽</strong></td></tr>
+              <tr><td>Расход на товар для налога на прибыль</td><td>100 ₽</td><td>122 ₽</td></tr>
+              <tr><td>Прибыльная база и налог по ставке 25%</td><td>100 ₽; налог <strong>25 ₽</strong></td><td>78 ₽; налог <strong>19,5 ₽</strong></td></tr>
+              <tr><td>Остаток из 244 ₽ после счета, НДС и налога на прибыль</td><td><strong>75 ₽</strong></td><td><strong>58,5 ₽</strong></td></tr>
+            </tbody>
+          </table></div>
+          <p>Потеря вычета увеличила НДС к уплате на 22 ₽. Но все 122 ₽ у поставщика без НДС становятся расходом для налога на прибыль, поэтому база ниже на 22 ₽, а налог на прибыль — на 5,5 ₽. В этом упрощенном примере итоговая разница после двух налогов — 16,5 ₽, а не все 22 ₽. Более низкая цена поставщика на УСН может сократить или убрать эту разницу.</p>
+        </div>
+        <div class="callout"><p><strong>Практический вывод:</strong> закупку нужно сравнивать по полной цене и по возможности вычета, а не по надписи «с НДС / без НДС». Поставщик без НДС может дать цену достаточно ниже, чтобы компенсировать потерю вычета. Поставщик на УСН со ставкой 5% или 7% предъявляет НДС, который покупатель на ОСНО в общем случае может принять к вычету, но сам поставщик на этих специальных ставках в общем случае не вычитает свой входной НДС и включает его в стоимость.</p></div>
+        <p class="small-note">Допущения расчета: все продажи покупателя облагаются по 22%; цена закупки до НДС одинакова; операции и документы реальны; расходы полностью признаны для налога на прибыль; нет других вычетов, льгот, восстановлений и корректировок. В контракте может быть согласована цена «включая НДС», поэтому сравнивайте фактическую полную стоимость и налоговые документы.</p>
+      </section>
+
+      <section id="control">
+        <div class="section-label">Как система менялась</div>
+        <h2>От налога в документах — к проверке всей цепочки</h2>
+        <p>НДС технически удобен для сверки: налог, который продавец показывает как исходящий, покупатель показывает как входящий. Одни и те же счета-фактуры связывают две декларации. Но это же создает и риск: фиктивный счет-фактура может дать покупателю вычет, не обеспеченный уплатой налога предыдущим звеном. Поэтому контроль НДС развивался в сторону сопоставления данных продавца и покупателя.</p>
+        <div class="steps">
+          <div class="step"><div class="step-no">01</div><div><h3>Каждая компания заявляет свою часть</h3><p>Продавец начисляет НДС с реализации. Покупатель включает предъявленный налог в книгу покупок и заявляет вычет, если выполнены установленные условия.</p></div></div>
+          <div class="step"><div class="step-no">02</div><div><h3>Сведения можно сопоставить</h3><p>С 2015 года в декларации по НДС отражаются сведения из книг покупок и продаж и журналов счетов-фактур. Комплекс АСК НДС-2 автоматически сопоставляет данные сторон одной операции и выявляет расхождения.</p></div></div>
+          <div class="step"><div class="step-no">03</div><div><h3>Расхождение становится сигналом</h3><p>Если счет-фактура есть у покупателя, но операция не совпала с данными продавца, налоговая может запросить пояснения. Причиной могут быть ошибка, корректировка, разные периоды или проблема в цепочке; само несовпадение — повод разобраться, а не готовый вывод о фиктивности сделки.</p></div></div>
+        </div>
+        <figure class="figure">
+          <div class="figure-title">Почему проверка цепочки естественно появилась именно у НДС</div>
+          <div class="svg-scroll">
+            <svg class="chain-svg" viewBox="0 0 1080 205" role="img" aria-labelledby="control-title control-desc">
+              <title id="control-title">Сопоставление деклараций продавца и покупателя по НДС</title>
+              <desc id="control-desc">Продавец отражает 22 рубля исходящего НДС, счет-фактура связывает его операцию с покупателем, покупатель отражает 22 рубля входного НДС к вычету. Система сопоставляет запись и при расхождении запрашивает пояснения.</desc>
+              <defs><marker id="control-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7c929f"/></marker></defs>
+              <g font-family="Arial, sans-serif">
+                <rect x="15" y="30" width="280" height="140" rx="12" fill="#eef4f7" stroke="#cbd9e1"/>
+                <text x="38" y="62" font-size="13" font-weight="700" fill="#426274">ДЕКЛАРАЦИЯ ПРОДАВЦА</text>
+                <text x="38" y="102" font-size="20" font-weight="700" fill="#15212b">Исходящий НДС: 22</text>
+                <text x="38" y="132" font-size="14" fill="#53616c">Книга продаж / счет-фактура</text>
+                <line x1="299" y1="100" x2="384" y2="100" stroke="#7c929f" stroke-width="3" marker-end="url(#control-arrow)"/>
+                <text x="317" y="82" font-size="12" fill="#66727d">одна операция</text>
+                <rect x="395" y="30" width="280" height="140" rx="12" fill="#15212b"/>
+                <text x="418" y="62" font-size="13" font-weight="700" fill="#a9c7d7">СВЕРКА ЦЕПОЧКИ</text>
+                <text x="418" y="101" font-size="20" font-weight="700" fill="#ffffff">Счет-фактура</text>
+                <text x="418" y="132" font-size="14" fill="#d0d9df">Сумма, период, стороны, операция</text>
+                <line x1="679" y1="100" x2="764" y2="100" stroke="#7c929f" stroke-width="3" marker-end="url(#control-arrow)"/>
+                <text x="698" y="82" font-size="12" fill="#66727d">сопоставление</text>
+                <rect x="775" y="30" width="290" height="140" rx="12" fill="#eef4f7" stroke="#cbd9e1"/>
+                <text x="798" y="62" font-size="13" font-weight="700" fill="#426274">ДЕКЛАРАЦИЯ ПОКУПАТЕЛЯ</text>
+                <text x="798" y="102" font-size="20" font-weight="700" fill="#15212b">Входной НДС: 22</text>
+                <text x="798" y="132" font-size="14" fill="#53616c">Книга покупок / вычет</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption>Сверка помогает увидеть разницу между заявленным продавцом налогом и вычетом покупателя. Она сама по себе не отвечает на весь вопрос о сделке: реальность, исполнение, документы и деловая цель оцениваются в совокупности.</figcaption>
+        </figure>
+
+        <h3>Короткая хронология российского НДС</h3>
+        <div class="timeline">
+          <div class="time-card"><b>1954</b><span>Современный налог на добавленную стоимость внедряется во Франции, затем модель распространяется на другие государства.</span></div>
+          <div class="time-card"><b>1992</b><span>НДС начинает действовать в России. Первоначальная общая ставка — 28%, налоговый период — месяц.</span></div>
+          <div class="time-card"><b>1993 / 2004</b><span>С 1993 года — 20% общая и 10% по отдельным товарам. С 2004 года общая ставка снижена до 18%.</span></div>
+          <div class="time-card"><b>2015 / 2019</b><span>ФНС запускает автоматическое сопоставление деклараций. С 2019 года общая ставка — 20%.</span></div>
+          <div class="time-card"><b>2026</b><span>Общая ставка повышается до 22%; для части плательщиков на УСН меняются порог освобождения и варианты расчета.</span></div>
+        </div>
+        <div class="callout warm"><p><strong>Что в контроле изменилось причинно?</strong> Раньше инспектор в основном видел отдельную декларацию и бумаги конкретной организации. Когда в отчетности стали видны покупки и продажи по счетам-фактурам, появилась возможность сравнить две стороны операции и дальше пройти по цепочке. Система стала лучше находить несоответствия быстро и массово. Это повышает требования к качеству первички и сверке контрагентов, но не отменяет права компании объяснить расхождение и подтвердить реальную операцию.</p></div>
+      </section>
+
+      <section id="myths">
+        <div class="section-label">Точнее в одной фразе</div>
+        <h2>Четыре фразы о НДС, которые лучше поправить</h2>
+        <div class="grid-2">
+          <div class="card"><small>Слишком широко</small><p><strong>«НДС — это всегда плюс 22% к цене».</strong></p><p>Не всегда: есть ставка 10%, нулевая ставка, освобождаемые операции и особые правила. А цена может уже включать налог.</p></div>
+          <div class="card"><small>Слишком широко</small><p><strong>«Бизнес платит 22% со всей выручки».</strong></p><p>Обычный плательщик рассчитывает итог как исходящий налог за минусом допустимых вычетов, с учетом восстановленного НДС и специальных правил.</p></div>
+          <div class="card"><small>Неверный вывод</small><p><strong>«При экспорте налог вернули — значит дали льготу».</strong></p><p>Нулевой экспорт плюс возмещение входного налога удаляют российский НДС из операции, потребление которой находится в другой стране.</p></div>
+          <div class="card"><small>Неверный вывод</small><p><strong>«Поставщик на УСН — нельзя учесть покупку в расходах».</strong></p><p>Режим поставщика сам по себе не аннулирует расход. Потеря входного НДС у покупателя на ОСНО — отдельный вопрос, а расход оценивается по правилам налога на прибыль и документам.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Что это значит для бизнеса</div>
+        <h2>НДС — это не просто строка в счете-фактуре</h2>
+        <p>Чтобы увидеть реальную стоимость сделки, нужно одновременно смотреть на четыре вещи: полную цену для покупателя, право на входной вычет, налоговый режим обеих сторон и налоговую базу по прибыли. Поставщик без НДС может быть коммерчески выгоднее, если цена ниже достаточно, чтобы покрыть потерянный вычет. И наоборот: низкая цена без отдельной строки НДС не гарантирует низкую конечную стоимость для компании на ОСНО.</p>
+        <p>Поэтому вопрос «работать ли с УСН?» решается не ярлыком режима. Нужны расчет цены после вычетов, оценка влияния на оборотный капитал, документы по сделке и проверка того, что выбранный поставщик вообще обязан выставлять НДС именно по этой операции.</p>
+      </section>
+
+      <section id="sources">
+        <div class="section-label">Источники</div>
+        <h2>Документы и материалы</h2>
+        <p>Правила и ставки сверены на 7 октября 2026 года. В разъяснениях ФНС возможны последующие обновления; перед расчетом конкретной операции проверяйте действующую редакцию НК РФ и дату возникновения налоговой базы.</p>
+        <ul class="source-list">
+          <li><a href="https://www.nalog.gov.ru/rn77/TAXATION/TAXES/NDS/" target="_blank" rel="noopener">ФНС России: НДС — ставки, база, вычеты и расчет</a><span>Общая ставка 22%, ставки 10% и 0%, формула «исчисленный минус входной плюс восстановленный».</span></li>
+          <li><a href="https://www.nalog.gov.ru/rn77/taxation/taxes/nds_usn/" target="_blank" rel="noopener">ФНС России: НДС при УСН, вопросы и ответы</a><span>Освобождение в 2026 году, ставки 5%, 7% и 22%, вычеты и момент начала обязанностей.</span></li>
+          <li><a href="https://www.nalog.gov.ru/rn25/ifns/r25_02/info/15398551/" target="_blank" rel="noopener">ФНС России: вычет у покупателя НДС, предъявленного поставщиком на УСН</a><span>Разъяснение, что указанный в счете-фактуре налог, включая суммы по ставкам 5% и 7%, покупатель принимает к вычету в общем порядке.</span></li>
+          <li><a href="https://www.nalog.gov.ru/new2026/" target="_blank" rel="noopener">ФНС России: изменения налогообложения в 2026 году</a><span>Порог 20 млн ₽ в 2026 году, будущие пороги, индексированные лимиты и выбор ставок при УСН.</span></li>
+          <li><a href="https://base.garant.ru/413165215/" target="_blank" rel="noopener">Федеральный закон от 28.11.2025 № 425-ФЗ</a><span>Изменения НК РФ, включая повышение общей ставки НДС с 20% до 22% с 1 января 2026 года.</span></li>
+          <li><a href="https://www.nalog.gov.ru/rn77/taxation/taxes/nds/exporter/" target="_blank" rel="noopener">ФНС России: информация для экспортера</a><span>Подтверждение нулевой ставки при экспорте в третьи страны и в государства ЕАЭС.</span></li>
+          <li><a href="https://legalinstruments.oecd.org/public/doc/350/50c924b3-21f3-4564-9d4d-345a53f90b1d.html" target="_blank" rel="noopener">ОЭСР: International VAT/GST Guidelines</a><span>НДС как налог на конечное потребление, нейтральность вычетов, принцип страны назначения и нулевая ставка экспорта.</span></li>
+          <li><a href="https://www.nalog.gov.ru/rn77/news/activities_fts/5606375/" target="_blank" rel="noopener">ФНС России: автоматические сообщения о расхождениях по НДС, 2015</a><span>Расширенная декларация с книгами покупок и продаж и первые автоматические требования по выявленным несоответствиям.</span></li>
+          <li><a href="https://www.nalog.gov.ru/rn28/ifns/terr_2801/events/8334827/" target="_blank" rel="noopener">ФНС России: переход общей ставки с 18% на 20%, 2019</a><span>Разъяснение о повышении общей ставки с 1 января 2019 года.</span></li>
+          <li><a href="https://www.nalog.gov.ru/rn86/news/smi/10387593/" target="_blank" rel="noopener">ФНС России: «НДС — вчера, сегодня, завтра»</a><span>Начало применения в России с 1992 года, ставки 28%, 20%, 18% и изменение налогового периода.</span></li>
+          <li><a href="https://www.impots.gouv.fr/www2/minisite/kezako/" target="_blank" rel="noopener">Налоговая служба Франции: история TVA</a><span>Внедрение современной TVA во Франции в 1954 году и распространение модели в Европе.</span></li>
+          <li><a href="https://www.nalog.gov.ru/rn21/promo/new2025/" target="_blank" rel="noopener">ФНС России: изменения по налогу на прибыль с 2025 года</a><span>Общая ставка налога на прибыль 25% начиная с отчетных периодов 2025 года.</span></li>
+          <li><a href="https://www.consultant.ru/document/cons_doc_LAW_28165/8dfc66340782162248d64306f483acdacf04e176/" target="_blank" rel="noopener">НК РФ, статья 248: доходы для налога на прибыль</a><span>При определении доходов исключаются предъявленные покупателю налоги.</span></li>
+          <li><a href="https://www.consultant.ru/document/cons_doc_LAW_28165/ef9b3e2f8e3046127b2ef57fccf5141b694e2138/" target="_blank" rel="noopener">НК РФ, статья 252: расходы</a><span>Расходы должны быть экономически оправданы, документально подтверждены и связаны с деятельностью, направленной на получение дохода.</span></li>
+          <li><a href="https://base.garant.ru/3962403/" target="_blank" rel="noopener">Закон РФ от 06.12.1991 № 1992-I «О налоге на добавленную стоимость»</a><span>Первоначальная правовая основа введения НДС в России.</span></li>
+        </ul>
+      </section>
+
+      <section id="related">
+        <div class="section-label">Другие исследования</div>
+        <h2>Продолжить чтение</h2>
+        <div class="research-grid research-grid--related" data-related-research data-current="nds-russia-2026" data-limit="2"></div>
+        <noscript><p><a href="peredel-sobstvennosti-rossiya-2022-2026.html">Передел собственности после 2022 года</a> · <a href="struktura-biznesa-usn-osno-zpif-2026.html">УСН, ОСНО и структура бизнеса</a></p></noscript>
+      </section>
+    </main>
+    <footer class="footer">Александра Кашаева • Точные цифры для решений • Hack-Fin</footer>
+  </div>
+  <script src="research-data.js"></script>
+  <script src="research-list.js"></script>
+</body>
+</html>
