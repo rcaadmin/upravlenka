@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Порядок в финансах и управленческий учёт — Александра Кашаева</title>
-  <meta name="description" content="Управленческий учёт на формулах: ДДС, отчёт о прибыли и баланс с прослеживаемостью до первичных данных. Проверка EBIT, EBITDA и расходов по месяцам, ЦФО, проектам, SKU и отделам. Александра Кашаева, Санкт-Петербург и онлайн.">
+  <title>Бизнес-план для кредита и управленческая отчётность — Александра Кашаева</title>
+  <meta name="description" content="Бизнес-план и финансовая модель для кредита. Если управленческой отчётности нет — проверка прошлого периода, сверка данных 1С, бухгалтерского и юридического контуров. Александра Кашаева, Санкт-Петербург и онлайн.">
   <link rel="canonical" href="https://hack-fin.ru/">
   <meta name="google-site-verification" content="3eFHYFysFR-2SCQRUlmbo7nLdDJEeGX12d21DHr_TT8">
   <meta name="theme-color" content="#173c32">
-  <meta property="og:title" content="Порядок в финансах. Ясность в бизнесе.">
-  <meta property="og:description" content="ДДС, отчёт о прибыли и баланс на формулах. Проверка прибыли и расходов с прослеживаемостью от показателя до исходных данных и первичных документов.">
+  <meta property="og:title" content="Бизнес-план для кредита и управленческая отчётность">
+  <meta property="og:description" content="Подготовка бизнес-плана и финансовой модели для банка. Управленческая отчётность — на фактических данных компании.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hack-fin.ru/">
   <meta property="og:locale" content="ru_RU">
@@ -63,6 +63,79 @@
     @media(max-width:600px){.hero-lead{font-size:16px}.hero-note{font-size:13px}.trust span{font-size:12px}.system-foot{font-size:12px}.report-tab{font-size:14px;padding:12px 15px;min-height:48px}.report-tabs{gap:2px}.report-caption h3{font-size:24px}.report-caption p{font-size:16px}.report-panel{padding-top:24px}.demo-notice{padding-left:15px}.demo-notice p{font-size:14px}.report-scroll{border-radius:10px}.report-dimensions{gap:12px}.case-scope{display:block;padding:27px}.case-scope>strong{margin:22px 0 10px;font-size:43px}.case-scope a{margin-top:22px}.case-content{padding:27px 23px}.case-content h3{font-size:26px}.case-content dd{font-size:16px}.data-agreement{padding:27px 23px;gap:28px}.data-agreement h3{font-size:27px}.data-agreement li{padding-left:35px}.contact-email{font-size:20px}.contact .actions{display:flex;flex-direction:column;align-items:stretch}.contact .btn{width:100%;font-size:14px}}
     @media print{.report-tabs,.report-enlarge,.report-mobile-hint{display:none}.report-panel[hidden]{display:block!important}.report-scroll{overflow:visible}.report-scroll img{min-width:0}.report-panel{break-inside:avoid}.practice-case,.data-agreement{display:block}}
 
+  
+/* Homepage offer hierarchy: bank plan first, management reporting second. */
+.bank-plan{background:var(--white)}
+.bank-plan-layout{display:grid;grid-template-columns:.78fr 1.22fr;gap:54px;align-items:start}
+.bank-plan-summary{background:var(--green);color:#fff;border-radius:var(--radius);padding:34px;display:flex;flex-direction:column}
+.bank-plan-label{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--lime);margin-bottom:25px}
+.bank-plan-summary h3{font-size:30px;line-height:1.13;margin-bottom:16px}
+.bank-plan-summary>p{font-size:14px;color:#d2ded4;line-height:1.6}
+.bank-plan-summary>.bank-model-note{border-top:1px solid #ffffff36;margin-top:16px;padding-top:14px;font-size:12px;line-height:1.55}
+.bank-model-note strong{color:var(--lime);font-weight:600}
+.bank-plan-price{border-top:1px solid #ffffff36;margin:25px 0 20px;padding-top:21px}
+.bank-plan-price strong{display:block;font-size:35px;letter-spacing:-.05em;color:var(--lime);line-height:1.15;margin-bottom:9px}
+.bank-plan-price span{display:block;font-size:12px;line-height:1.5;color:#d2ded4}
+.bank-plan-summary .btn{width:100%;justify-content:space-between}
+.bank-plan-note{display:block;font-size:11px;line-height:1.5;color:#bacdc0;margin-top:15px}
+.plan-points{list-style:none;padding:0;margin:0}
+.plan-points li{display:grid;grid-template-columns:32px minmax(155px,.72fr) 1.28fr;gap:15px;align-items:start;padding:17px 0;border-top:1px solid var(--line)}
+.plan-points li>span{font-size:11px;color:#55723e;padding-top:3px}
+.plan-points strong{font-size:15px;line-height:1.35;font-weight:600}
+.plan-points p{font-size:13px;line-height:1.55;margin:0}
+.management-offer{background:var(--mint)}
+.management-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #cbd6c8;border-bottom:1px solid #cbd6c8}
+.management-step{padding:25px 25px 27px 0}
+.management-step+.management-step{border-left:1px solid #cbd6c8;padding-left:25px}
+.management-step>span{display:block;font-size:9px;letter-spacing:.1em;color:#55723e;margin-bottom:22px}
+.management-step h3{font-size:22px;line-height:1.18;margin-bottom:12px}
+.management-step p{font-size:13px;line-height:1.65}
+.management-proof{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;background:#fff;border:1px solid #d8dfd5;border-radius:16px;padding:25px 28px;margin-top:26px}
+.management-proof strong{font-size:18px;display:block;margin-bottom:8px}
+.management-proof p{font-size:13px;line-height:1.6;max-width:730px}
+.management-proof .btn{max-width:310px}
+.case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.case-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:25px;display:flex;flex-direction:column;min-height:330px}
+.case-card--featured{grid-column:span 2;background:var(--green);color:#fff;border-color:var(--green)}
+.case-card--wide{grid-column:span 2}
+.case-sector{display:block;font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:#55723e;line-height:1.45;margin-bottom:20px}
+.case-card--featured .case-sector{color:var(--lime)}
+.case-card h3{font-size:22px;line-height:1.16;margin:0 0 14px}
+.case-card>p{font-size:13px;line-height:1.6;margin-bottom:14px}
+.case-card--featured>p{color:#d0ddd3}
+.case-metric{border-top:1px solid var(--line);padding-top:14px;margin-top:auto;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.case-card--featured .case-metric{border-color:#ffffff35}
+.case-metric strong{font-size:17px;letter-spacing:-.02em}
+.case-card--featured .case-metric strong{color:var(--lime)}
+.case-metric span{font-size:11px;line-height:1.45;color:var(--muted)}
+.case-card--featured .case-metric span{color:#d0ddd3}
+.case-card .case-result{margin:13px 0 0;font-size:12px;line-height:1.55;color:var(--ink)}
+.case-card--featured .case-result{color:#fff}
+.case-card .text-link{align-self:flex-start;margin-top:15px;font-size:12px}
+.trust-below{margin-top:52px}
+@media(max-width:900px){
+ .bank-plan-layout{grid-template-columns:1fr;gap:30px}
+ .case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .case-card--featured,.case-card--wide{grid-column:span 2}
+ .management-proof{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+ .bank-plan-summary{padding:27px 23px}
+ .bank-plan-summary h3{font-size:27px}
+ .bank-plan-price strong{font-size:32px}
+ .plan-points li{grid-template-columns:26px 1fr;gap:10px;padding:14px 0}
+ .plan-points li>div{grid-column:2}
+ .plan-points p{margin-top:4px}
+ .management-steps{grid-template-columns:1fr}
+ .management-step,.management-step+.management-step{padding:21px 0;border-left:0;border-top:1px solid #cbd6c8}
+ .management-step:first-child{border-top:0}
+ .management-proof{padding:22px 20px}
+ .management-proof .btn{max-width:none;width:100%}
+ .case-grid{grid-template-columns:1fr}
+ .case-card--featured,.case-card--wide{grid-column:auto}
+ .case-card{min-height:0;padding:23px}
+}
+
   </style>
   
   <script type="text/javascript">
@@ -87,79 +160,94 @@
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Хак Фин — на главную"><span class="brand-symbol" aria-hidden="true">h.</span><span class="brand-name">hack / fin<small>Александра Кашаева</small></span></a>
       <nav class="nav" id="mainNav" aria-label="Главная навигация">
-        <a href="#situations">Задачи</a><a href="#report-example">Пример отчёта</a><a href="#formats">Услуги</a><a href="#experience">Опыт</a><a href="#reviews">Отзывы</a><a href="#ai">ИИ и обучение</a><a href="#research">Исследования</a><a href="#contact">Контакт</a>
+        <a href="#business-plan">Бизнес-план</a>
+        <a href="#management-accounting">Управленка</a>
+        <a href="#report-example">Пример отчёта</a>
+        <a href="#experience">Кейсы</a>
+        <a href="#about">Обо мне</a>
+        <a href="#contact">Контакт</a>
       </nav>
-      <a class="btn btn-dark header-cta" href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Обсудить задачу <span aria-hidden="true">↗</span></a>
+      <a class="btn btn-dark header-cta" href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Обсудить кредитный пакет <span aria-hidden="true">↗</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav" id="menuToggle">Меню <span aria-hidden="true">☰</span></button>
     </div>
   </header>
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="heroTitle">
-      <div class="wrap">
-        <div class="hero-grid">
-          <div>
-            <div class="eyebrow">Финансовый консультант для собственников бизнеса</div>
-            <h1 id="heroTitle">Порядок<br>в финансах.<br><span class="serif">Ясность в бизнесе.</span></h1>
-            <p class="hero-lead">Строю <strong>ДДС, отчёт о прибыли и баланс на формулах</strong> — от выписок, отгрузок и кадровых данных до показателей бизнеса. Можно проверить прибыль и расходы по месяцам и <strong>проследить каждый показатель до исходных данных и первички</strong>.</p>
-            <div class="actions"><a class="btn btn-dark" href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Навести порядок в финансах <span class="arrow" aria-hidden="true">↗</span></a><a class="btn btn-light" href="#report-example">Посмотреть отчёт <span aria-hidden="true">↓</span></a></div>
-            <p class="hero-note">Начните с короткого сообщения. Без длинного технического задания.</p>
-            <div class="hero-author"><div class="initials" aria-hidden="true">АК</div><div><strong>Александра Кашаева</strong><span>Санкт-Петербург · работаю онлайн · применяю ИИ</span></div></div>
-          </div>
-          <div class="system" aria-label="Финансовый, бухгалтерский и юридический контуры связаны в управленческом учёте — основе единой картины бизнеса">
-            <div class="system-top"><span>КАРТА ВАШЕГО БИЗНЕСА</span><span class="system-status">3 контура → 1 система</span></div>
-            <h2>Каждую цифру<br>можно проверить.</h2>
-            <a class="contour-mini" href="#contours"><span class="num">01 /</span><div><strong>Финансовый</strong><small>Деньги · прибыль · капитал</small></div><span class="dot" aria-hidden="true">↗</span></a>
-            <a class="contour-mini" href="#contours"><span class="num">02 /</span><div><strong>Бухгалтерский</strong><small>Учёт · первичка · налоги</small></div><span class="dot" aria-hidden="true">↗</span></a>
-            <a class="contour-mini" href="#contours"><span class="num">03 /</span><div><strong>Юридический</strong><small>Договоры · активы · обязательства</small></div><span class="dot" aria-hidden="true">↗</span></a>
-            <div class="merge-line" aria-hidden="true"></div>
-            <div class="system-result"><div><small>Основной инструмент управления</small><strong>Управленческий учёт</strong></div><span class="arrow" aria-hidden="true">↗</span></div>
-            <div class="system-foot">Показатель → формула → операция → первичный документ</div>
-          </div>
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Бизнес-план для кредита · управленческая отчётность</div>
+        <h1 id="heroTitle">Бизнес-план<br>для кредита.<br><span class="serif">Отчётность — на фактах.</span></h1>
+        <p class="hero-lead">Подготовлю бизнес-план и финансовую модель для банка. Если управленческих данных пока нет, проверю прошлый период, соберу фактическую картину из 1С, выписок и документов и покажу, из каких денег компания сможет погашать кредит.</p>
+        <div class="actions">
+          <a class="btn btn-dark" href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Обсудить кредитный пакет <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-light" href="#report-example">Посмотреть пример отчёта <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="trust" aria-label="Опыт Александры Кашаевой">
-          <div><strong>17+ лет</strong><span>в финансах и работе<br>со сложными бизнесами</span></div>
-          <div><strong>до 50</strong><span>юридических лиц<br>в одном экономическом контуре</span></div>
-          <div><strong>6 млрд ₽</strong><span>совокупный оборот<br>за трёхлетний период</span></div>
-          <div><strong class="geo">Россия, Европа,<br>Азия</strong><span>опыт с международными структурами</span></div>
+        <p class="hero-note">Начнём с запроса банка и того, что уже есть в учёте.</p>
+        <div class="hero-author">
+          <div class="initials" aria-hidden="true">АК</div>
+          <div><strong>Александра Кашаева</strong><span>Санкт-Петербург · работаю онлайн · применяю ИИ</span></div>
         </div>
       </div>
-    </section>
+      <div class="system" aria-label="Состав кредитного пакета: фактические данные, план проекта и источник погашения кредита">
+        <div class="system-top"><span>КРЕДИТНЫЙ ПАКЕТ</span><span class="system-status">ПО ДАННЫМ БИЗНЕСА</span></div>
+        <h2>Что банк должен увидеть</h2>
+        <div class="contour-mini"><span class="num">01 /</span><div><strong>Фактическая картина</strong><small>Деньги · прибыль · обязательства</small></div><span class="dot" aria-hidden="true">✓</span></div>
+        <div class="contour-mini"><span class="num">02 /</span><div><strong>План проекта</strong><small>Продажи · расходы · ресурсы</small></div><span class="dot" aria-hidden="true">✓</span></div>
+        <div class="contour-mini"><span class="num">03 /</span><div><strong>Возврат кредита</strong><small>Денежный поток · график · сценарии</small></div><span class="dot" aria-hidden="true">✓</span></div>
+        <div class="system-result"><div><small>Результат работы</small><strong>Бизнес-план + финансовая модель</strong></div><span class="arrow" aria-hidden="true">↗</span></div>
+        <div class="system-foot">Расчёты можно проверить и связать с исходными данными</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section situations" id="situations" aria-labelledby="situationsTitle">
-      <div class="wrap">
-        <div class="section-head"><div><div class="eyebrow">01 / Когда стоит обратиться</div><h2 id="situationsTitle">Отчёты есть.<br>Ответов всё ещё нет?</h2></div><p>Выберите знакомую ситуацию. Покажу, что нужно связать и с чего можно начать работу.</p></div>
-        <div class="situation-layout">
-          <div class="situation-list" role="tablist" aria-label="Ситуации в бизнесе" aria-orientation="vertical">
-            <button class="situation-btn" id="situation-0" role="tab" aria-selected="true" aria-controls="situationPanel" data-situation="0"><span class="count">01</span><strong>Прибыль есть. А где деньги?</strong><span aria-hidden="true">↗</span></button>
-            <button class="situation-btn" id="situation-1" role="tab" aria-selected="false" aria-controls="situationPanel" tabindex="-1" data-situation="1"><span class="count">02</span><strong>Цифры в разных системах не сходятся</strong><span aria-hidden="true">↗</span></button>
-            <button class="situation-btn" id="situation-2" role="tab" aria-selected="false" aria-controls="situationPanel" tabindex="-1" data-situation="2"><span class="count">03</span><strong>Компаний много. Общей картины нет</strong><span aria-hidden="true">↗</span></button>
-            <button class="situation-btn" id="situation-3" role="tab" aria-selected="false" aria-controls="situationPanel" tabindex="-1" data-situation="3"><span class="count">04</span><strong>Проверка или спор требуют фактов</strong><span aria-hidden="true">↗</span></button>
-          </div>
-          <div class="situation-detail" id="situationPanel" role="tabpanel" aria-labelledby="situation-0" tabindex="0">
-            <span class="label">Что будем разбирать</span><h3 id="situationTitle">Почему прибыль не превращается в свободные деньги</h3>
-            <p id="situationText">Свяжем отчёт о прибыли, движение денег и баланс. Посмотрим, сколько осталось в дебиторке и запасах, ушло на кредиты, лизинг и расчёты между компаниями.</p>
-            <div class="situation-output"><span>Что вы получите</span><p id="situationOutput">Картину движения денег и обязательств: чем профинансирован бизнес и какие платежи нужно учесть до вывода прибыли.</p></div>
-            <a class="text-link" href="#contact">Разобрать мою ситуацию <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section bank-plan" id="business-plan" aria-labelledby="businessPlanTitle">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">01 / Бизнес-план для банка</div><h2 id="businessPlanTitle">План, который<br>сходится с фактами.</h2></div>
+      <p>Подготовлю документ и расчёты под цель кредита и требования конкретного банка. Если у кредитора есть форма, перенесу в неё согласованные показатели из финансовой модели.</p>
+    </div>
+    <div class="bank-plan-layout">
+      <aside class="bank-plan-summary">
+        <span class="bank-plan-label">Предложение</span>
+        <h3>Бизнес-план<br>с финансовой моделью</h3>
+        <p>Для заявки на кредит, развития бизнеса или нового направления.</p>
+        <p class="bank-model-note"><strong>В модели:</strong> прибыль, денежный поток, окупаемость и стресс-сценарии. Выводы в бизнес-плане соответствуют расчётам.</p>
+        <div class="bank-plan-price"><strong>от 95 000 ₽</strong><span>Срок — от 10 рабочих дней, если управленческие данные готовы.</span></div>
+        <a class="btn btn-lime" href="#contact">Обсудить задачу <span aria-hidden="true">↗</span></a>
+        <small class="bank-plan-note">Если нужно восстановить управленческую отчётность, этот этап оценивается отдельно — после просмотра данных.</small>
+      </aside>
+      <ol class="plan-points" aria-label="Состав бизнес-плана">
+        <li><span>01</span><div><strong>Краткое резюме</strong><p>Цель кредита, сумма, план действий и источник погашения.</p></div></li>
+        <li><span>02</span><div><strong>Бизнес и продукт</strong><p>Что продаёт компания, кому и как устроена выручка.</p></div></li>
+        <li><span>03</span><div><strong>Рынок и конкуренты</strong><p>Спрос, цены, положение компании и подтверждающие источники.</p></div></li>
+        <li><span>04</span><div><strong>Продажи и маркетинг</strong><p>Каналы привлечения клиентов и план продаж.</p></div></li>
+        <li><span>05</span><div><strong>Операционный план</strong><p>Команда, поставщики, ресурсы и график реализации.</p></div></li>
+        <li><span>06</span><div><strong>Финансовый план</strong><p>Прибыль, движение денег, баланс и обслуживание кредита.</p></div></li>
+        <li><span>07</span><div><strong>Риски и сценарии</strong><p>Что изменится при снижении спроса, росте затрат или задержке запуска.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
 
-    <section class="section contours" id="contours" aria-labelledby="contoursTitle">
-      <div class="wrap">
-        <div class="section-head"><div><div class="eyebrow">02 / В чём мой подход</div><h2 id="contoursTitle">Проверить цифры.<br>Объяснить расхождения.</h2></div><p>Деньги зависят от договоров. Учёт — от документов. Риски — от того, как оформлены и исполнены обязательства. Связываю их в управленческом учёте, чтобы у собственника была единая картина.</p></div>
-        <div class="contour-grid">
-          <article class="contour-card"><div class="contour-index"><span>01 / ФИНАНСЫ</span><svg class="line-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 32V10M6 32h29M13 26v-7m8 7V13m8 13V6"/><path d="m10 14 10-8 10-3"/></svg></div><h3>Финансовый контур</h3><p>Сколько бизнес зарабатывает, где находятся деньги и что происходит с капиталом.</p><ul class="plain-list"><li>ДДС, отчёт о прибыли и баланс</li><li>Себестоимость, маржа и дебиторка</li><li>Планирование платежей и сценариев</li><li>Консолидация группы компаний</li></ul><div class="contour-takeaway">Вы видите экономику бизнеса и последствия решений.</div></article>
-          <article class="contour-card"><div class="contour-index"><span>02 / УЧЁТ</span><svg class="line-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="8" y="5" width="25" height="30" rx="2"/><path d="M14 12h13M14 19h13M14 26h6m4 1 2 2 5-6"/></svg></div><h3>Бухгалтерский контур</h3><p>На каких документах основаны цифры и где данные расходятся с реальными операциями.</p><ul class="plain-list"><li>Банки, 1С, первичные документы</li><li>Сверка учёта и фактических операций</li><li>Дубли, корректировки и расхождения</li><li>Налоговые данные и обязательства</li></ul><div class="contour-takeaway">Вы понимаете, какие цифры подтверждены и что нужно восстановить.</div></article>
-          <article class="contour-card"><div class="contour-index"><span>03 / ПРАВО</span><svg class="line-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M20 5v29m-8 0h16M7 12h26M10 12 5 23h10L10 12Zm20 0-5 11h10l-5-11Z"/><circle cx="20" cy="10" r="2"/></svg></div><h3>Юридический контур</h3><p>Кому принадлежат активы, кто кому должен и как условия договоров влияют на деньги.</p><ul class="plain-list"><li>Договоры, платежи и обязательства</li><li>Активы, кредиты и лизинг</li><li>Экономическая сторона проверок и споров</li><li>Связь правовых событий с учётом</li></ul><div class="contour-takeaway">У вашей команды есть расчёты и факты для обоснования позиции.</div></article>
-        </div>
-        <div class="management-tool" aria-labelledby="managementTitle">
-          <div class="management-intro"><div class="eyebrow">Основной инструмент собственника</div><h3 id="managementTitle">Три отчёта.<br>Одна база данных.</h3><p>ДДС показывает движение денег, ОПиУ — прибыль, баланс — активы и обязательства. Итоговые показатели рассчитываются по формулам. Бухгалтер, финансовый директор и собственник могут проверить состав цифры и её источник.</p></div>
-          <div class="management-reports"><div><span>01 / ДДС</span><strong>Где деньги и хватит ли их на платежи?</strong><p>Поступления, выплаты, остатки и предстоящие расчёты.</p></div><div><span>02 / ОТЧЁТ О ПРИБЫЛИ</span><strong>Что бизнес зарабатывает на самом деле?</strong><p>Выручка, себестоимость, расходы и финансовый результат.</p></div><div><span>03 / БАЛАНС</span><strong>Что есть у бизнеса и за чей счёт?</strong><p>Активы, обязательства и капитал — в одной системе.</p></div></div>
-        </div>
-        <div class="contours-bottom"><strong>Порядок в данных.<br>Ясность в цифрах. Опора для решений.</strong><p>В проверках и спорах работаю вместе с юристами, адвокатами и налоговыми консультантами. Моя ответственность — финансово-экономическая часть: операции, документы, расчёты и их связь.</p></div>
-      </div>
-    </section>
+<section class="section management-offer" id="management-accounting" aria-labelledby="managementAccountingTitle">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">02 / Управленческая отчётность</div><h2 id="managementAccountingTitle">Сначала — картина бизнеса.<br>Потом — прогноз и решение.</h2></div>
+      <p>Управленческая отчётность — базовая архитектура для финансовых решений. Если её пока нет, начинаю с проверки прошлого периода и связываю данные между собой.</p>
+    </div>
+    <div class="management-steps">
+      <article class="management-step"><span>01 / ПРОВЕРКА ПРОШЛОГО ПЕРИОДА</span><h3>Что происходило в бизнесе?</h3><p>Разбираю данные 1С, выписки, отгрузки, договоры и первичные документы. Отмечаю, что подтверждено и где остаются пробелы.</p></article>
+      <article class="management-step"><span>02 / УВЯЗКА КОНТУРОВ</span><h3>Почему цифры расходятся?</h3><p>Сопоставляю финансовые показатели с бухгалтерским учётом и юридическими основаниями операций: договорами, обязательствами и активами.</p></article>
+      <article class="management-step"><span>03 / ОСНОВА ОТЧЁТНОСТИ</span><h3>На что можно опираться?</h3><p>Собираю регулярные управленческие показатели, правила расчёта и контрольные точки — чтобы их можно было проверять и использовать в планировании.</p></article>
+    </div>
+    <div class="management-proof">
+      <div><strong>Лучше собрать эту систему заранее.</strong><p>Я работала в составе команд, сопровождавших сложные выездные налоговые проверки. На практике вижу, сколько времени и сил уходит на восстановление цифр, когда банк или проверяющие уже запросили документы.</p></div>
+      <a class="btn btn-dark" href="#contact">Обсудить управленческую отчётность <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
 
 <section class="section report-example" id="report-example" aria-labelledby="reportExampleTitle"><div class="wrap">
  <div class="section-head"><div><div class="eyebrow">Как выглядит результат</div><h2 id="reportExampleTitle">Отчёт, который<br>можно проверить.</h2></div><p>От общего показателя — к статье, операции и первичному документу. Расчёты открыты для проверки бухгалтером, финансовым директором и собственником.</p></div>
@@ -183,9 +271,97 @@
  <a class="text-link" href="#contact">Обсудить отчётность для моего бизнеса <span aria-hidden="true">↗</span></a>
  </div></section>
 
-    <section class="section" id="formats" aria-labelledby="formatsTitle">
+<section class="section" id="experience" aria-labelledby="experienceTitle">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">03 / Практика в проектах</div><h2 id="experienceTitle">Финансовые задачи<br>в разных отраслях.</h2></div>
+      <p>Ниже — конкретные задачи, с которыми я работала, и результаты. Компании описаны по отрасли и модели бизнеса, без названий, ссылок и логотипов.</p>
+    </div>
+    <div class="case-grid">
+      <article class="case-card case-card--featured">
+        <span class="case-sector">Производство витаминов и добавок · быстрый рост</span>
+        <h3>Из серьёзного минуса — в плюс</h3>
+        <p>Российский производитель липосомальных витаминов и БАДов с собственным производством и несколькими продуктовыми линейками быстро рос и столкнулся с серьёзными кассовыми разрывами.</p>
+        <div class="case-metric"><strong>6 месяцев</strong><span>ежемесячного финансового сопровождения · 200 тыс. ₽ в месяц</span></div>
+        <p class="case-result">Компания вышла из убытка в плюс и была стабилизирована.</p>
+      </article>
+      <article class="case-card">
+        <span class="case-sector">Онлайн-образование · несколько валют</span>
+        <h3>Финансовый анализ собственной платформы</h3>
+        <p>Онлайн-школа для детей: программирование, цифровые навыки и занятия с преподавателями. Операции в разных валютах и собственная база данных.</p>
+        <div class="case-metric"><strong>2 месяца</strong><span>проект около 300 тыс. ₽</span></div>
+        <p class="case-result">Подготовлен финансовый анализ на данных платформы и расчётов компании.</p>
+      </article>
+      <article class="case-card">
+        <span class="case-sector">Производство мороженого</span>
+        <h3>Учёт для производства и продаж</h3>
+        <p>Производитель с широким ассортиментом и несколькими каналами сбыта: розница, опт и крупные заказчики.</p>
+        <div class="case-metric"><strong>Около 3 месяцев</strong><span>внедрение и обучение · бюджет около 100 тыс. ₽</span></div>
+        <p class="case-result">Настроили управленческую систему и обучили сотрудников ей пользоваться.</p>
+      </article>
+      <article class="case-card">
+        <span class="case-sector">Доставка питьевой воды · налоговые вопросы</span>
+        <h3>Пересчёт финансовой истории за три года</h3>
+        <p>Региональный оператор доставлял бутилированную воду и сопутствующее оборудование физическим лицам и бизнесу.</p>
+        <div class="case-metric"><strong>3 года</strong><span>операций в расчёте</span></div>
+        <p class="case-result">Рассчитали финансовый эффект от объединения бизнеса; затем деятельность консолидировали в одном ООО.</p>
+      </article>
+      <article class="case-card">
+        <span class="case-sector">Дистрибуция продуктов питания</span>
+        <h3>Консолидация и обучение команды</h3>
+        <p>Региональный дистрибьютор молочной и другой продукции: поставки в магазины, оптовым покупателям и в HoReCa, складская логистика. Масштаб бизнеса — около 500 млн ₽.</p>
+        <div class="case-metric"><strong>Финансовая консолидация</strong><span>и передача знаний внутренней команде</span></div>
+        <p class="case-result">Провела консультации, элиминации внутригрупповых оборотов и обучение сотрудников.</p>
+      </article>
+      <article class="case-card">
+        <span class="case-sector">Маркетплейсы · группа компаний</span>
+        <h3>Убыток в разрезе всей группы</h3>
+        <p>Группа компаний, торгующая на маркетплейсах, обратилась с убытком по совокупности бизнеса. Данные и внутригрупповые операции нужно было свести в общую картину.</p>
+        <div class="case-metric"><strong>Консолидация</strong><span>отчётности и внутригрупповых оборотов</span></div>
+        <p class="case-result">Сконсолидировала финансовые результаты группы и провела элиминации внутригрупповых оборотов.</p>
+      </article>
+      <article class="case-card case-card--wide">
+        <span class="case-sector">Логистическая группа · несколько юридических лиц</span>
+        <h3>Связала операции с проверяемой управленческой отчётностью</h3>
+        <p>За три года группа прошла через большой объём финансовых и операционных задач. Нужно было проверить EBIT, EBITDA и расходы по месяцам, центрам ответственности, проектам, номенклатуре и подразделениям.</p>
+        <div class="case-metric"><strong>6 млрд ₽</strong><span>совокупный оборот за три года</span></div>
+        <p class="case-result">Построила взаимосвязанные расчёты на данных выписок, отгрузок и других первичных источников. Показатель можно раскрыть и проследить до операции и документа.</p>
+        <a class="text-link" href="#report-example">Посмотреть демонстрационный отчёт <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+    <div class="trust trust-below" aria-label="Опыт Александры Кашаевой">
+      <div><strong>17+ лет</strong><span>в финансах и работе<br>со сложными бизнесами</span></div>
+      <div><strong>до 50</strong><span>юридических лиц<br>в одном экономическом контуре</span></div>
+      <div><strong>6 млрд ₽</strong><span>совокупный оборот<br>за трёхлетний период</span></div>
+      <div><strong class="geo">Россия, Европа,<br>Азия</strong><span>опыт с международными структурами</span></div>
+    </div>
+    <p class="experience-disclaimer">Названия компаний, ссылки и логотипы скрыты. Суммы и сроки указаны ориентировочно там, где были даны приблизительные оценки.</p>
+  </div>
+</section>
+
+<section class="section situations" id="situations" aria-labelledby="situationsTitle">
       <div class="wrap">
-        <div class="section-head"><div><div class="eyebrow">03 / Форматы работы</div><h2 id="formatsTitle">Начать можно<br>с конкретной задачи.</h2></div><p>Выберите отправную точку. Глубину работы, состав результата, сроки и стоимость определим по вашей ситуации.</p></div>
+        <div class="section-head"><div><div class="eyebrow">Другие задачи</div><h2 id="situationsTitle">Когда цифры не дают<br>ответа на вопрос.</h2></div><p>Помогаю разобраться с прибылью, денежным потоком, несколькими компаниями и финансовой стороной проверок.</p></div>
+        <div class="situation-layout">
+          <div class="situation-list" role="tablist" aria-label="Другие задачи бизнеса" aria-orientation="vertical">
+            <button class="situation-btn" id="situation-0" role="tab" aria-selected="true" aria-controls="situationPanel" data-situation="0"><span class="count">01</span><strong>Прибыль есть. А где деньги?</strong><span aria-hidden="true">↗</span></button>
+            <button class="situation-btn" id="situation-1" role="tab" aria-selected="false" aria-controls="situationPanel" tabindex="-1" data-situation="1"><span class="count">02</span><strong>Цифры в разных системах не сходятся</strong><span aria-hidden="true">↗</span></button>
+            <button class="situation-btn" id="situation-2" role="tab" aria-selected="false" aria-controls="situationPanel" tabindex="-1" data-situation="2"><span class="count">03</span><strong>Компаний много. Общей картины нет</strong><span aria-hidden="true">↗</span></button>
+            <button class="situation-btn" id="situation-3" role="tab" aria-selected="false" aria-controls="situationPanel" tabindex="-1" data-situation="3"><span class="count">04</span><strong>Проверка или спор требуют фактов</strong><span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="situation-detail" id="situationPanel" role="tabpanel" aria-labelledby="situation-0" tabindex="0">
+            <span class="label">Что будем разбирать</span><h3 id="situationTitle">Почему прибыль не превращается в свободные деньги</h3>
+            <p id="situationText">Свяжем отчёт о прибыли, движение денег и баланс. Посмотрим, сколько осталось в дебиторке и запасах, ушло на кредиты, лизинг и расчёты между компаниями.</p>
+            <div class="situation-output"><span>Что вы получите</span><p id="situationOutput">Картину движения денег и обязательств: чем профинансирован бизнес и какие платежи нужно учесть до вывода прибыли.</p></div>
+            <a class="text-link" href="#contact">Разобрать мою ситуацию <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="formats" aria-labelledby="formatsTitle">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">04 / Другие форматы работы</div><h2 id="formatsTitle">Для отдельных задач<br>и сложных ситуаций.</h2></div><p>Диагностика, управленческий учёт и финансовая реконструкция. Состав этапа, сроки и стоимость согласуем до начала работы.</p></div>
         <div class="formats-grid">
           <article class="format-card"><div class="format-label">Если пока непонятно, где проблема</div><h3>Диагностика<br>финансов бизнеса</h3><p>Когда нужен независимый взгляд на цифры, расхождения и обязательства.</p><ul class="plain-list"><li>Карта данных и основных связей</li><li>Существенные расхождения</li><li>Приоритеты и план дальнейшей работы</li></ul><div class="format-term"><strong>Ориентир: 5–10 рабочих дней</strong><span>При доступных данных и участии команды</span></div><a class="btn btn-dark" href="#contact">Обсудить диагностику <span aria-hidden="true">↗</span></a></article>
           <article class="format-card featured"><div class="format-label">Основной инструмент управления</div><h3>Управленческий учёт<br>и финансовый контроль</h3><p>Когда нужна единая картина бизнеса: понятные цифры, регулярная отчётность и контроль того, что происходит.</p><ul class="plain-list"><li>Связанные ДДС, прибыль и баланс</li><li>Правила учёта и контрольные точки</li><li>Планирование и автоматизация рутины</li></ul><div class="format-term"><strong>Проект и сопровождение</strong><span>Этапы и сроки — после оценки источников</span></div><a class="btn btn-lime" href="#contact">Обсудить систему учёта <span aria-hidden="true">↗</span></a></article>
@@ -194,6 +370,19 @@
         <p class="price-note"><span aria-hidden="true">↗</span>Стоимость зависит от числа компаний, качества данных, периода и состава задачи. До начала работы согласуем объём, результат и цену конкретного этапа.</p>
       </div>
     </section>
+
+
+
+
+    
+
+    
+
+    
+
+
+
+    
 
     <section class="about" id="about" aria-labelledby="aboutTitle">
       <div class="wrap about-grid"><div><div class="eyebrow">Со мной вы будете работать</div><h2 id="aboutTitle">Александра<br>Кашаева</h2><p class="role">Финансовый консультант.<br>Управленческий учёт, финансовая реконструкция и применение ИИ в работе.</p><div class="about-sign">Навожу порядок. Даю ясную картину.</div></div><div><blockquote>«Управленческая отчётность должна отвечать на 4 вопроса собственника: сколько у меня денег, сколько мне должны, сколько должен я и сколько стоит моя компания. А расчёты строю на формулах: каждый показатель можно проследить до исходных данных и первичных документов.»</blockquote><p>В моей практике — рост и упрощение групп компаний, международные расчёты, производство, логистика, цифровые платформы, налоговые проверки и сложные споры. Этот опыт помогает видеть за отчётом реальные операции и последствия решений.</p><p class="about-ai-note">Активно применяю ИИ в анализе финансовых данных, обработке документов и автоматизации. Отдельно обучаю бухгалтеров, финансистов и команды использовать ИИ в своих рабочих задачах.</p><div class="about-tags"><span>Группы компаний</span><span>IT и финтех</span><span>Производство и логистика</span><span>Малый бизнес</span></div></div></div>
@@ -214,17 +403,7 @@
       </div>
     </section>
 
-    <section class="section" id="experience" aria-labelledby="experienceTitle">
-      <div class="wrap">
-        <div class="section-head"><div><div class="eyebrow">04 / Практический опыт</div><h2 id="experienceTitle">Когда за отчётами —<br>сложный бизнес.</h2></div><p>В основе работы — конкретный вопрос собственника. Ниже — задача одного из проектов, моя роль и полученный результат без раскрытия клиента.</p></div>
-        <article class="practice-case" aria-labelledby="practiceCaseTitle"><div class="case-scope"><span>Проект из практики</span><strong>6 млрд ₽</strong><p>совокупного оборота<br>за три года</p><a href="#report-example">Посмотреть устройство отчётов ↗</a></div><div class="case-content"><h3 id="practiceCaseTitle">Проверить прибыль и расходы.<br>Собрать полную тройку отчётов.</h3><dl><div><dt>Исходная задача</dt><dd>Проверить EBIT, EBITDA и расходы в динамике по месяцам, по центрам финансовой ответственности, проектам, SKU и отделам.</dd></div><div><dt>Моя работа</dt><dd>Построила взаимосвязанные ДДС, ОПиУ и баланс на формулах от базы исходных данных: банковских выписок, отгрузок, кадровых данных и других первичных источников.</dd></div><div><dt>Результат</dt><dd>Полная тройка отчётов с прослеживаемыми расчётами. Бухгалтер, финансовый директор или собственник могут раскрыть показатель, проверить формулу и дойти до исходной операции и первичного документа.</dd></div></dl></div></article>
-        <div class="experience-grid">
-          <article class="experience-card"><span class="section-number">01 / ГРУППЫ И АКТИВЫ</span><h3>Несколько компаний.<br>Одна экономика.</h3><p>Перекрёстные платежи, займы, транспорт, лизинг и активы в разных юридических лицах.</p><dl><dt>С чем работаю</dt><dd>Внутригрупповые обороты, распределение активов, стоимость структуры и источники финансирования.</dd><dt>Что связываю</dt><dd>Учёт отдельных компаний, реальные денежные потоки и обязательства группы.</dd></dl></article>
-          <article class="experience-card"><span class="section-number">02 / МЕЖДУНАРОДНЫЙ ФИНТЕХ</span><h3>От операции клиента<br>до выручки бизнеса.</h3><p>Биллинг, платёжные провайдеры, банки, кошельки, комиссии и расчёты в разных валютах.</p><dl><dt>С чем работаю</dt><dd>Транзакционные массивы, расчёты с провайдерами, комиссии и межкомпанейские потоки.</dd><dt>Что связываю</dt><dd>Данные платформы, фактическое поступление денег, выручку и финансовый результат.</dd></dl></article>
-          <article class="experience-card"><span class="section-number">03 / ПРОВЕРКИ И СПОРЫ</span><h3>У позиции должны<br>быть основания.</h3><p>Восстановление учётной истории и финансовых связей в составе экспертной команды.</p><dl><dt>С чем работаю</dt><dd>Движение денег, структура платежей, активы, обязательства и первичные документы.</dd><dt>Что связываю</dt><dd>Фактическую экономику операций с расчётами и материалами для правовой позиции.</dd></dl></article>
-        </div><p class="experience-disclaimer">По части проектов действует NDA. Здесь приведены направления работы без названий клиентов и внутренних деталей.</p>
-      </div>
-    </section>
+    
 
     <!-- Отзывы предоставлены Александрой 12.09.2026. Названия обозначают контекст работы; имена и компании не были указаны. -->
     <section class="section reviews-section" id="reviews" aria-labelledby="reviewsTitle"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Отзывы клиентов</div><h2 id="reviewsTitle">Когда появляется ясность,<br>бизнесом можно управлять.</h2></div><p>Три истории о порядке в финансах, единой картине и управленческом учёте, который становится частью работы компании.</p></div><div class="review-grid" id="reviewGrid"><figure class="review"><figcaption>01 / СТАБИЛИЗАЦИЯ БИЗНЕСА</figcaption><blockquote><p>Наше взаимодействие началось в период сильного системного давления со стороны налоговой, поставщиков, покупателей и сотрудников компании.</p><p>Саша крайне быстро — я вообще раньше такого никогда не видел — разобралась в основных вопросах и не только. Я не рассчитывал, что её понимание нашего прошлого будет таким точным.</p><p>Потом Саша показала мне управленку — мне было не до того, когда она её создавала, — и объяснила, каким образом всё это нашла.</p><p>За следующие восемь месяцев ситуация стабилизировалась по всем фронтам и вошла в управляемое русло.</p></blockquote></figure><figure class="review"><figcaption>02 / МЕЖДУНАРОДНАЯ СТРУКТУРА</figcaption><blockquote><p>У меня международная структура. Очень долго искал того, кто помог бы сделать адекватную консолидацию. Да, много компаний, да — много счетов, разные валюты, криптовалюта, биржи. Но головой я всегда понимал, что это реально.</p><p>Раз за разом я нанимал специалистов, которые не смогли достичь именно этого результата. У меня доступов в Xero больше, чем каких-либо других доступов: сто раз собранная первичка и никакой ясности. Пока не появилась Саша.</p><p>Это было быстро, легко и, самое главное, понятно. Спасибо, Саша ❤️</p></blockquote></figure><figure class="review"><figcaption>03 / ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ</figcaption><blockquote><p>На момент начала работы с Александрой Кашаевой компания находилась в сложной финансовой ситуации. Высокая кредитная нагрузка и нестабильный денежный поток затрудняли планирование работы производства и расчётов.</p><p>Александра внедрила управленческий учёт и регулярную финансовую отчётность, запустила 1С:УНФ, организовала контроль бюджетов и платежей. Данные производства, продаж, расходов и обязательств были связаны в систему, на которую руководство могло опираться при принятии решений.</p><p>В результате мы получили возможность видеть финансовое положение компании, планировать денежный поток и контролировать влияние расходов на прибыль. За период совместной работы бизнес стабилизировался, вернулся к прибыльной деятельности и вышел на траекторию роста.</p><p>Благодарим Александру за вклад в преодоление кризиса и внедрение финансовой системы, которая стала частью ежедневного управления компанией.</p></blockquote></figure></div></div></section>
