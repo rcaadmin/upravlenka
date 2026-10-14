@@ -6,6 +6,22 @@
 */
 window.HACK_FIN_RESEARCH = [
   {
+    slug: "vnedrenie-ii-v-komandu",
+    href: "vnedrenie-ii-v-komandu.html",
+    title: "Как внедрить ИИ в команду: люди, агенты и первые месяцы",
+    category: "ИИ и управление командами",
+    categoryKey: "ai",
+    date: "14 октября 2026",
+    published: "2026-10-14",
+    readTime: "10–12 мин",
+    badge: "Новое исследование",
+    proof: "8 источников",
+    description: "Как команда привыкает к ИИ, почему сотрудники могут скрывать его использование, когда нужны ИИ-агенты и как оценить результат тестового запуска.",
+    visualLabel: "Команда и автоматизация",
+    visual: "ИИ · агент · пилот",
+    theme: "finance"
+  },
+  {
     slug: "nds-russia-2026",
     href: "nds-russia-2026.html",
     title: "НДС простыми словами: кто платит и зачем нужен вычет",

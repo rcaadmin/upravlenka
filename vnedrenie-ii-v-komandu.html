@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Как внедрить ИИ в команду: люди, агенты и пилот | Hack Finance</title>
+  <meta name="description" content="Как внедрять ИИ в бизнес без гонки за промптами: сопротивление команды, скрытое использование, ИИ-агенты, тестирование пилота, критерии результата и бесплатное обучение.">
+  <link rel="canonical" href="https://hack-fin.ru/vnedrenie-ii-v-komandu.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="google-site-verification" content="3eFHYFysFR-2SCQRUlmbo7nLdDJEeGX12d21DHr_TT8">
+  <meta name="theme-color" content="#111a23">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Hack Finance — Александра Кашаева">
+  <meta property="og:title" content="Как внедрить ИИ в команду: люди, агенты и пилот">
+  <meta property="og:description" content="Личный опыт автоматизации, данные об ИИ-агентах и практический план, как проверить пользу технологии в работе команды.">
+  <meta property="og:url" content="https://hack-fin.ru/vnedrenie-ii-v-komandu.html">
+  <meta property="article:published_time" content="2026-10-14">
+  <meta property="article:modified_time" content="2026-10-14">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Как внедрить ИИ в команду: люди, агенты и пилот",
+    "description": "Личный опыт автоматизации и практический разбор того, как внедрять ИИ в бизнес: адаптация команды, проверка ИИ-агентов, измерение результата и обучение сотрудников.",
+    "inLanguage": "ru-RU",
+    "datePublished": "2026-10-14",
+    "dateModified": "2026-10-14",
+    "author": {
+      "@type": "Person",
+      "name": "Александра Кашаева",
+      "url": "https://hack-fin.ru/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hack Finance",
+      "url": "https://hack-fin.ru/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://hack-fin.ru/vnedrenie-ii-v-komandu.html"
+    },
+    "articleSection": "ИИ и управление командами",
+    "keywords": [
+      "внедрение ИИ в команду",
+      "внедрение ИИ в бизнес",
+      "сопротивление сотрудников внедрению ИИ",
+      "ИИ-агенты для бизнеса",
+      "обучение сотрудников работе с ИИ"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Главная","item":"https://hack-fin.ru/"},
+      {"@type":"ListItem","position":2,"name":"Исследования","item":"https://hack-fin.ru/research.html"},
+      {"@type":"ListItem","position":3,"name":"Внедрение ИИ в команду","item":"https://hack-fin.ru/vnedrenie-ii-v-komandu.html"}
+    ]
+  }
+  </script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j=0; j<document.scripts.length; j++) {
+        if (document.scripts[j].src === r) { return; }
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+      k.async=1;k.src=r;a.parentNode.insertBefore(k,a);
+    })(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108398430','ym');
+    ym(108398430,'init',{
+      ssr:true,
+      webvisor:true,
+      clickmap:true,
+      ecommerce:"dataLayer",
+      referrer:document.referrer,
+      url:location.href,
+      accurateTrackBounce:true,
+      trackLinks:true
+    });
+  </script>
+  <style>
+    :root{--ink:#15212b;--muted:#66727d;--paper:#f3f5f7;--white:#fff;--navy:#111a23;--line:#dce2e7;--blue:#285778;--blue-soft:#e9f1f6;--mint:#d8eee8;--mint-dark:#226854;--warm:#fff4e8;--max:1120px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.72 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+    a{color:var(--blue);text-underline-offset:3px}
+    a:hover{color:#143b55}
+    .page{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .sitebar{background:var(--white);border-bottom:1px solid #e7eaee;color:#3d4852;font-size:13px;font-weight:700}
+    .sitebar-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{color:var(--ink);text-decoration:none;letter-spacing:.01em}
+    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+    .sitebar nav{display:flex;gap:20px;flex-wrap:wrap}
+    .sitebar nav a{color:#5b6570;text-decoration:none}
+    .crumbs{padding:20px 0 12px;color:#6d7882;font-size:13px}
+    .crumbs a{color:var(--ink);text-decoration:none;font-weight:700}
+    .hero{isolation:isolate;overflow:hidden;position:relative;padding:clamp(32px,5vw,60px);border-radius:15px;color:#f7f9fb;background:var(--navy);box-shadow:0 16px 44px rgba(21,33,43,.07)}
+    .hero:after{content:"";position:absolute;z-index:-1;right:-150px;top:-280px;width:520px;height:520px;border:1px solid rgba(255,255,255,.07);border-radius:50%;box-shadow:0 0 0 60px rgba(255,255,255,.025),0 0 0 120px rgba(255,255,255,.018)}
+    .eyebrow,.section-label{font-size:11px;font-weight:850;letter-spacing:.13em;text-transform:uppercase}
+    .eyebrow{display:inline-block;padding:8px 11px;border:1px solid rgba(255,255,255,.2);border-radius:7px;color:#c6d2db}
+    h1{max-width:900px;margin:22px 0 16px;font-size:clamp(38px,6vw,66px);line-height:1.04;letter-spacing:-.045em}
+    .dek{max-width:900px;margin:0;color:#c5cdd4;font-size:clamp(18px,2.2vw,22px);line-height:1.55}
+    .metadata{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+    .metadata span{padding:7px 10px;border:1px solid rgba(255,255,255,.16);border-radius:7px;color:#e2e8ed;font-size:12px;font-weight:700}
+    .article-notice{max-width:900px;margin-top:22px;padding:14px 16px;border-left:3px solid #9dc4d7;background:rgba(255,255,255,.08);color:#d8e0e6;font-size:14px}
+    .toc-wrap{margin:22px 0 34px;padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+    .toc{display:flex;flex-wrap:wrap;gap:8px}
+    .toc a{padding:8px 10px;border-radius:6px;background:#f3f6f8;color:#35434f;font-size:12px;font-weight:750;text-decoration:none}
+    .toc a:hover{background:var(--blue-soft)}
+    main{padding-bottom:55px}
+    section{margin:0 0 48px;scroll-margin-top:20px}
+    .section-label{margin-bottom:8px;color:var(--blue)}
+    h2{margin:0 0 15px;font-size:clamp(27px,3.8vw,39px);line-height:1.13;letter-spacing:-.035em}
+    h3{margin:24px 0 8px;font-size:21px;line-height:1.28;letter-spacing:-.02em}
+    p{margin:0 0 15px}
+    .lead{max-width:940px;color:#3d4a55;font-size:19px;line-height:1.65}
+    .conclusion{padding:23px;border:1px solid #d6e3e9;border-radius:12px;background:#eaf1f5}
+    .conclusion-head{color:#38596d;font-size:11px;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
+    .conclusion>p{margin:9px 0 0;font-size:18px;font-weight:650;line-height:1.55}
+    .panel,.callout,.table-wrap{margin:18px 0;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+    .callout{border-left:3px solid var(--mint-dark);border-radius:0 9px 9px 0;background:#eaf4f0}
+    .callout.warm{border-left-color:#bd6e4b;background:var(--warm)}
+    .callout p:last-child{margin-bottom:0}
+    .grid-3,.grid-2{display:grid;gap:13px;margin-top:18px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .card{padding:19px;border:1px solid var(--line);border-radius:11px;background:var(--white)}
+    .card small{display:block;margin-bottom:8px;color:var(--blue);font-size:10px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
+    .card h3{margin:0 0 8px;font-size:19px}
+    .card p{margin:0;color:#53616c;font-size:14px;line-height:1.58}
+    .table-wrap{overflow-x:auto;padding:0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th,td{padding:13px 15px;border-bottom:1px solid #e7ebee;text-align:left;vertical-align:top}
+    th{background:#eff3f5;color:#394853;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    tr:last-child td{border-bottom:0}
+    td strong{color:var(--navy)}
+    .steps{display:grid;gap:10px;margin:18px 0}
+    .step{display:grid;grid-template-columns:44px 1fr;gap:13px;align-items:start;padding:15px;border:1px solid var(--line);border-radius:10px;background:var(--white)}
+    .step-no{display:grid;width:38px;height:38px;place-items:center;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:850}
+    .step h3{margin:0 0 4px;font-size:17px}
+    .step p{margin:0;color:#586671;font-size:14px}
+    .source-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:0;list-style:none}
+    .source-list li{padding:14px;border:1px solid var(--line);border-radius:9px;background:var(--white);font-size:13px;line-height:1.5}
+    .source-list a{display:block;margin-bottom:4px;font-weight:800;text-decoration:none}
+    .source-list span{color:var(--muted)}
+    .faq{max-width:900px}
+    .faq details{border-top:1px solid var(--line)}
+    .faq details:last-child{border-bottom:1px solid var(--line)}
+    .faq summary{cursor:pointer;list-style:none;position:relative;padding:16px 34px 16px 0;font-size:18px;font-weight:750}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary:after{content:"+";position:absolute;right:5px;top:12px;color:var(--blue);font-size:24px}
+    .faq details[open] summary:after{content:"−"}
+    .faq details p{max-width:850px;color:#53616c}
+    .cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:25px;border-radius:12px;background:var(--navy);color:#fff}
+    .cta h2{margin:0 0 7px;font-size:27px}
+    .cta p{max-width:680px;margin:0;color:#d1d9df}
+    .cta a{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:7px;background:#fff;color:var(--navy);font-weight:800;text-decoration:none}
+    .footer{margin-top:45px;padding:22px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+    .site-footer-wrap{width:min(1200px,calc(100% - 64px));margin:0 auto}
+    .site-footer-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:18px;padding-top:14px;border-top:1px solid currentColor;font-size:12px;line-height:1.55}
+    .site-footer-meta a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+    .site-footer-meta .site-copyright{flex-basis:100%;margin-top:3px;font-size:11px;opacity:.8}
+    @media(max-width:760px){.sitebar nav{display:none}.grid-3{grid-template-columns:1fr}.grid-2,.source-list{grid-template-columns:1fr}.hero{border-radius:12px;padding:29px 22px}.hero:after{right:-300px}.page{width:min(100% - 24px,var(--max))}.table-wrap table{min-width:720px}.site-footer-wrap{width:calc(100% - 34px)}}
+  </style>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108398430" style="position:absolute;left:-9999px" alt=""></div></noscript>
+  <header class="sitebar">
+    <div class="page sitebar-inner">
+      <a class="brand" href="https://hack-fin.ru/">Александра Кашаева<small>Точные цифры для решений</small></a>
+      <nav aria-label="Навигация"><a href="https://hack-fin.ru/research.html">Исследования</a><a href="#pilot">Пилот</a><a href="#agents">ИИ-агенты</a><a href="#learning">Обучение</a></nav>
+    </div>
+  </header>
+  <div class="page">
+    <div class="crumbs"><a href="https://hack-fin.ru/">Главная</a>　→　<a href="research.html">Исследования</a>　→　Внедрение ИИ в команду</div>
+    <header class="hero">
+      <div class="eyebrow">ИИ • управление • автоматизация</div>
+      <h1>Как внедрить ИИ в команду: люди, агенты и первые месяцы</h1>
+      <p class="dek">Почему сотрудники сопротивляются новым инструментам, как спокойно провести тестовый запуск и понять, где ИИ-агент действительно полезен, а где автоматизации пока достаточно.</p>
+      <div class="metadata"><span>Александра Кашаева</span><span>14 октября 2026</span><span>10–12 минут чтения</span><span>Опыт + открытые исследования</span></div>
+      <div class="article-notice">Это авторская колонка и практическая рамка для пилота. Данные опросов описывают конкретные выборки и не обещают такой же результат каждой компании.</div>
+    </header>
+    <div class="toc-wrap"><nav class="toc" aria-label="Содержание">
+      <a href="#story">Команда и сопротивление</a><a href="#hidden-use">Скрытое использование</a><a href="#boundaries">Полотна от ИИ</a><a href="#first-months">Первые месяцы</a><a href="#agents">ИИ-агенты</a><a href="#pilot">Как тестировать</a><a href="#learning">Бесплатное обучение</a><a href="#videos">Видео с охватом</a><a href="#sources">Источники</a>
+    </nav></div>
+    <main>
+      <section id="answer">
+        <div class="section-label">Короткий ответ</div>
+        <div class="conclusion">
+          <div class="conclusion-head">Как я бы начинала внедрение ИИ в бизнес</div>
+          <p>Не с лозунга «теперь всё делаем через ИИ» и не с обязательного числа запросов. Выбрать одну повторяющуюся задачу одного сотрудника, разрешить безопасный пробный запуск, вместе проверить ошибки и только потом решать, нужен ли команде ИИ-агент, обычная автоматизация или пока достаточно хорошего помощника.</p>
+        </div>
+      </section>
+
+      <section id="story">
+        <div class="section-label">Личный опыт</div>
+        <h2>Когда я сказала команде, что через несколько месяцев она будет работать с ИИ</h2>
+        <p class="lead">В последней команде, где меня попросили помочь с автоматизацией, средний возраст сотрудников был около пятидесяти лет. Я сказала, что через несколько месяцев команда будет работать с ИИ. На меня посмотрели с подозрением — как будто я предложила что-то совсем невероятное.</p>
+        <p>Я не говорила это потому, что у меня есть волшебная технология. Я уже около пятнадцати лет встраиваю небольшие узлы автоматизации в рабочие процессы и успела увидеть разное сопротивление: человек не хочет менять привычный способ, не доверяет результату, опасается лишней проверки или просто не понимает, что именно ему предлагают.</p>
+        <p>Возраст сам по себе не объясняет эту реакцию. В той команде средний возраст был около пятидесяти — это факт о конкретной группе, а не диагноз. На внедрение сильнее влияют полезность задачи, понятность интерфейса, качество исходных данных, возможность безопасно ошибиться и то, как руководитель говорит об изменениях.</p>
+        <p>В начале почти всегда есть трение. Новая система требует внимания, а старая рутина уже знакома. Я часто вижу, что перелом наступает не после презентации, а когда сотрудник сам замечает: «Вот эту скучную часть можно больше не делать вручную». Лень здесь не порок и не стратегия управления. Это сигнал, что повторяющаяся операция стала достаточно раздражающей, чтобы человек захотел один раз разобраться с новым способом.</p>
+        <p>Поэтому я нормально отношусь к первому скепсису и не требую мгновенного энтузиазма. Сначала человеку нужно самому обнаружить, где инструмент облегчает именно его работу.</p>
+      </section>
+
+      <section id="hidden-use">
+        <div class="section-label">Доверие и политика</div>
+        <h2>Сотрудники могут пользоваться ИИ и одновременно скрывать это</h2>
+        <p>Если человек не понимает, разрешено ли загружать рабочие данные, не потеряет ли он ценность в глазах руководителя и не превратится ли экономия времени в повод увеличить ему норму, он может не рассказывать о реальном использовании ИИ. Это не обязательно саботаж технологии. Иногда это разумная реакция на неясные правила.</p>
+        <p>В апреле 2026 года «Инк» пересказал результаты опроса MWS AI: 35% из 1&nbsp;100 опрошенных россиян сообщили, что скрывают использование ИИ от работодателя. Это данные конкретного опроса, опубликованные деловым медиа, а не измерение всех российских сотрудников. В исследовании Visier среди 1&nbsp;000 работников в США измеряли другое поведение: 48% признались, что хотя бы иногда преувеличивали свой опыт или частоту применения ИИ. Скрывать и преувеличивать — не одно и то же, но оба результата предупреждают: самоотчёт «кто сколько пользуется ИИ» может давать искажённую картину.</p>
+        <div class="callout">
+          <p><strong>Практический вывод:</strong> не превращать количество запросов, входов в нейросеть или признаний в KPI. Договориться, какие сервисы допустимы, какие данные нельзя загружать, где нужен человек и как сообщать о неудачных попытках. Интересоваться результатом процесса, а не тем, насколько сотрудник публично демонстрирует свой промптинг.</p>
+        </div>
+      </section>
+
+      <section id="boundaries">
+        <div class="section-label">Рабочие границы</div>
+        <h2>Экспертность не должна тонуть в полотнах, которые написал ИИ</h2>
+        <p>На следующем этапе может появиться другая крайность: сотрудник присылает руководителю длинный ответ нейросети и ожидает, что тот самостоятельно отделит факты от красивого текста. Тут полезно заранее установить форму результата.</p>
+        <div class="grid-3">
+          <article class="card"><small>01 · вопрос</small><h3>Какое решение нужно?</h3><p>Не «посмотрите, что нашёл ИИ», а конкретно: сравнить варианты, проверить комплект документов или определить, где есть расхождение.</p></article>
+          <article class="card"><small>02 · проверка</small><h3>Что подтверждено источником?</h3><p>Короткий вывод, ссылки или номера исходных документов, отмеченные сомнения и места, которые сотрудник проверил вручную.</p></article>
+          <article class="card"><small>03 · действие</small><h3>Что предлагается сделать?</h3><p>Один следующий шаг и ответственный. Если решения пока нет, так и написать — без двадцати экранов промежуточной генерации.</p></article>
+        </div>
+        <p>ИИ может помогать специалисту думать, сортировать материалы и готовить черновик. Но сгенерированный объём сам по себе не является аналитикой, а уверенный тон не заменяет профессиональную проверку.</p>
+      </section>
+
+      <section id="first-months">
+        <div class="section-label">Период адаптации</div>
+        <h2>Не мерить производительность по первой неделе</h2>
+        <p>Сотруднику нужно научиться ставить задачу, оценивать ответ и не передавать наружу лишние данные. Руководителю — разобраться, какой результат считать хорошим, где нужен контроль и сколько времени занимает проверка. Эти две кривые обучения идут одновременно.</p>
+        <p>Я бы не обещала, что у любой компании через три месяца все сотрудники уже работают с ИИ. Мой прогноз команде был основан на прежнем опыте автоматизации, но срок зависит от задач, интерфейса, доступа к инструментам и того, насколько быстро люди видят пользу. Несколько месяцев адаптации — полезный горизонт для наблюдения, но не гарантия срока окупаемости.</p>
+        <div class="callout warm">
+          <p>Есть и обратный эффект. После первых удачных задач возникает короткая эйфория: будто теперь можно сделать всё, закрыть все старые «гештальты» и автоматизировать полкомпании за выходные. Я бы в этот момент сама себя притормозила. Сначала повторить процесс, проверить качество и стоимость контроля, потом добавлять следующий сценарий.</p>
+        </div>
+        <p>На одной из прежних версий Алисы Pro, с которой я работала, интерфейс казался мне недостаточно удобным, а сильный результат требовал заметного участия программиста. Это мой опыт конкретной версии, а не оценка текущего продукта: интерфейсы и доступные функции быстро меняются. Для внедрения это хороший пример того, что качества модели недостаточно — сотруднику нужны понятное рабочее место, доступ к нужному контексту и аккуратно настроенные подключения.</p>
+      </section>
+
+      <section id="agents">
+        <div class="section-label">ИИ-агенты без хайпа</div>
+        <h2>Агенты уже применяют, но это ещё не автоматический сотрудник</h2>
+        <p>Чат-бот в основном отвечает на запрос. Обычная автоматизация выполняет заранее описанную последовательность действий. ИИ-агент получает цель, использует ограниченный набор инструментов или сервисов, выбирает следующий шаг и может повторить попытку, если результат не подошёл. Чем больше у него доступа и самостоятельности, тем важнее ограничения и проверка человеком.</p>
+        <p>Мультиагентная система распределяет работу между несколькими специализированными агентами. Например, один собирает исходные данные, второй проверяет их по заданным правилам, третий формирует черновик. Но это не универсальное улучшение: добавляются координация, стоимость, новые места отказа и сложность контроля.</p>
+        <div class="panel">
+          <p><strong>Насколько это распространено сейчас?</strong> В опросе McKinsey за 2026 год участвовали 1&nbsp;719 человек из 97 стран. О масштабировании ИИ-агентов в одной или нескольких функциях сообщили 40% респондентов из компаний с выручкой более $1 млрд — против 27% годом ранее. Среди респондентов из организаций меньшего размера доля осталась на уровне 22%. Это показывает, что агенты уже переходят из пилотов в отдельные рабочие функции, но массовое и одинаковое внедрение по рынку ещё не произошло. Опрос не означает, что 40% компаний отдали агентам работу целиком.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card"><small>Обычная автоматизация</small><h3>Лучше, если маршрут известен</h3><p>Если шаги одинаковые и правила не меняются, надёжная форма, скрипт или RPA-процесс часто дешевле, прозрачнее и легче тестируется.</p></article>
+          <article class="card"><small>ИИ-агент</small><h3>Полезен, когда есть вариативность</h3><p>Агент может разбирать неидеальный текст, искать информацию в разрешённых источниках и предлагать следующий шаг. Решение с последствиями лучше оставить человеку.</p></article>
+        </div>
+        <h3>Как понять, что агент не просто красиво показан на демо</h3>
+        <ul>
+          <li>У задачи есть ясный вход, измеримый результат и набор типичных исключений.</li>
+          <li>Права агента ограничены тестовой средой или нужными папками; отправка письма, платёж, изменение учёта и действие от имени сотрудника требуют подтверждения.</li>
+          <li>Видно, какие источники он использовал и какие действия выполнял; ошибки можно остановить и разобрать.</li>
+          <li>Его проверяют на обычных, неполных и нестандартных примерах, а не на одном удачном сценарии для презентации.</li>
+          <li>Время на настройку, контроль, исправления и стоимость использования включены в расчёт пользы.</li>
+        </ul>
+        <p>Если агент добавляет больше согласований, чем снимает работы, либо его нельзя безопасно ограничить, это пока не рабочее решение. Начинать с нескольких агентов сразу обычно незачем: сначала нужно понять, что не справляется один понятный процесс.</p>
+      </section>
+
+      <section id="pilot">
+        <div class="section-label">Тестирование и измерение</div>
+        <h2>Начать с одного сотрудника и одной задачи</h2>
+        <p>Небольшой пилот позволяет понять не только, способна ли модель выполнить операцию, но и подходит ли она конкретному человеку, данным и правилам компании.</p>
+        <div class="steps">
+          <article class="step"><div class="step-no">01</div><div><h3>Зафиксировать исходную работу</h3><p>Сколько раз задача повторяется, сколько занимает, сколько возвратов и исправлений бывает сейчас. Не нужно добиваться секундомера на каждое движение — достаточно понятной точки сравнения.</p></div></article>
+          <article class="step"><div class="step-no">02</div><div><h3>Выбрать узкую и проверяемую операцию</h3><p>Подготовить черновик сводки, разнести данные в таблицу, проверить комплект документов, найти расхождения или сгруппировать обращения. Не отдавать агенту весь процесс сразу.</p></div></article>
+          <article class="step"><div class="step-no">03</div><div><h3>Проверить работу в теневом режиме</h3><p>Сначала ИИ готовит вариант, но не меняет исходные записи и не совершает действия сам. Сотрудник сравнивает ответ с первоисточником и помечает ошибки, сомнительные случаи и удачные результаты.</p></div></article>
+          <article class="step"><div class="step-no">04</div><div><h3>Посчитать чистую пользу</h3><p>Сравнить общее время вместе с перепроверкой, число исправлений, потери на исключениях, стоимость инструмента и удобство для сотрудника. Сэкономленные минуты не равны экономии денег автоматически.</p></div></article>
+          <article class="step"><div class="step-no">05</div><div><h3>Решить: оставить, изменить или расширить</h3><p>Если польза повторяется, качество приемлемо, а процесс понятен другому сотруднику, можно перейти к следующей операции. Если нет — изменить задачу или остановить пилот.</p></div></article>
+        </div>
+        <div class="callout">
+          <p><strong>Что считать хорошим результатом:</strong> меньше времени на цикл без роста ошибок и перепроверки; меньше просроченных задач; больше обработанных документов при той же нагрузке; или более ровное качество. Один показатель выбирают под процесс заранее. Число промптов, токенов и сгенерированных страниц само по себе ничего не говорит о ценности для бизнеса.</p>
+        </div>
+        <p>На моей странице <a href="ai.html">про внедрение ИИ для финансовой рутины</a> описан похожий принцип: начать с одного рабочего места, отработать документы, таблицы и проверки на исходниках, а затем решать, нужен ли следующий этап.</p>
+      </section>
+
+      <section id="learning">
+        <div class="section-label">Обучение сотрудников</div>
+        <h2>Необязательно сразу отправлять всю команду на большую программу</h2>
+        <p>Для первого шага достаточно общей грамотности: как давать контекст, проверять факты и источники, работать с файлами и не загружать конфиденциальные данные в неподходящий сервис. Дальше обучение лучше привязать к должности и конкретной рабочей задаче.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Ресурс</th><th>Кому подходит</th><th>Бесплатность и содержание</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://start.practicum.yandex/courses/basic-skills-ai" target="_blank" rel="noopener noreferrer">Яндекс Практикум: «Базовые навыки работы с нейросетями»</a></td><td>Сотрудникам и руководителям без технической подготовки</td><td>Бесплатный курс на 6,5 часа; основы ИИ, промпты, проверка ошибок, документы и безопасное применение. Актуальная программа указана на странице курса.</td></tr>
+              <tr><td><a href="https://learn.microsoft.com/en-us/shows/ai-agents-for-beginners/" target="_blank" rel="noopener noreferrer">Microsoft Learn: AI Agents for Beginners</a></td><td>Тем, кто хочет понять устройство агентов и затем собирать их; скорее технической аудитории</td><td>Бесплатная серия из 10 уроков от понятий до кода. Материал англоязычный; доступность перевода отдельных материалов зависит от страницы.</td></tr>
+              <tr><td><a href="https://practicum.yandex.ru/ai-agents/" target="_blank" rel="noopener noreferrer">Яндекс Практикум: «ИИ-агенты и автоматизация»</a></td><td>Тем, кто уже выбрал процесс и хочет научиться собирать no-code решения</td><td>На момент проверки доступны первые уроки бесплатно; полная программа платная. В описании курса есть тестирование идеи, безопасность, интеграции и отдельный модуль про мультиагентные системы.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Для команды полезна и внутренняя «школа»: короткая встреча раз в неделю, один реальный сценарий, один разобранный сбой и памятка, что можно загружать. Важно показать не только эффектную демонстрацию, но и обычную работу: ответ с ошибкой, проверку по источнику и безопасный отказ от неподходящей задачи.</p>
+      </section>
+
+      <section id="videos">
+        <div class="section-label">Темы с заметным интересом</div>
+        <h2>Что уже набирает охват вокруг ИИ-агентов</h2>
+        <p>В подборке видео об агентах Glasp на момент проверки особенно заметны короткие объяснения «чем агент отличается от чат-бота» и разбор его устройства. В списке подборки видео Jeff Su «AI Agents, Clearly Explained» указано около 4,6 млн просмотров, а видео IBM Technology «What are AI Agents?» — около 1,7 млн. Счётчики просмотров меняются; это ориентир по англоязычной подборке, а не рейтинг русскоязычного YouTube.</p>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=FwOTs4UxQS4" target="_blank" rel="noopener noreferrer">Jeff Su — AI Agents, Clearly Explained</a>: коротко о том, как отличить агента от обычного чат-бота.</li>
+          <li><a href="https://www.youtube.com/watch?v=F8NKVhkZZWI" target="_blank" rel="noopener noreferrer">IBM Technology — What are AI Agents?</a>: из каких компонентов складывается агент и как он использует инструменты.</li>
+        </ul>
+        <p>Отдельно обсуждать интерес к агентам без проверки на рабочем процессе мало смысла. Главный вопрос для руководителя — не сколько агентов можно собрать, а какой шаг они надёжно выполняют, как человек проверяет результат и что происходит при ошибке.</p>
+      </section>
+
+      <section id="faq">
+        <div class="section-label">Короткие ответы</div>
+        <h2>Частые вопросы о внедрении ИИ в команду</h2>
+        <div class="faq">
+          <details><summary>Нужно ли принуждать сотрудников пользоваться ИИ?</summary><p>Полезнее определить разрешённые инструменты и задачи, дать возможность безопасно попробовать их и вместе оценить результат. Обязательные нормы по количеству запросов подталкивают к имитации активности.</p></details>
+          <details><summary>Сколько времени занимает адаптация команды?</summary><p>Единого срока нет. На освоение влияют тип задач, интерфейс, доступ к безопасным данным и поддержка руководителя. Несколько месяцев могут понадобиться и сотрудникам, и руководителю; это не обещание роста производительности к конкретной дате.</p></details>
+          <details><summary>Нужно ли сразу строить мультиагентную систему?</summary><p>Нет. Сначала стоит проверить одну задачу одним помощником или обычной автоматизацией. Несколько агентов оправданы, только если у ролей есть чёткое разделение и дополнительная координация окупается.</p></details>
+          <details><summary>Как измерить эффективность ИИ на работе?</summary><p>Сравнить выбранный процесс до и после: общее время вместе с проверкой, долю исправлений, очередь, качество и стоимость. Показатели выбирают под конкретную операцию и до запуска теста.</p></details>
+          <details><summary>С чего начать, если у команды нет опыта с ИИ?</summary><p>Выбрать одного добровольного участника и одну безопасную, повторяющуюся задачу с понятным источником для проверки. Начать можно с короткого бесплатного курса и тестового запуска на обезличенных или разрешённых данных.</p></details>
+        </div>
+      </section>
+
+      <section id="sources">
+        <div class="section-label">Источники и методика</div>
+        <h2>Материалы, на которые опирается статья</h2>
+        <p>Срез проверен 14 октября 2026 года. Опросы ниже проводились в разных странах, в разные годы и среди разных групп; их показатели нельзя складывать или напрямую переносить на конкретную российскую команду.</p>
+        <ul class="source-list">
+          <li><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener noreferrer">McKinsey, The State of AI 2026</a><span>Опрос 1&nbsp;719 участников из 97 стран; данные об агентах и масштабировании по размеру компаний.</span></li>
+          <li><a href="https://incrussia.ru/news/opros-pokazal-chto-kazhdyj-tretij-rossiyanin-skryvaet-ispolzovanie-ii-ot-rabotodatelya/" target="_blank" rel="noopener noreferrer">«Инк.» о результатах MWS AI, 2026</a><span>Вторичная публикация результатов опроса 1&nbsp;100 россиян об использовании ИИ на работе.</span></li>
+          <li><a href="https://www.visier.com/blog/ai-in-the-workplace-new-research-on-performative-ai/" target="_blank" rel="noopener noreferrer">Visier, AI in the Workplace, 2026</a><span>Собственный опрос 1&nbsp;000 работающих полный день в США; в частности, об уверенности и преувеличении опыта работы с ИИ.</span></li>
+          <li><a href="https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-agent-survey.html" target="_blank" rel="noopener noreferrer">PwC, AI Agent Survey, 2025</a><span>Опрос 308 руководителей компаний в США об агентах, управленческих барьерах и сценариях использования.</span></li>
+          <li><a href="https://start.practicum.yandex/courses/basic-skills-ai" target="_blank" rel="noopener noreferrer">Яндекс Практикум: бесплатный курс по базовым навыкам работы с нейросетями</a><span>Программа для начинающих, актуальность и условия указаны на странице курса.</span></li>
+          <li><a href="https://learn.microsoft.com/en-us/shows/ai-agents-for-beginners/" target="_blank" rel="noopener noreferrer">Microsoft Learn: AI Agents for Beginners</a><span>Десять вводных уроков об основах разработки ИИ-агентов.</span></li>
+          <li><a href="https://practicum.yandex.ru/ai-agents/" target="_blank" rel="noopener noreferrer">Яндекс Практикум: курс об ИИ-агентах</a><span>Описание программы и бесплатной вводной части; платные условия указаны организатором.</span></li>
+          <li><a href="https://glasp.co/posts/10-best-youtube-videos-on-ai-agents" target="_blank" rel="noopener noreferrer">Glasp: подборка видео об AI agents</a><span>Агрегаторская подборка видео и указанных просмотров; счётчики динамические, поэтому приведены как ориентир, а не постоянная метрика.</span></li>
+        </ul>
+      </section>
+
+      <section class="cta">
+        <div><h2>Начните с одной повторяющейся задачи</h2><p>Если хотите проверить, где ИИ может помочь в финансовом процессе, опишите входные документы, нужный результат и место, где сейчас возникает ручная работа.</p></div>
+        <a href="ai.html">Как проходит пилот ↗</a>
+      </section>
+
+      <section id="related">
+        <div class="section-label">Другие материалы</div>
+        <h2>Продолжить чтение</h2>
+        <div class="research-grid research-grid--related" data-related-research data-current="vnedrenie-ii-v-komandu" data-limit="2"></div>
+        <noscript><p><a href="ai.html">ИИ для финансовой рутины</a> · <a href="research.html">Архив исследований</a></p></noscript>
+      </section>
+    </main>
+    <footer class="footer">Александра Кашаева • Точные цифры для решений • Hack-Fin<div class="site-footer-wrap"><div class="site-footer-meta" aria-label="Контакты и ресурсы"><a href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Написать в Telegram ↗</a><a href="https://max.ru/u/f9LHodD0cOKXwQTJ7SyC1KUcRLqlHmeWsulaEtSdae7vfF0wBjW6Pto4znk" target="_blank" rel="noopener noreferrer">Написать в MAX ↗</a><a href="mailto:helper@okcept.ru">helper@okcept.ru</a><a href="https://promo.okcept.ru/" target="_blank" rel="noopener noreferrer">Ресурсы: promo.okcept.ru ↗</a><span class="site-copyright">© 2020–2026 Александра Кашаева · Hack / Fin</span></div></div></footer>
+  </div>
+  <script src="research-data.js"></script>
+  <script src="research-list.js"></script>
+</body>
+</html>
