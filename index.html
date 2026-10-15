@@ -64,6 +64,24 @@
 .nav-dropdown__menu a:hover{background:var(--mint);text-decoration:none}
 .nav-dropdown__menu .nav-dropdown__all{font-weight:700;color:var(--green);border-bottom:1px solid var(--line);margin-bottom:3px}
 @media(max-width:700px){.nav-dropdown{width:100%}.nav-dropdown>summary{justify-content:space-between;padding:11px 0;font-size:15px}.nav-dropdown__menu{position:static;width:100%;margin:0 0 8px;padding:4px 0 6px;border:0;border-radius:0;box-shadow:none;background:transparent}.nav-dropdown__menu a{padding:8px 0;font-size:12px;color:var(--muted)}.nav-dropdown__menu .nav-dropdown__all{padding-top:6px}}
+
+/* Tax calculator promo */
+.tax-tool-banner{padding:28px 0 66px}
+.tax-tool-banner__inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;overflow:hidden;padding:36px 40px;background:var(--lime);border:1px solid #c4dc70;border-radius:4px}
+.tax-tool-banner__inner:after{content:"";position:absolute;right:-88px;bottom:-170px;width:330px;height:330px;border:1px solid rgb(23 60 50 / 18%);border-radius:50%;box-shadow:0 0 0 28px rgb(23 60 50 / 5%),0 0 0 58px rgb(23 60 50 / 4%);pointer-events:none}
+.tax-tool-banner .eyebrow{color:#536b35;margin-bottom:14px}
+.tax-tool-banner h2{font:500 clamp(31px,3.4vw,44px)/1.08 var(--serif);letter-spacing:-.04em;max-width:650px;margin:0 0 12px;color:var(--green)}
+.tax-tool-banner__copy{max-width:650px;color:#46563e;font-size:13px;line-height:1.7;margin:0 0 20px}
+.tax-tool-banner__actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.tax-tool-banner .button{background:var(--green);border-color:var(--green)}
+.tax-tool-banner__price{font-size:11px;font-weight:700;color:var(--green)}
+.tax-tool-banner__visual{position:relative;z-index:1;justify-self:end;width:min(100%,350px);padding:22px 24px;background:var(--green);color:white;border-radius:4px;box-shadow:0 14px 30px rgb(24 43 37 / 13%)}
+.tax-tool-banner__visual small{display:block;color:#c6d4c8;font-size:10px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px}
+.tax-tool-banner__visual strong{display:block;font:23px/1.2 var(--serif);margin-bottom:15px}
+.tax-tool-banner__visual ul{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:0;padding:0;list-style:none}
+.tax-tool-banner__visual li{padding-top:8px;border-top:1px solid rgb(255 255 255 / 18%);color:#e6efdf;font-size:10px}
+@media(max-width:700px){.tax-tool-banner{padding:8px 0 48px}.tax-tool-banner__inner{grid-template-columns:1fr;padding:25px 21px;gap:22px}.tax-tool-banner__copy{font-size:12px}.tax-tool-banner__visual{justify-self:stretch;width:100%;padding:18px}.tax-tool-banner__actions{align-items:flex-start;flex-direction:column;gap:11px}.tax-tool-banner .button{width:100%}}
+
 </style><script>
 document.addEventListener("DOMContentLoaded",function(){var t=document.querySelector(".menu-toggle"),n=document.querySelector(".nav");if(t&&n){t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",String(o))});n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");t.setAttribute("aria-expanded","false")})})}});
 
@@ -123,6 +141,10 @@ document.addEventListener("DOMContentLoaded",function(){var t=document.querySele
         <div class="metric"><strong>6 млрд ₽</strong><span>оборот группы за трёхлетний период в одном из проектов</span></div>
       </div>
     </div></section>
+    <section class="tax-tool-banner" id="tax-calculator" aria-labelledby="tax-tool-title"><div class="wrap"><div class="tax-tool-banner__inner">
+      <div><p class="eyebrow">Новый инструмент · 4 900 ₽</p><h2 id="tax-tool-title">Выручка растёт. А сколько останется после налогов?</h2><p class="tax-tool-banner__copy">Сравните налог, взносы и НДС на своих вводных. Калькулятор покажет расчёты по нескольким режимам и отметит те, которые не проходят заданные ограничения.</p><div class="tax-tool-banner__actions"><a class="button" href="kalkulyator-nalogovoy-nagruzki.html">Посмотреть калькулятор <span>↗</span></a><span class="tax-tool-banner__price">Google Sheets · Excel-файл по запросу</span></div></div>
+      <div class="tax-tool-banner__visual" aria-label="Что показывает калькулятор"><small>В одном сравнении</small><strong>Не только ставка, а вся нагрузка</strong><ul><li>Налог по режиму</li><li>Страховые взносы</li><li>НДС к уплате</li><li>Доля платежей в выручке</li></ul></div>
+    </div></div></section>
     <section class="section" id="services"><div class="wrap">
       <div class="section-head"><div><p class="eyebrow">С какой задачей приходят</p><h2>Выберите ситуацию — <em>предложу первый этап.</em></h2></div><p>Не нужно заранее знать, какой именно отчёт или программа вам нужны. Достаточно описать, что не получается понять или решить.</p></div>
       <div class="service-grid">
