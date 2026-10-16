@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded",function(){var t=document.querySele
   </div></section>
 
   <section class="purchase-section" id="purchase"><div class="wrap"><div class="purchase-panel"><div>
-    <p class="eyebrow">Калькулятор налоговой нагрузки</p><h2>Сравните сценарии на своих данных</h2><p>Стоимость — <strong>4 900 ₽</strong>. После подтверждения оплаты отправлю калькулятор выбранным вами способом.</p><p class="purchase-contact-form__status" id="payment-result" role="status" aria-live="polite"></p>
+    <p class="eyebrow">Калькулятор налоговой нагрузки</p><h2>Сравните сценарии на своих данных</h2><p>Стоимость — <strong>4 900 ₽</strong>. Укажите, куда отправить калькулятор. После отправки формы откроется Robokassa; я сверю оплату и пришлю файл выбранным способом.</p><p class="purchase-contact-form__status" id="payment-result" role="status" aria-live="polite"></p>
     <button class="button" id="checkout-start" type="button">Купить за 4 900 ₽ <span>↗</span></button>
     <form class="purchase-contact-form" id="calculator-checkout" action="https://script.google.com/macros/s/AKfycbyKq0SOadWmxXUNkie2QuPL_zCMi8FKqeza93bwl078dQIvApOkAs4T7flK3G3L1pGK/exec" method="post" target="_blank" hidden>
       <input type="hidden" name="action" value="create">
@@ -211,8 +211,8 @@ document.addEventListener("DOMContentLoaded",function(){var t=document.querySele
       <label for="delivery-contact" id="delivery-contact-label">Ваша электронная почта
         <input id="delivery-contact" name="deliveryContact" type="text" autocomplete="off" placeholder="Сначала выберите способ получения" maxlength="160" required disabled>
       </label>
-      <button class="button" type="submit">Перейти к оплате <span>↗</span></button>
-      <p class="purchase-contact-form__help" id="delivery-contact-help">После оплаты заказ с выбранным способом получения придёт на обработку.</p>
+      <button class="button" type="submit">Отправить и оплатить <span>↗</span></button>
+      <p class="purchase-contact-form__help" id="delivery-contact-help">После отправки формы данные заказа придут мне, а вы перейдёте к оплате.</p>
       <p class="purchase-contact-form__status" id="checkout-status" role="status" aria-live="polite"></p>
     </form>
     <div class="purchase-details"><span>ИП Кашаева Александра Константиновна</span><a href="mailto:helper@okcept.ru">Нужен счёт от организации? helper@okcept.ru</a><a href="https://t.me/international_deal_sp" target="_blank" rel="noopener noreferrer">Или напишите в Telegram ↗</a></div>
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded",function(){var t=document.querySele
           method.focus();
         });
         const paymentState = new URLSearchParams(window.location.search).get('payment');
-        if (paymentState === 'success') paymentResult.textContent = 'Спасибо! После подтверждения оплаты заказ будет обработан. Если вы указали электронную почту, проверьте также папку «Спам».';
+        if (paymentState === 'success') paymentResult.textContent = 'Спасибо! Я сверю оплату в Robokassa и отправлю калькулятор выбранным способом. Если вы указали электронную почту, проверьте также папку «Спам».';
         if (paymentState === 'failed') paymentResult.textContent = 'Платёж не завершён. Вы можете попробовать ещё раз.';
         method.addEventListener('change', updateContact);
         form.addEventListener('submit', (event) => {
