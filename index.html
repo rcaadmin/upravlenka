@@ -69,13 +69,14 @@
 /* Tax calculator promo */
 .services-overview{padding:8px 0 14px}
 .services-overview h2{font:500 clamp(29px,3.2vw,42px)/1.12 var(--serif);color:var(--green);margin:0 0 20px}
-.services-overview__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.services-overview__card{padding:21px 23px;background:#fbfbf7;border:1px solid var(--line);border-radius:4px;color:var(--green)}
+.services-overview__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.services-overview__card{padding:21px 20px;background:#fbfbf7;border:1px solid var(--line);border-radius:4px;color:var(--green)}
 .services-overview__card:first-child{background:var(--mint)}
-.services-overview__card h3{font:500 clamp(19px,2vw,25px)/1.2 var(--serif);margin:0 0 18px}
+.services-overview__card h3{font:500 clamp(19px,2vw,23px)/1.2 var(--serif);margin:0 0 18px}
 .services-overview__card ul{margin:0;padding-left:1.1em;font-size:14px;line-height:1.5}
 .services-overview__card li+li{margin-top:6px}
 .services-overview__card li::marker{color:#698452}
+@media(max-width:1040px){.services-overview__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.services-overview__grid{grid-template-columns:1fr;gap:10px}.services-overview__card{padding:18px}.services-overview__card h3{margin-bottom:10px}}
 .tax-tool-banner{padding:28px 0 66px}
 .tax-tool-banner__inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;overflow:hidden;padding:36px 40px;background:var(--lime);border:1px solid #c4dc70;border-radius:4px}
@@ -149,16 +150,16 @@ document.addEventListener("DOMContentLoaded",function(){var t=document.querySele
         <h2 id="services-overview-title">Чем могу помочь бизнесу</h2>
         <div class="services-overview__grid">
           <article class="services-overview__card">
-            <h3>Настройка учёта<br>для малого бизнеса</h3>
+            <h3>Настройка учета<br>бизнесу</h3>
             <ul>
               <li>Выбор налогового режима</li>
-              <li>Технический стек</li>
-              <li>Первая учётная политика</li>
+              <li>Написание учетной политики</li>
               <li>Учредительный договор</li>
+              <li>Онбординг главного бухгалтера</li>
             </ul>
           </article>
           <article class="services-overview__card">
-            <h3>Налоговые расчёты<br>и обоснование</h3>
+            <h3>Налоговая, ВНП, КНП, совещания, опросы и допросы</h3>
             <ul>
               <li>Переход с УСН на ОСНО</li>
               <li>Расчёт действительных налоговых обязательств</li>
@@ -166,12 +167,21 @@ document.addEventListener("DOMContentLoaded",function(){var t=document.querySele
             </ul>
           </article>
           <article class="services-overview__card">
-            <h3>Управленческая отчётность<br>и планирование</h3>
+            <h3>Управленческая отчетность</h3>
             <ul>
-              <li>ДДС, FR (прибыль) и баланс</li>
+              <li>ДДС, ФР (прибыль) и баланс</li>
               <li>Консолидация группы</li>
               <li>Бюджет и финансовый план</li>
               <li>Бизнес-план и экономика проекта</li>
+            </ul>
+          </article>
+          <article class="services-overview__card">
+            <h3>Бухгалтерский учет</h3>
+            <ul>
+              <li>Ведение бухгалтерского учета</li>
+              <li>Аудит бухгалтерского учета</li>
+              <li>Консультирование по техническому стеку</li>
+              <li>Оптимизация налогов</li>
             </ul>
           </article>
         </div>
