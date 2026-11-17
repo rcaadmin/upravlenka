@@ -55,7 +55,7 @@ html { scroll-padding-top: 88px; }
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper) url("paper.webp") repeat;
+  background: var(--paper);
   font: 16px/1.55 var(--serif);
 }
 
@@ -88,7 +88,7 @@ p + p { margin-top: .65rem; }
   position: sticky;
   z-index: 10;
   top: 0;
-  background: var(--paper) url("paper.webp") repeat;
+  background: var(--paper);
 }
 
 .header-inner {
@@ -181,6 +181,31 @@ p + p { margin-top: .65rem; }
 .button:hover { background: var(--red-hover); }
 .nav .button:hover { text-decoration: none; }
 .text-link { display: inline-block; font-weight: 700; }
+
+/* Keep external-link arrows legible with any local font fallback. */
+.button > span, .text-link > span {
+  position: relative;
+  display: inline-block;
+  width: .52rem;
+  height: .52rem;
+  margin-inline: .1rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  vertical-align: .15rem;
+  font-size: 0;
+}
+
+.button > span::after, .text-link > span::after {
+  position: absolute;
+  content: "";
+  right: -1px;
+  top: -1px;
+  width: .7rem;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: right center;
+}
 
 .hero-grid {
   display: grid;
