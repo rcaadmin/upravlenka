@@ -97,3 +97,287 @@
 /* Якоря не прячутся под фиксированной верхней панелью. */
 section[id]{scroll-margin-top:88px}
 @media (max-width:760px){section[id]{scroll-margin-top:82px}}
+
+/* Local typefaces shared by the research archive and articles. */
+@font-face {
+  font-family: "PT Serif";
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/comic/fonts/pt-serif-latin-regular.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/comic/fonts/pt-serif-latin-bold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/comic/fonts/pt-serif-cyrillic-regular.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/comic/fonts/pt-serif-cyrillic-bold.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Article layouts use either .sitebar or .article-hero. Scope the theme to
+   those layouts so the archive and standalone research cards stay independent. */
+@media screen {
+  :root:has(header:is(.sitebar, .article-hero)) {
+    color-scheme: light;
+    --paper: #fbefd5;
+    --white: #fff5e0;
+    --ink: #0a233e;
+    --navy: #102942;
+    --navy-2: #19334d;
+    --muted: #3e4a53;
+    --line: #cebea2;
+    --edge: #3f5061;
+    --blue: #b62617;
+    --blue-soft: #f5e5c5;
+    --bg: var(--paper);
+    --card: var(--white);
+    --text: var(--ink);
+    --dark: var(--navy);
+    --dark-2: var(--navy-2);
+    --accent: var(--blue);
+    --accent-dark: #971d11;
+    --accent-soft: #fae2d2;
+    --soft: var(--blue-soft);
+    --shadow: none;
+    --radius-xl: 7px;
+    --radius-lg: 5px;
+    --radius-md: 4px;
+    --research-serif: "PT Serif", Georgia, serif;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) body {
+    color: var(--ink);
+    background: var(--paper);
+    font-family: var(--research-serif);
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(a, summary, button):focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.sitebar, .topbar) {
+    color: var(--ink);
+    background: var(--paper);
+    border-bottom: 0;
+    backdrop-filter: none;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.topbar-inner, .sitebar-inner) {
+    min-height: 68px;
+    padding-block: .6rem;
+    border-bottom: 2px solid var(--navy);
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.sitebar, .topbar) .brand {
+    position: relative;
+    min-height: 2.5rem;
+    align-content: center;
+    padding-inline-start: clamp(6.35rem, 11vw, 9.3rem);
+    color: var(--ink);
+    font-size: clamp(.91rem, 1.4vw, 1rem);
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.sitebar, .topbar) .brand::before {
+    position: absolute;
+    inset: .1rem auto .1rem 0;
+    display: grid;
+    align-content: center;
+    padding-inline-end: clamp(.5rem, 1.3vw, 1rem);
+    border-inline-end: 1px solid var(--edge);
+    content: "hack/fin" / "";
+    color: var(--ink);
+    font-size: clamp(1.6rem, 3vw, 2.45rem);
+    font-weight: 700;
+    letter-spacing: -.065em;
+    white-space: nowrap;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.sitebar, .topbar) .brand-mark { display: none; }
+  :root:has(header:is(.sitebar, .article-hero)) :is(.sitebar, .topbar) .brand small {
+    margin-top: .15rem;
+    color: var(--muted);
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.sitebar, .topbar) nav a {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.sitebar, .topbar) nav a:hover { text-decoration: underline; }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.btn-primary, .cta > a) {
+    border-color: var(--accent);
+    border-radius: var(--radius-lg);
+    background: var(--accent);
+    color: var(--white);
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.btn-primary, .cta > a):hover {
+    background: var(--accent-dark);
+    color: var(--white);
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.crumbs, .breadcrumb) { color: var(--muted); }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(header.hero, .article-hero .hero-panel) {
+    padding: clamp(1.05rem, 3.2vw, 2.6rem) 0;
+    border: 0;
+    border-bottom: 2px solid var(--navy);
+    border-radius: 0;
+    background: transparent;
+    color: var(--ink);
+    box-shadow: none;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(header.hero, .article-hero .hero-panel)::after { content: none; }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(header.hero, .article-hero .hero-panel) h1 {
+    max-width: 23ch;
+    margin: .35rem 0 .8rem;
+    color: var(--ink);
+    font-size: clamp(2.15rem, 5.5vw, 4.45rem);
+    line-height: 1.03;
+    letter-spacing: -.045em;
+    overflow-wrap: anywhere;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(header.hero, .article-hero .hero-panel) .eyebrow {
+    padding: 0;
+    border: 0;
+    margin: 0 0 .3rem;
+    color: var(--accent-dark);
+    font-size: .78rem;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.dek, .hero-deck) {
+    max-width: 66ch;
+    color: var(--muted);
+    font-size: clamp(1.08rem, 2vw, 1.32rem);
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.dek, .hero-deck) strong { color: var(--ink); }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.metadata, .article-meta) span {
+    padding: .32rem .55rem;
+    border-color: var(--line);
+    color: var(--ink);
+    background: var(--white);
+    font-size: .83rem;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) .article-meta a { color: var(--accent-dark); }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.hero-note, .article-notice, header.hero .notice) {
+    border-left-color: var(--accent);
+    background: var(--soft);
+    color: var(--ink);
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) .market-visual {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--edge);
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) .market-visual::after { content: none; }
+  :root:has(header:is(.sitebar, .article-hero)) .visual-steps b { color: var(--white); }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.jump, .toc-wrap) {
+    background: var(--white);
+    border-color: var(--edge);
+    border-radius: var(--radius-xl);
+    box-shadow: none;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.jump, .toc) a {
+    background: var(--soft);
+    color: var(--ink);
+    border-radius: var(--radius-md);
+    font-size: .84rem;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.jump, .toc) a:hover {
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.section-label, .section-kicker, .conclusion-head) {
+    color: var(--accent-dark);
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.table-wrap, .stat, .time-card, .step, .source, .source-list li, .flow-item, .plain-item, .cycle-card, .compare-side, .era-year, .article-next, .author-box, .footer-links a) {
+    background: var(--white);
+    box-shadow: none;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) .conclusion {
+    background: var(--soft);
+    border-color: var(--line);
+  }
+
+  :root:has(.sitebar) .callout {
+    background: var(--white);
+    border-left-color: var(--accent);
+  }
+
+  :root:has(.sitebar) .callout.warm { background: var(--warm); }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(td, th) { border-bottom-color: var(--line); }
+  :root:has(header:is(.sitebar, .article-hero)) th { background: var(--navy); color: var(--white); }
+  :root:has(header:is(.sitebar, .article-hero)) :is(.case-source, .inline-cite, .source-list a) { color: var(--accent-dark); }
+
+  :root:has(header:is(.sitebar, .article-hero)) :is(.footer-box, .footer, .site-footer-meta) { border-top-color: var(--edge); }
+
+  :root:has(header:is(.sitebar, .article-hero)) .research-card {
+    border-color: var(--edge);
+    box-shadow: none;
+  }
+
+  :root:has(header:is(.sitebar, .article-hero)) .research-card__visual::before,
+  :root:has(header:is(.sitebar, .article-hero)) .research-card__visual::after { content: none; }
+
+  :root:has(header:is(.sitebar, .article-hero)) .research-card--ownership .research-card__visual { background: var(--navy); }
+  :root:has(header:is(.sitebar, .article-hero)) .research-card--marketplaces .research-card__visual { background: #f4d697; }
+  :root:has(header:is(.sitebar, .article-hero)) .research-card--finance .research-card__visual { background: #f6e0b6; }
+
+  :root:has(header:is(.sitebar, .article-hero)) .research-card:is(.research-card--marketplaces, .research-card--finance) :is(.research-card__visual-mark, .research-card__visual-label, .research-card__badge) {
+    color: var(--ink);
+    border-color: var(--edge);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  :root:has(header:is(.sitebar, .article-hero)) :is(.topbar-inner, .sitebar-inner) { gap: .65rem; }
+  :root:has(header:is(.sitebar, .article-hero)) :is(.sitebar, .topbar) .brand small { font-size: .69rem; }
+  :root:has(header:is(.sitebar, .article-hero)) :is(header.hero, .article-hero .hero-panel) h1 {
+    font-size: clamp(2.02rem, 8.2vw, 3.35rem);
+  }
+}
